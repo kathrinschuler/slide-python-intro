@@ -38,7 +38,7 @@
 
     <div class="reveal">
 
-        <!-- Any section element inside of this container is displayed as a slide -->
+        <!-- Intro Slide -->
         <div class="slides">
             <section>
                 <h1>Introduction to Python</h1>
@@ -48,37 +48,121 @@
                 </p>
             </section>
 
+            <!--<section>-->
+                <!--<h2>Hello There</h2>-->
+                <!--<p>-->
+                    <!--reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.-->
+                <!--</p>-->
+            <!--</section>-->
+
+            <!-- About us -->
             <section>
-                <h2>Hello There</h2>
-                <p>
-                    reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-                </p>
+                <section>
+                    <h2>About us</h2>
+                    <!--<p>Slides can be nested inside of each other.</p>-->
+                    <!--<p>Use the <em>Space</em> key to navigate through all slides.</p>-->
+                    <!--<br>-->
+                    <!--<a href="#" class="navigate-down">-->
+                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">-->
+                    <!--</a>-->
+                </section>
+                <section>
+                    <h2>Kathrin Schuler</h2>
+                    <p>Financial Software Developer at Bloomberg</p>
+                    <br>
+                    <!--<a href="#" class="navigate-down">-->
+                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">-->
+                    <!--</a>-->
+                </section>
+                <section>
+                    <h2>Naomi Christie</h2>
+                    <p>Naomi's title</p>
+                    <br>
+                    <!--<a href="#/2">-->
+                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">-->
+                    <!--</a>-->
+                </section>
             </section>
 
-            <!-- Example of nested vertical slides -->
-            <section>
+              <!-- Basics -->
+            <section title="Interactive shell">
                 <section>
-                    <h2>Vertical Slides</h2>
-                    <p>Slides can be nested inside of each other.</p>
-                    <p>Use the <em>Space</em> key to navigate through all slides.</p>
+                    <h2>Expressions and the interactive shell</h2>
+                    <p> Let's play with <a href="https://repl.it/">repl.it</a>: </p>
                     <br>
-                    <a href="#" class="navigate-down">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                    </a>
+                    <small>expressions consist of values and operators:</small>
+                     <pre><code class="hljs" data-trim contenteditable>
+                         >>> 2 + 2
+                         4
+					</code></pre>
+                    <small>Do you know any other operators?</small>
                 </section>
                 <section>
-                    <h2>Basement Level 1</h2>
-                    <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+                    <p>There are plenty of operators available:</p>
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Operation</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>**</td>
+                            <td>Exponent</td>
+                            <td>2 ** 3 evaluates to 8</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus/Remainder</td>
+                            <td>22 % 8 evaluates to 6</td>
+                        </tr>
+                        <tr>
+                            <td>//</td>
+                            <td>Integer Division/Floored Quotient</td>
+                            <td>22 // 8 evaluates to 2</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <div class="fragment">
+                    <pre><code class="hljs" data-trim contenteditable>
+                        >>> 2 ** 8
+                        256
+                        >>> (5 - 1) * ((7 + 1) / (3 - 1))
+                        16.0
+					</code></pre>
+                    </div>
+                    <div class="fragment">
+                    <pre><code class="hljs" data-trim contenteditable>
+                        >>> 42 + 5 + * 2
+                          File "python", line 1
+                            42 + 5 + * 2
+                                     ^
+                        SyntaxError: invalid syntax
+					</code></pre>
+                    </div>
+                    <h3 class="fragment">Errors are okay!</h3>
                 </section>
                 <section>
-                    <h2>Basement Level 2</h2>
-                    <p>That's it, time to go back up.</p>
+                    <h3>Syntax matters!</h3>
+                    <small>This is a grammatically correct English sentence.</small>
+                    <small>This grammatically is sentence not English correct a.</small>
                     <br>
-                    <a href="#/2">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                    </a>
+                    <div class="fragment">
+                        <small>Similar rules apply to Python:</small>
+                        <pre><code class="hljs" data-trim contenteditable>
+                        >>> 5 +
+                          File "python", line 1
+                            5 +
+                              ^
+                        SyntaxError: invalid syntax
+					    </code></pre>
+                    </div>
                 </section>
             </section>
+
+
 
             <section>
                 <h2>Slides</h2>
@@ -381,7 +465,7 @@ Reveal.addEventListener( 'customevent', function() {
             history: true,
             center: true,
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transition: 'none', // none/fade/slide/convex/concave/zoom
 
             // More info https://github.com/hakimel/reveal.js#dependencies
             dependencies: [{
