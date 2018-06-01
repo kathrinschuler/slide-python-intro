@@ -76,7 +76,7 @@
                 </section>
                 <section>
                     <h2>Naomi Christie</h2>
-                    <p>Naomi's title</p>
+                    <p>News Automation Engineer at Bloomberg</p>
                     <br>
                     <!--<a href="#/2">-->
                         <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">-->
@@ -109,6 +109,26 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>1 + 7 evaluates to 8</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>80 - 12 evaluates to 68</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>2 * 3 evaluates to 6</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>15 / 4 evaluates to 3.75</td>
+                        </tr>
+                        <tr>
                             <td>**</td>
                             <td>Exponent</td>
                             <td>2 ** 3 evaluates to 8</td>
@@ -133,7 +153,9 @@
                         16.0
 					</code></pre>
                     </div>
-                    <div class="fragment">
+                </section>
+                <section>
+                    <h3>Errors are okay!</h3>
                     <pre><code class="hljs" data-trim contenteditable>
                         >>> 42 + 5 + * 2
                           File "python", line 1
@@ -141,11 +163,90 @@
                                      ^
                         SyntaxError: invalid syntax
 					</code></pre>
-                    </div>
-                    <h3 class="fragment">Errors are okay!</h3>
                 </section>
                 <section>
-                    <h3>Syntax matters!</h3>
+                    <h3>Syntax matters</h3>
+                    <small>This is a grammatically correct English sentence.</small>
+                    <small>This grammatically is sentence not English correct a.</small>
+                    <br>
+                    <br>
+                    <div class="fragment">
+                        <small>Similar rules apply to Python:</small>
+                        <pre><code class="hljs" data-trim contenteditable>
+                        >>> 5 +
+                          File "python", line 1
+                            5 +
+                              ^
+                        SyntaxError: invalid syntax
+					    </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Data Types -->
+            <section title="Data Types">
+                <section>
+                    <h2>Data Types</h2>
+                    <small>A data type is a category for values. Every value is exactly one data type</small>
+                    <small> A look at the most common data types:</small>
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Integer</td>
+                            <td>-2, -1, 0, 1, 2, 3, 4, 5</td>
+                        </tr>
+                        <tr>
+                            <td>Floating Point Numbers (Float)</td>
+                            <td>-1.25, 1.0, 17.999, 20.1</td>
+                        </tr>
+                        <tr>
+                            <td>Strings</td>
+                            <td>'a', 'hello world', '20 cars', ' '</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <br>
+                    <div class="fragment">
+                    <pre><code class="hljs" data-trim contenteditable>
+                        >>> 'Hello world!
+                        SyntaxError: EOL while scanning string literal
+                    </code></pre>
+                    <small>What went wrong here?</small>
+                    </div>
+                </section>
+                <section>
+                    <p>The behaviour of operator changes depending on the data types:</p>
+                    <pre><code class="hljs" data-trim contenteditable>
+                    >>> 'Alice' + 'Bob'
+                    'AliceBob'
+					</code></pre>
+                    <small>This is called <q>string concatenation</q></small>
+                    <div class="fragment">
+                        <pre><code class="hljs" data-trim contenteditable>
+                        >>> 'Alice' + 42
+                        Traceback (most recent call last):
+                          File "python", line 1
+                            'Alice' + 42
+                        TypeError: Can't convert 'int' object to str implicitly
+                        </code></pre>
+                        <small>Python doesn't understand this</small>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="hljs" data-trim contenteditable>
+                        >>> 'Alice' * 5
+                        'AliceAliceAliceAliceAlice'
+                        </code></pre>
+                        <small>Makes sense again</small>
+                    </div>
+                </section>
+                <section>
+                    <h3>Syntax matters</h3>
                     <small>This is a grammatically correct English sentence.</small>
                     <small>This grammatically is sentence not English correct a.</small>
                     <br>
@@ -161,6 +262,8 @@
                     </div>
                 </section>
             </section>
+
+
 
 
 
