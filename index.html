@@ -35,11 +35,9 @@
 </head>
 
 <body>
-
     <div class="reveal">
-
-        <!-- Intro Slide -->
         <div class="slides">
+            <!-- Intro Slide -->
             <section>
                 <h1>Introduction to Python</h1>
                 <h3>Lesson 1</h3>
@@ -48,39 +46,20 @@
                 </p>
             </section>
 
-            <!--<section>-->
-                <!--<h2>Hello There</h2>-->
-                <!--<p>-->
-                    <!--reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.-->
-                <!--</p>-->
-            <!--</section>-->
-
             <!-- About us -->
             <section>
                 <section>
                     <h2>About us</h2>
-                    <!--<p>Slides can be nested inside of each other.</p>-->
-                    <!--<p>Use the <em>Space</em> key to navigate through all slides.</p>-->
-                    <!--<br>-->
-                    <!--<a href="#" class="navigate-down">-->
-                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">-->
-                    <!--</a>-->
                 </section>
                 <section>
                     <h2>Kathrin Schuler</h2>
                     <p>Financial Software Developer at Bloomberg</p>
                     <br>
-                    <!--<a href="#" class="navigate-down">-->
-                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">-->
-                    <!--</a>-->
                 </section>
                 <section>
                     <h2>Naomi Christie</h2>
                     <p>News Automation Engineer at Bloomberg</p>
                     <br>
-                    <!--<a href="#/2">-->
-                        <!--<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">-->
-                    <!--</a>-->
                 </section>
             </section>
 
@@ -91,7 +70,7 @@
                     <p> Let's play with <a href="https://repl.it/">repl.it</a>: </p>
                     <br>
                     <small>expressions consist of values and operators:</small>
-                     <pre><code class="hljs" data-trim contenteditable>
+                     <pre><code class="python" data-trim contenteditable>
                          >>> 2 + 2
                          4
 					</code></pre>
@@ -146,7 +125,7 @@
                     </tbody>
                     </table>
                     <div class="fragment">
-                    <pre><code class="hljs" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> 2 ** 8
                         256
                         >>> (5 - 1) * ((7 + 1) / (3 - 1))
@@ -156,7 +135,7 @@
                 </section>
                 <section>
                     <h3>Errors are okay!</h3>
-                    <pre><code class="hljs" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> 42 + 5 + * 2
                           File "python", line 1
                             42 + 5 + * 2
@@ -172,7 +151,7 @@
                     <br>
                     <div class="fragment">
                         <small>Similar rules apply to Python:</small>
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> 5 +
                           File "python", line 1
                             5 +
@@ -213,7 +192,7 @@
                     </table>
                     <br>
                     <div class="fragment">
-                    <pre><code class="hljs" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> 'Hello world!
                         SyntaxError: EOL while scanning string literal
                     </code></pre>
@@ -222,13 +201,13 @@
                 </section>
                 <section>
                     <p>The behaviour of operator changes depending on the data types:</p>
-                    <pre><code class="hljs" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                     >>> 'Alice' + 'Bob'
                     'AliceBob'
 					</code></pre>
                     <small>This is called <q>string concatenation</q></small>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> 'Alice' + 42
                         Traceback (most recent call last):
                           File "python", line 1
@@ -238,31 +217,88 @@
                         <small>Python doesn't understand this</small>
                     </div>
                     <div class="fragment">
-                        <pre><code class="hljs" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> 'Alice' * 5
                         'AliceAliceAliceAliceAlice'
                         </code></pre>
                         <small>Makes sense again</small>
                     </div>
                 </section>
-                <section>
-                    <h3>Syntax matters</h3>
-                    <small>This is a grammatically correct English sentence.</small>
-                    <small>This grammatically is sentence not English correct a.</small>
-                    <br>
-                    <div class="fragment">
-                        <small>Similar rules apply to Python:</small>
-                        <pre><code class="hljs" data-trim contenteditable>
-                        >>> 5 +
-                          File "python", line 1
-                            5 +
-                              ^
-                        SyntaxError: invalid syntax
-					    </code></pre>
-                    </div>
-                </section>
             </section>
 
+            <!-- Variables-->
+            <section title="Variables">
+                <section>
+                    <h2>Variables</h2>
+                    <small>A <q>variable</q> is like a box in the computer's memory where you can store a single value.</small>
+                    <small>If you save a value into a variable you can reuse it later on</small>       
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = 42
+                        >>> spam
+                        42
+                    </code></pre>
+                    <img height="250" data-src="pics/variable.jpg" alt="variable">
+                    </div>
+                </section>   
+                <section>
+                    <h4>Try it out:</h4>
+                    <small>When a variable is created we call that <q> initialized</q>:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> spam = 40
+                    >>> spam
+                    40
+                    </code></pre>
+                    <small>You can then use that variable in expressions:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> eggs = 2
+                    >>> spam + eggs
+                    42
+                    >>> spam + eggs + spam
+                    82
+                    </code></pre>
+                    <small>If you want to assign a new value to a variable. This is valled <q>overwriting the variable</q>:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> spam = spam + 2
+                    >>> spam
+                    42
+                    </code></pre>
+                    </section> 
+                    <section>
+                        <pre><code class="python" data-trim contenteditable>
+                            >>> spam = 'Hello'
+                            >>> spam
+                            'Hello'
+                            >>> spam = 'Goodbye'
+                            >>> spam
+                            'Goodbye'
+                        </code></pre>
+                        <br>
+                        <small>Just like before, the spam variable stores "Hello" until we replace it with "Goodbye":</small>
+                        <img height="270" data-src="pics/variable2.jpg" alt="variable">
+                    </section> 
+                    <section>
+                        <h3>Naming Variables</h3>
+                        <ul>
+                            <li>Only use one word (no spaces, hyphens)</li>
+                            <li>Use letters, numbers and underscores</li>
+                            <li>variables can not begin with a number</li>
+                            <li>Names are case sensitive</li>
+                        </ul>
+                        <br>
+                        <br>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> password_to_pc = 'top secret' # valid
+                                >>> _password = 'test'            # valid
+            
+                                >>> 4password                     # cannot start with a number
+                                >>> password-to-pc                # cannot use hyphens
+                                >>> password to pc                # no spaces
+                        </code></pre>
+                        <p><span class="fragment">Python convention is to use lowercase characters and underscores</span></p>
+
+                    </section>                     
+            </section>
 
 
 
