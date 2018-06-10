@@ -1,410 +1,741 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <title>Python - An introduction (Lesson 1)</title>
+    <title>Python - An introduction (Lesson 1)</title>
 
-		<meta name="description" content="An introduction to python">
-		<meta name="author" content="Kathrin Schuler and Naomi Christie">
+    <meta name="description" content="An introduction to python">
+    <meta name="author" content="Kathrin Schuler and Naomi Christie">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 
-		<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-	</head>
+</head>
 
-	<body>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Intro Slide -->
+            <section>
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 1</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
 
-		<div class="reveal">
+            <!-- About us -->
+            <section>
+                <section>
+                    <h2>About us</h2>
+                </section>
+                <section>
+                    <h2>Kathrin Schuler</h2>
+                    <p>Financial Software Developer at Bloomberg</p>
+                    <br>
+                </section>
+                <section>
+                    <h2>Naomi Christie</h2>
+                    <p>News Automation Engineer at Bloomberg</p>
+                    <br>
+                </section>
+            </section>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Introduction to Python</h1>
-					<h3>Lesson 1</h3>
-					<p>
-						<small>Following<a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="https://slides.com" target="_blank">https://slides.com</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment fade-up">fade-up (also down, left and right!)</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
+              <!-- Basics -->
+            <section title="Interactive shell">
+                <section>
+                    <h2>Expressions and the interactive shell</h2>
+                    <p> Let's play with <a href="https://repl.it/">repl.it</a>: </p>
+                    <br>
+                    <small>expressions consist of values and operators:</small>
+                     <pre><code class="python" data-trim contenteditable>
+                         >>> 2 + 2
+                         4
 					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
+                    <small>Do you know any other operators?</small>
+                </section>
+                <section>
+                    <p>There are plenty of operators available:</p>
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Operation</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>1 + 7 evaluates to 8</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>80 - 12 evaluates to 68</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>2 * 3 evaluates to 6</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>15 / 4 evaluates to 3.75</td>
+                        </tr>
+                        <tr>
+                            <td>**</td>
+                            <td>Exponent</td>
+                            <td>2 ** 3 evaluates to 8</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus/Remainder</td>
+                            <td>22 % 8 evaluates to 6</td>
+                        </tr>
+                        <tr>
+                            <td>//</td>
+                            <td>Integer Division/Floored Quotient</td>
+                            <td>22 // 8 evaluates to 2</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 2 ** 8
+                        256
+                        >>> (5 - 1) * ((7 + 1) / (3 - 1))
+                        16.0
 					</code></pre>
-				</section>
+                    </div>
+                </section>
+                <section>
+                    <h3>Errors are okay!</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 42 + 5 + * 2
+                          File "python", line 1
+                            42 + 5 + * 2
+                                     ^
+                        SyntaxError: invalid syntax
+					</code></pre>
+                </section>
+                <section>
+                    <h3>Syntax matters</h3>
+                    <small>This is a grammatically correct English sentence.</small>
+                    <small>This grammatically is sentence not English correct a.</small>
+                    <br>
+                    <br>
+                    <div class="fragment">
+                        <small>Similar rules apply to Python:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> 5 +
+                          File "python", line 1
+                            5 +
+                              ^
+                        SyntaxError: invalid syntax
+					    </code></pre>
+                    </div>
+                </section>
+            </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+            <!-- Data Types -->
+            <section title="Data Types">
+                <section>
+                    <h2>Data Types</h2>
+                    <small>A data type is a category for values. Every value is exactly one data type</small>
+                    <small> A look at the most common data types:</small>
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Examples</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Integer</td>
+                            <td>-2, -1, 0, 1, 2, 3, 4, 5</td>
+                        </tr>
+                        <tr>
+                            <td>Floating Point Numbers (Float)</td>
+                            <td>-1.25, 1.0, 17.999, 20.1</td>
+                        </tr>
+                        <tr>
+                            <td>Strings</td>
+                            <td>'a', 'hello world', '20 cars', ' '</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <br>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 'Hello world!
+                        SyntaxError: EOL while scanning string literal
+                    </code></pre>
+                    <small>What went wrong here?</small>
+                    </div>
+                </section>
+                <section>
+                    <p>The behaviour of operator changes depending on the data types:</p>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 'Alice' + 'Bob'
+                    'AliceBob'
+					</code></pre>
+                    <small>This is called <q>string concatenation</q></small>
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> 'Alice' + 42
+                        Traceback (most recent call last):
+                          File "python", line 1
+                            'Alice' + 42
+                        TypeError: Can't convert 'int' object to str implicitly
+                        </code></pre>
+                        <small>Python doesn't understand this</small>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> 'Alice' * 5
+                        'AliceAliceAliceAliceAlice'
+                        </code></pre>
+                        <small>Makes sense again</small>
+                    </div>
+                </section>
+            </section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+            <!-- Variables-->
+            <section title="Variables">
+                <section>
+                    <h2>Variables</h2>
+                    <small>A <q>variable</q> is like a box in the computer's memory where you can store a single value.</small>
+                    <small>If you save a value into a variable you can reuse it later on</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = 42
+                        >>> spam
+                        42
+                    </code></pre>
+                    <img height="250" data-src="pics/variable.jpg" alt="variable">
+                    </div>
+                </section>
+                <section>
+                    <h4>Try it out:</h4>
+                    <small>When a variable is created we call that <q>initialized</q>:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> spam = 40
+                    >>> spam
+                    40
+                    </code></pre>
+                    <small>You can then use that variable in expressions:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> eggs = 2
+                    >>> spam + eggs
+                    42
+                    >>> spam + eggs + spam
+                    82
+                    </code></pre>
+                    <small>If you want to assign a new value to a variable. This is called <q>overwriting the variable</q>:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> spam = spam + 2
+                    >>> spam
+                    42
+                    </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="python" data-trim contenteditable>
+                            >>> spam = 'Hello'
+                            >>> spam
+                            'Hello'
+                            >>> spam = 'Goodbye'
+                            >>> spam
+                            'Goodbye'
+                        </code></pre>
+                        <br>
+                        <small>Just like before, the spam variable stores "Hello" until we replace it with "Goodbye":</small>
+                        <img height="270" data-src="pics/variable2.jpg" alt="variable">
+                    </section>
+                    <section>
+                        <h3>Naming Variables</h3>
+                        <ul>
+                            <li>Only use one word (no spaces, hyphens)</li>
+                            <li>Use letters, numbers and underscores</li>
+                            <li>variables can not begin with a number</li>
+                            <li>Names are case sensitive</li>
+                        </ul>
+                        <br>
+                        <br>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> password_to_pc = 'top secret' # valid
+                                >>> _password = 'test'            # valid
+                                >>> myPassword = 'my pets name'   # valid
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+                                >>> 4password                     # cannot start with a number
+                                >>> password-to-pc                # cannot use hyphens
+                                >>> password to pc                # no spaces
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Good Names?</h3>
+                        <small>A good variable name describes the data it contains. Imagine that you moved to a new house and labeled all of your moving boxes as Stuff. You’d never find anything!</small>
+                        <br><br><br>
 
-			</div>
+                        <div class="fragment">
+                        <h3>Conventions</h3>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> bank_account_nr = 12345     # snake case
+                                >>> bankAccountNr = 12345       # camel case
+                        </code></pre>
+                        <p>Pick one and stick with it</p>
+                        <small>(Python convention is snake case)</small>
+                        </div>
+                       </section>
+            </section>
 
-		</div>
+            <!-- First Program -->
+            <section title="First Program">
+                <section>
+                    <h2>Your First Program</h2>
+                    <small>The interactive shell is good for trying things out but we wan't to write entire programs.
+                        In a program you can type multiple instructions before executing them.</small>
+                    <br><br>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                    # This program says hello and asks for my name.
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+                    print('Hello world!')
+                    print('What is your name?')    # ask for their name
+                    myName = input() # raw_input if you're in python2
+                    print('It is good to meet you, ' + myName)
+                    print('The length of your name is:')
+                    print(len(myName))
+                    print('What is your age?')    # ask for their age
+                    myAge = input()
+                    print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+                    </code></pre>
+                    <small>Make sure you save it!</small>
+                    </div>
+                </section>
+                <section>
+                    <h4>Comments</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    # This program says hello and asks for my name.
+                    </code></pre>
+                    <small>Text following a hash mark is a comment</small>
+                    <br><br>
+                    <div class="fragment">
+                    <h4>The print() function</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    print('Hello world!')
+                    print('What is your name?')    # ask for their name
+                    </code></pre>
+                    <small>The <code>print()</code> function prints everything inside the parenthesis on the screen.
+                        We say that python is <q>calling</q> the <code>print()</code> function with a string
+                        value <q>passed to the function</q>. A value passed to a function is called an <q> argument</q>
+                    </small>
+                    <br>
+                    <br>
+                    <small>The parenthesis are important. They mean we are calling a function. Just <code>print</code>
+                    would refer to a variable.</small>
+                    </div>
+                </section>
+                <section>
+                    <h4>The input() function</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    myName = input()
+                    </code></pre>
+                    <small>input waits for the user's input and saves it into <code>myName</code>
+                    as a string</small>
+                    <br><br>
+                    <div class="fragment">
+                    <h4>Printing variables</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    print('It is good to meet you, ' + myName)
+                    </code></pre>
+                    <small>If 'Kathrin' was stored in <code>myName</code> then this expression would print
+                    "It is good to meet you, Kathrin"</small>
+                    </div>
+                </section>
+                <section>
+                    <h4>The len() function</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    print('The length of your name is:')
+                    print(len(myName))
+                    </code></pre>
+                    <div class="fragment">
+                    <small>The <code>len()</code> functions evaluates the length of a string. Try it out:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> len('hello')
+                    5
+                    >>> len('I really like learning Python')
+                    29
+                    >>> len('')
+                    0
+                    </code></pre>
+                    </div>
+                    <div class="fragment">
+                    <small>The result of the <code>len()</code> function is then passed to the <code>print()</code> function.
+                    The <code>print()</code> function can take integers and string values but try mixing the two:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> print('I am ' + 29 + ' years old.')
+                    Traceback (most recent call last):
+                       File "python", line 1
+                        print('I am ' + 29 + ' years old.')
+                    TypeError: Can't convert 'int' object to str implicitly
+                    </code></pre>
+                    </div>
+                </section>
+                <section>
+                        <h4>The str(), int() and float() functions</h4>
+                        <small>If you want to concatenate an integer (like 29) with a string you need to convert 29 to '29' </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> str(29)
+                        '29'
+                        >>> print('I am ' + str(29) + ' years old.')
+                        </code></pre>
+                        <div class="fragment">
+                        <small>Can you guess what int() and float() do?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> int('-99')
+                        -99
+                        >>> int(1.25)
+                        1
+                        >>> int(1.99)
+                        1
+                        >>> float('3.14')
+                        3.14
+                        >>> float(10)
+                        10.0
+                        </code></pre>
+                        </div>
 
-		<script>
+                    </section>
+                    <section>
+                        <small>If you want to concatenate an integer (like 29) with a string you need to convert 29 to '29' </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        print('What is your age?') # ask for their age
+                        myAge = input()
+                        print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+                        </code></pre>
+                        <br>
+                        <div class="fragment">
+                        <small>myAge contains the value returned from input() as a string.
+                            To add 1 to it we need to convert it to an integer.
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        int(myAge) + 1
+                        </code></pre>
+                        <br></div>
+                        <div class="fragment">
+                        <small>To print this to the user's screen we need to convert it to a string again:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        str(int(myAge) + 1)
+                        </code></pre>   </div>
+                    </section>
+            </section>
 
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            <!-- Text and Number Equivalence -->
+            <section title="Text and Number Equivalence">
+                <section>
+                    <h2>Text and Number Equivalence</h2>
+                    <small>You can check equivalence using == in Python:</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 == 37
+                    False
+                    >>> 42 == '42'
+                    False
+                    >>> 42 == 42.0
+                    True
+                    >>> 42.0 == 0042.000
+                    True
+                    </code></pre></div>
+                </section>
+            </section>
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+             <!-- Pracice Questions -->
+             <section title="Practice Questions">
+                <section>
+                    <h2>Practice Questions</h2>
+                </section>
+                <section>
+                    <h4>Which of the following are operators and which are values?</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                    *
+                    'hello'
+                    -88.8
+                    -
+                    /
+                    +
+                    5
+                    </code></pre>
+                </section>
+                <section>
+                        <h4>Which of the following is a variable and which is a string?</h4>
+                        <pre><code class="python" data-trim contenteditable>
+                        'spam'
+                        spam
+                        </code></pre>
+                </section>
+                <section>
+                        <h4>What does bacon hold after the following code? And what is printed on the screen?</h4>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> bacon = 20
+                        >>> bacon + 1
+                        </code></pre>
+                </section>
+                <section>
+                        <h4>Why does the following return an error?</h4>
+                        <pre><code class="python" data-trim contenteditable>
+                        print('I have eaten' + 99 + 'burritos')
+                        </code></pre>
+                </section>
+            </section>
+            <section>
+                <h2>Thank you!!</h2>
+            </section>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/search/search.js', async: true },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
 
-		</script>
+           <!-- Lesson 2 -->
+            <section>
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 2</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
 
-	</body>
+             <!-- Booleans -->
+            <section title="Booleans">
+                <section>
+                    <h2>Booleans</h2>
+                    <p> Boolean values </p>
+                    <br>
+                    <small>The Boolean data type has only two values:</small>
+                    <br>
+                    <small>True and False</small>
+                    <small>Boolean is capitalized because the data type is named after mathematician George Boole</small>
+                </section>
+
+                <section>
+                    <h2>Booleans</h2>
+                    <br>
+                    <small>Like any other value, Boolean values are used in expressions and can be stored in variables.
+                        If you don’t use the proper case or you try to use True and False for variable names,
+                        Python will give you an error message.
+                        <br><br>
+                        1. Type the following into your terminal
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = True #then press enter
+                        >>> spam #if you press enter again what do you think you'll see?
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Booleans</h2>
+                    <br>
+                    <small>
+                        Answer: Because a boolean can be a variable, just like a number or a string it returned True
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = True
+                        >>> spam
+                        True
+                    </code></pre>
+
+                    <small>
+                        Some more questions to try in your terminal:
+                        <br><br>
+                        2. What happens if you used the wrong case for True?
+                        <br>
+                        3. What happens if you try to use True or False as the name of a variable?
+                        <br>
+                    </small>
+                </section>
+            </section>
+
+            <!--Comparison Operators-->
+            <section title="Comparison Operators">
+                    <section>
+                        <h2>Comparison Operators</h2>
+                    <small>
+                        We use these to compare two values and return a True or False statement
+                    </small>
+
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>==</td>
+                        <td>Equal to</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Not equal to</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Less than</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>More than</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Less than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>More than or equal to</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </section>
+                    </section>
+
+
+
+
+
+
+
+                <!--<section>-->
+                    <!--<p>There are plenty of operators available:</p>-->
+                    <!--<table style="font-size: 20px">-->
+                    <!--<thead>-->
+                        <!--<tr>-->
+                            <!--<th>Operator</th>-->
+                            <!--<th>Operation</th>-->
+                            <!--<th>Example</th>-->
+                        <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                        <!--<tr>-->
+                            <!--<td>+</td>-->
+                            <!--<td>Addition</td>-->
+                            <!--<td>1 + 7 evaluates to 8</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>-</td>-->
+                            <!--<td>Subtraction</td>-->
+                            <!--<td>80 - 12 evaluates to 68</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>*</td>-->
+                            <!--<td>Multiplication</td>-->
+                            <!--<td>2 * 3 evaluates to 6</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>/</td>-->
+                            <!--<td>Division</td>-->
+                            <!--<td>15 / 4 evaluates to 3.75</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>**</td>-->
+                            <!--<td>Exponent</td>-->
+                            <!--<td>2 ** 3 evaluates to 8</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>%</td>-->
+                            <!--<td>Modulus/Remainder</td>-->
+                            <!--<td>22 % 8 evaluates to 6</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td>//</td>-->
+                            <!--<td>Integer Division/Floored Quotient</td>-->
+                            <!--<td>22 // 8 evaluates to 2</td>-->
+                        <!--</tr>-->
+                    <!--</tbody>-->
+                    <!--</table>-->
+                    <!--<div class="fragment">-->
+                    <!--<pre><code class="python" data-trim contenteditable>-->
+                        <!--&gt;>> 2 ** 8-->
+                        <!--256-->
+                        <!--&gt;>> (5 - 1) * ((7 + 1) / (3 - 1))-->
+                        <!--16.0-->
+					<!--</code></pre>-->
+                    <!--</div>-->
+                <!--</section>section-->
+
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'none', // none/fade/slide/convex/concave/zoom
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/search/search.js',
+                async: true
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+
+</body>
+
 </html>
