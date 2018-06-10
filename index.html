@@ -63,14 +63,14 @@
                 </section>
             </section>
 
-              <!-- Basics -->
+            <!-- Basics -->
             <section title="Interactive shell">
                 <section>
                     <h2>Expressions and the interactive shell</h2>
                     <p> Let's play with <a href="https://repl.it/">repl.it</a>: </p>
                     <br>
                     <small>expressions consist of values and operators:</small>
-                     <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                          >>> 2 + 2
                          4
 					</code></pre>
@@ -79,53 +79,53 @@
                 <section>
                     <p>There are plenty of operators available:</p>
                     <table style="font-size: 20px">
-                    <thead>
-                        <tr>
-                            <th>Operator</th>
-                            <th>Operation</th>
-                            <th>Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>+</td>
-                            <td>Addition</td>
-                            <td>1 + 7 evaluates to 8</td>
-                        </tr>
-                        <tr>
-                            <td>-</td>
-                            <td>Subtraction</td>
-                            <td>80 - 12 evaluates to 68</td>
-                        </tr>
-                        <tr>
-                            <td>*</td>
-                            <td>Multiplication</td>
-                            <td>2 * 3 evaluates to 6</td>
-                        </tr>
-                        <tr>
-                            <td>/</td>
-                            <td>Division</td>
-                            <td>15 / 4 evaluates to 3.75</td>
-                        </tr>
-                        <tr>
-                            <td>**</td>
-                            <td>Exponent</td>
-                            <td>2 ** 3 evaluates to 8</td>
-                        </tr>
-                        <tr>
-                            <td>%</td>
-                            <td>Modulus/Remainder</td>
-                            <td>22 % 8 evaluates to 6</td>
-                        </tr>
-                        <tr>
-                            <td>//</td>
-                            <td>Integer Division/Floored Quotient</td>
-                            <td>22 // 8 evaluates to 2</td>
-                        </tr>
-                    </tbody>
+                        <thead>
+                            <tr>
+                                <th>Operator</th>
+                                <th>Operation</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>+</td>
+                                <td>Addition</td>
+                                <td>1 + 7 evaluates to 8</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Subtraction</td>
+                                <td>80 - 12 evaluates to 68</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Multiplication</td>
+                                <td>2 * 3 evaluates to 6</td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>Division</td>
+                                <td>15 / 4 evaluates to 3.75</td>
+                            </tr>
+                            <tr>
+                                <td>**</td>
+                                <td>Exponent</td>
+                                <td>2 ** 3 evaluates to 8</td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Modulus/Remainder</td>
+                                <td>22 % 8 evaluates to 6</td>
+                            </tr>
+                            <tr>
+                                <td>//</td>
+                                <td>Integer Division/Floored Quotient</td>
+                                <td>22 // 8 evaluates to 2</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> 2 ** 8
                         256
                         >>> (5 - 1) * ((7 + 1) / (3 - 1))
@@ -169,34 +169,34 @@
                     <small>A data type is a category for values. Every value is exactly one data type</small>
                     <small> A look at the most common data types:</small>
                     <table style="font-size: 20px">
-                    <thead>
-                        <tr>
-                            <th>Data Type</th>
-                            <th>Examples</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Integer</td>
-                            <td>-2, -1, 0, 1, 2, 3, 4, 5</td>
-                        </tr>
-                        <tr>
-                            <td>Floating Point Numbers (Float)</td>
-                            <td>-1.25, 1.0, 17.999, 20.1</td>
-                        </tr>
-                        <tr>
-                            <td>Strings</td>
-                            <td>'a', 'hello world', '20 cars', ' '</td>
-                        </tr>
-                    </tbody>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Integer</td>
+                                <td>-2, -1, 0, 1, 2, 3, 4, 5</td>
+                            </tr>
+                            <tr>
+                                <td>Floating Point Numbers (Float)</td>
+                                <td>-1.25, 1.0, 17.999, 20.1</td>
+                            </tr>
+                            <tr>
+                                <td>Strings</td>
+                                <td>'a', 'hello world', '20 cars', ' '</td>
+                            </tr>
+                        </tbody>
                     </table>
                     <br>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> 'Hello world!
                         SyntaxError: EOL while scanning string literal
                     </code></pre>
-                    <small>What went wrong here?</small>
+                        <small>What went wrong here?</small>
                     </div>
                 </section>
                 <section>
@@ -231,16 +231,16 @@
                 <section>
                     <h2>Variables</h2>
                     <small>A <q>variable</q> is like a box in the computer's memory where you can store a single value.</small>
-                    <small>If you save a value into a variable you can reuse it later on</small>       
+                    <small>If you save a value into a variable you can reuse it later on</small>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         >>> spam = 42
                         >>> spam
                         42
                     </code></pre>
-                    <img height="250" data-src="pics/variable.jpg" alt="variable">
+                        <img height="250" data-src="pics/variable.jpg" alt="variable">
                     </div>
-                </section>   
+                </section>
                 <section>
                     <h4>Try it out:</h4>
                     <small>When a variable is created we call that <q>initialized</q>:</small>
@@ -263,9 +263,9 @@
                     >>> spam
                     42
                     </code></pre>
-                    </section> 
-                    <section>
-                        <pre><code class="python" data-trim contenteditable>
+                </section>
+                <section>
+                    <pre><code class="python" data-trim contenteditable>
                             >>> spam = 'Hello'
                             >>> spam
                             'Hello'
@@ -273,21 +273,21 @@
                             >>> spam
                             'Goodbye'
                         </code></pre>
-                        <br>
-                        <small>Just like before, the spam variable stores "Hello" until we replace it with "Goodbye":</small>
-                        <img height="270" data-src="pics/variable2.jpg" alt="variable">
-                    </section> 
-                    <section>
-                        <h3>Naming Variables</h3>
-                        <ul>
-                            <li>Only use one word (no spaces, hyphens)</li>
-                            <li>Use letters, numbers and underscores</li>
-                            <li>variables can not begin with a number</li>
-                            <li>Names are case sensitive</li>
-                        </ul>
-                        <br>
-                        <br>
-                        <pre><code class="python" data-trim contenteditable>
+                    <br>
+                    <small>Just like before, the spam variable stores "Hello" until we replace it with "Goodbye":</small>
+                    <img height="270" data-src="pics/variable2.jpg" alt="variable">
+                </section>
+                <section>
+                    <h3>Naming Variables</h3>
+                    <ul>
+                        <li>Only use one word (no spaces, hyphens)</li>
+                        <li>Use letters, numbers and underscores</li>
+                        <li>variables can not begin with a number</li>
+                        <li>Names are case sensitive</li>
+                    </ul>
+                    <br>
+                    <br>
+                    <pre><code class="python" data-trim contenteditable>
                                 >>> password_to_pc = 'top secret' # valid
                                 >>> _password = 'test'            # valid
                                 >>> myPassword = 'my pets name'   # valid
@@ -296,13 +296,15 @@
                                 >>> password-to-pc                # cannot use hyphens
                                 >>> password to pc                # no spaces
                         </code></pre>
-                    </section>
-                    <section>
-                        <h3>Good Names?</h3>
-                        <small>A good variable name describes the data it contains. Imagine that you moved to a new house and labeled all of your moving boxes as Stuff. You’d never find anything!</small>
-                        <br><br><br>
+                </section>
+                <section>
+                    <h3>Good Names?</h3>
+                    <small>A good variable name describes the data it contains. Imagine that you moved to a new house and labeled all of your moving boxes as Stuff. You’d never find anything!</small>
+                    <br>
+                    <br>
+                    <br>
 
-                        <div class="fragment">
+                    <div class="fragment">
                         <h3>Conventions</h3>
                         <pre><code class="python" data-trim contenteditable>
                                 >>> bank_account_nr = 12345     # snake case 
@@ -310,8 +312,8 @@
                         </code></pre>
                         <p>Pick one and stick with it</p>
                         <small>(Python convention is snake case)</small>
-                        </div>
-                       </section>   
+                    </div>
+                </section>
             </section>
 
             <!-- First Program -->
@@ -320,9 +322,10 @@
                     <h2>Your First Program</h2>
                     <small>The interactive shell is good for trying things out but we wan't to write entire programs. 
                         In a program you can type multiple instructions before executing them.</small>
-                    <br><br>
+                    <br>
+                    <br>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                     # This program says hello and asks for my name.
 
                     print('Hello world!')
@@ -335,7 +338,7 @@
                     myAge = input()
                     print('You will be ' + str(int(myAge) + 1) + ' in a year.')
                     </code></pre>
-                    <small>Make sure you save it!</small>
+                        <small>Make sure you save it!</small>
                     </div>
                 </section>
                 <section>
@@ -344,20 +347,21 @@
                     # This program says hello and asks for my name.
                     </code></pre>
                     <small>Text following a hash mark is a comment</small>
-                    <br><br>
+                    <br>
+                    <br>
                     <div class="fragment">
-                    <h4>The print() function</h4>
-                    <pre><code class="python" data-trim contenteditable>
+                        <h4>The print() function</h4>
+                        <pre><code class="python" data-trim contenteditable>
                     print('Hello world!')
                     print('What is your name?')    # ask for their name
                     </code></pre>
-                    <small>The <code>print()</code> function prints everything inside the parenthesis on the screen.
+                        <small>The <code>print()</code> function prints everything inside the parenthesis on the screen.
                         We say that python is <q>calling</q> the <code>print()</code> function with a string 
                         value <q>passed to the function</q>. A value passed to a function is called an <q> argument</q>
                     </small>
-                    <br>
-                    <br>
-                    <small>The parenthesis are important. They mean we are calling a function. Just <code>print</code>
+                        <br>
+                        <br>
+                        <small>The parenthesis are important. They mean we are calling a function. Just <code>print</code>
                     would refer to a variable.</small>
                     </div>
                 </section>
@@ -368,13 +372,14 @@
                     </code></pre>
                     <small>input waits for the user's input and saves it into <code>myName</code>
                     as a string</small>
-                    <br><br>
+                    <br>
+                    <br>
                     <div class="fragment">
-                    <h4>Printing variables</h4>
-                    <pre><code class="python" data-trim contenteditable>
+                        <h4>Printing variables</h4>
+                        <pre><code class="python" data-trim contenteditable>
                     print('It is good to meet you, ' + myName)
                     </code></pre>
-                    <small>If 'Kathrin' was stored in <code>myName</code> then this expression would print
+                        <small>If 'Kathrin' was stored in <code>myName</code> then this expression would print
                     "It is good to meet you, Kathrin"</small>
                     </div>
                 </section>
@@ -385,20 +390,20 @@
                     print(len(myName))
                     </code></pre>
                     <div class="fragment">
-                    <small>The <code>len()</code> functions evaluates the length of a string. Try it out:</small>
-                    <pre><code class="python" data-trim contenteditable>
+                        <small>The <code>len()</code> functions evaluates the length of a string. Try it out:</small>
+                        <pre><code class="python" data-trim contenteditable>
                     >>> len('hello')
                     5
                     >>> len('I really like learning Python')
                     29
                     >>> len('')
                     0
-                    </code></pre> 
+                    </code></pre>
                     </div>
                     <div class="fragment">
-                    <small>The result of the <code>len()</code> function is then passed to the <code>print()</code> function.
-                    The <code>print()</code> function can take integers and string values but try mixing the two:</small>   
-                    <pre><code class="python" data-trim contenteditable>
+                        <small>The result of the <code>len()</code> function is then passed to the <code>print()</code> function.
+                    The <code>print()</code> function can take integers and string values but try mixing the two:</small>
+                        <pre><code class="python" data-trim contenteditable>
                     >>> print('I am ' + 29 + ' years old.')
                     Traceback (most recent call last):
                        File "python", line 1
@@ -406,16 +411,16 @@
                     TypeError: Can't convert 'int' object to str implicitly
                     </code></pre>
                     </div>
-                </section>  
+                </section>
                 <section>
-                        <h4>The str(), int() and float() functions</h4>
-                        <small>If you want to concatenate an integer (like 29) with a string you need to convert 29 to '29' </small>
-                        <pre><code class="python" data-trim contenteditable>
+                    <h4>The str(), int() and float() functions</h4>
+                    <small>If you want to concatenate an integer (like 29) with a string you need to convert 29 to '29' </small>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> str(29)
                         '29'
                         >>> print('I am ' + str(29) + ' years old.')
                         </code></pre>
-                        <div class="fragment">
+                    <div class="fragment">
                         <small>Can you guess what int() and float() do?</small>
                         <pre><code class="python" data-trim contenteditable>
                         >>> int('-99')
@@ -428,41 +433,42 @@
                         3.14
                         >>> float(10)
                         10.0
-                        </code></pre> 
-                        </div>
-                        
-                    </section>  
-                    <section>
-                        <small>How can you do calculations on a variable and then print it? </small>
-                        <pre><code class="python" data-trim contenteditable>
+                        </code></pre>
+                    </div>
+
+                </section>
+                <section>
+                    <small>How can you do calculations on a variable and then print it? </small>
+                    <pre><code class="python" data-trim contenteditable>
                         print('What is your age?') # ask for their age
                         myAge = input()
                         print('You will be ' + str(int(myAge) + 1) + ' in a year.')
                         </code></pre>
-                        <br>
-                        <div class="fragment">
+                    <br>
+                    <div class="fragment">
                         <small>myAge contains the value returned from input() as a string.
                             To add 1 to it we need to convert it to an integer. 
                         </small>
                         <pre><code class="python" data-trim contenteditable>
                         int(myAge) + 1
                         </code></pre>
-                        <br></div>
-                        <div class="fragment">
+                        <br>
+                    </div>
+                    <div class="fragment">
                         <small>To print this to the user's screen we need to convert it to a string again:</small>
                         <pre><code class="python" data-trim contenteditable>
                         str(int(myAge) + 1)
-                        </code></pre>   </div>  
-                    </section>  
+                        </code></pre> </div>
+                </section>
             </section>
-            
+
             <!-- Text and Number Equivalence -->
             <section title="Text and Number Equivalence">
                 <section>
                     <h2>Text and Number Equivalence</h2>
                     <small>You can check equivalence using == in Python:</small>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                     >>> 42 == 37
                     False
                     >>> 42 == '42'
@@ -475,8 +481,8 @@
                 </section>
             </section>
 
-             <!-- Pracice Questions -->
-             <section title="Practice Questions">
+            <!-- Pracice Questions -->
+            <section title="Practice Questions">
                 <section>
                     <h2>Practice Questions</h2>
                 </section>
@@ -493,22 +499,22 @@
                     </code></pre>
                 </section>
                 <section>
-                        <h4>Which of the following is a variable and which is a string?</h4>
-                        <pre><code class="python" data-trim contenteditable>
+                    <h4>Which of the following is a variable and which is a string?</h4>
+                    <pre><code class="python" data-trim contenteditable>
                         'spam'
                         spam
                         </code></pre>
                 </section>
                 <section>
-                        <h4>What does bacon hold after the following code? And what is printed on the screen?</h4>
-                        <pre><code class="python" data-trim contenteditable>
+                    <h4>What does bacon hold after the following code? And what is printed on the screen?</h4>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> bacon = 20
                         >>> bacon + 1
                         </code></pre>
                 </section>
                 <section>
-                        <h4>Why does the following return an error?</h4>
-                        <pre><code class="python" data-trim contenteditable>
+                    <h4>Why does the following return an error?</h4>
+                    <pre><code class="python" data-trim contenteditable>
                         print('I have eaten' + 99 + 'burritos')
                         </code></pre>
                 </section>
@@ -517,25 +523,26 @@
                 <h2>Thank you!!</h2>
             </section>
 
-<!-- LESSON 3 -->
-<section>
-    <h1>Introduction to Python</h1>
-    <h3>Lesson 3</h3>
-    <p>
-        <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
-    </p>
-</section>
+            <!-- LESSON 3 -->
+            <section>
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 3</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
 
-<!-- Functions -->
-<section title="Functions">
-    <section>
-        <h2>Functions</h2>
-        <small>You already know <code>print(), input() and len()</code>. 
+            <!-- Functions -->
+            <section title="Functions">
+                <section>
+                    <h2>Functions</h2>
+                    <small>You already know <code>print(), input() and len()</code>. 
             These are all built in functions but you can also write your own.</small>
-        <br><br>
-        <div class="fragment">
-        <small>Write a file called <code>helloFunc.py</code>:</small>
-         <pre><code class="python" data-trim contenteditable>
+                    <br>
+                    <br>
+                    <div class="fragment">
+                        <small>Write a file called <code>helloFunc.py</code>:</small>
+                        <pre><code class="python" data-trim contenteditable>
             def hello():
                 print('Howdy!')
                 print('Howdy!!!')
@@ -544,37 +551,38 @@
             hello()
             hello()
         </code></pre>
-        </div>
-        <p class="fragment">Let's have a closer look:</p>
-    </section>
-    <section>
-        <p>Function definition:</p>
-         <pre><code class="python" data-trim contenteditable>
+                    </div>
+                    <p class="fragment">Let's have a closer look:</p>
+                </section>
+                <section>
+                    <p>Function definition:</p>
+                    <pre><code class="python" data-trim contenteditable>
             def hello():
                 print('Howdy!')
                 print('Howdy!!!')
                 print('Hello there.')
         </code></pre>
-        <small><code>def</code> defines a function called hello.
+                    <small><code>def</code> defines a function called hello.
         The <q>body</q> is executed when we call this function, not when we define it.</small>
-        <div class="fragment">
-            <p>Function call:<p>
-            <pre><code class="python" data-trim contenteditable>
+                    <div class="fragment">
+                        <p>Function call:
+                            <p>
+                                <pre><code class="python" data-trim contenteditable>
             hello()
             hello()
             hello()
            </code></pre>
-           </div>
-           <small class="fragment">Take care of indentation in python!
+                    </div>
+                    <small class="fragment">Take care of indentation in python!
                Try running this code a few times and to understand what it does.
            </small>
-    </section>
-    <section>:
-            <h4>Why do we need functions?</h4>
-            <div class="fragment">
-                <small>...because we don't like to copy paste! 
+                </section>
+                <section>:
+                    <h4>Why do we need functions?</h4>
+                    <div class="fragment">
+                        <small>...because we don't like to copy paste! 
                     Have a look at what the code would look like without a function:</small>
-             <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                     print('Howdy!')
                     print('Howdy!!!')
                     print('Hello there.')
@@ -585,46 +593,47 @@
                     print('Howdy!!!')
                     print('Hello there.')
             </code></pre>
-            </div>
-            <small class="fragment">Imagine you need to change "Howdy" to "Good Morning" now..
+                    </div>
+                    <small class="fragment">Imagine you need to change "Howdy" to "Good Morning" now..
                 With a function this is much less work and less error prone!
             </small>
-        </section>
-</section>
+                </section>
+            </section>
 
-<!-- Functions with parameters -->
-<section title="Functions with parameters">
-        <section>
-            <h3>Functions with parameters</h3>
-            <small>When we called <code>print()</code> we passed in values, so called <q>arguments</q>.
+            <!-- Functions with parameters -->
+            <section title="Functions with parameters">
+                <section>
+                    <h3>Functions with parameters</h3>
+                    <small>When we called <code>print()</code> we passed in values, so called <q>arguments</q>.
             Can we pass an argument to our function hello?</small>
-            <br><br>
-            <div class="fragment">
-             <pre><code class="python" data-trim contenteditable>
+                    <br>
+                    <br>
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
                     def hello(name):
                         print('Hello ' + name)
                     
                     hello('Alice')
                     hello('Bob')
             </code></pre>
-            </div>
-            <div class="fragment">
-            <small>What happens if you call it without a name now? Can you explain why?</small>
-            <small>What happens if you call <code>print(name)</code> after the function?</small>
-            </div>
-        </section>    
-</section>
+                    </div>
+                    <div class="fragment">
+                        <small>What happens if you call it without a name now? Can you explain why?</small>
+                        <small>What happens if you call <code>print(name)</code> after the function?</small>
+                    </div>
+                </section>
+            </section>
 
-<!-- Return values and Return statements -->
-<section title="Return values">
-        <section>
-            <h3>Return values</h3>
-            <small>When we call the <code>len()</code> function with 'Hello' it will evaluate to the value 5.
+            <!-- Return values and Return statements -->
+            <section title="Return values">
+                <section>
+                    <h3>Return values</h3>
+                    <small>When we call the <code>len()</code> function with 'Hello' it will evaluate to the value 5.
             We call this a <q>return value</q>.</small>
-            <small>A function can do something or return something... or both.</small>
-            <div class="fragment">
-                <small>When you define a function you can also define what it returns:</small>
-             <pre><code class="python" data-trim contenteditable>
+                    <small>A function can do something or return something... or both.</small>
+                    <div class="fragment">
+                        <small>When you define a function you can also define what it returns:</small>
+                        <pre><code class="python" data-trim contenteditable>
                     def getAnswer(number):
                         if number == 1:
                             return 'It is certain'
@@ -639,113 +648,114 @@
                     fortune = getAnswer(5)
                     print(fortune)
                         </code></pre>
-            </div>
-        </section>
-        <section>
-                <small>The result of getAnswer is stored in a variable called fortune.
+                    </div>
+                </section>
+                <section>
+                    <small>The result of getAnswer is stored in a variable called fortune.
                     We can then pass this to print.
                 </small>
-                <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         fortune = getAnswer(3)
                         print(fortune)
                 </code></pre>
-                <small>we can also chain this call:</small>
-                <pre><code class="python" data-trim contenteditable>
+                    <small>we can also chain this call:</small>
+                    <pre><code class="python" data-trim contenteditable>
                         print(getAnswer(3))
                 </code></pre>
-                <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using this function?</small>
-        </section>
-        <section>
-                <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
+                    <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using this function?</small>
+                </section>
+                <section>
+                    <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
                 </small>
-                <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         number = input('Tell me a number: ')
                         fortune = getAnswer(int(number))
                         print(fortune)
                 </code></pre>
-                <small class="fragment">Remember that we need to create an int out of the input string!</small>
-        </section>
-</section>
+                    <small class="fragment">Remember that we need to create an int out of the input string!</small>
+                </section>
+            </section>
 
-<!-- The None Value-->
-<section title="The None Value">
-        <section>
-            <h3>The None value</h3>
-            <small>In Python there is a value called <code>None</code> which means no value/absent value.
+            <!-- The None Value-->
+            <section title="The None Value">
+                <section>
+                    <h3>The None value</h3>
+                    <small>In Python there is a value called <code>None</code> which means no value/absent value.
             Just like <code>True</code> and <code>False</code> this must be capitalized: <code>None</code></small>
-            <br><br>
+                    <br>
+                    <br>
 
-            <div class="fragment">
-                <small>One example where <code>None</code> is used is the <code>print()</code> function.
+                    <div class="fragment">
+                        <small>One example where <code>None</code> is used is the <code>print()</code> function.
                  All it does is print on the screen, it doesn't return anything:</small>
-             <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                     >>> spam = print('Hello!')
                     Hello!
                     >>> spam == None
                     True  
             </code></pre>
-            </div>
-            <div class="fragment">
-                <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
-                <small><code>return</code> without a value will also mean <code>None</code></small>
-            </div>
-        </section>    
-</section>
+                    </div>
+                    <div class="fragment">
+                        <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
+                        <small><code>return</code> without a value will also mean <code>None</code></small>
+                    </div>
+                </section>
+            </section>
 
-<!-- Keyword arguments-->
-<section title="Keyword arguments">
-        <section>
-            <h3>Keyword arguments</h3>
-            <small>Needed???</small>
-        </section>    
-</section>
+            <!-- Keyword arguments-->
+            <section title="Keyword arguments">
+                <section>
+                    <h3>Keyword arguments</h3>
+                    <small>Needed???</small>
+                </section>
+            </section>
 
-<!-- Local and Global Scope-->
-<section title="Local and Global Scope">
-        <section>
-            <h3>Local and Global Scope</h3>
-            <small>To be DONE</small>
-            <small>without global statement!!!</small>
-        </section>    
-</section>
+            <!-- Local and Global Scope-->
+            <section title="Local and Global Scope">
+                <section>
+                    <h3>Local and Global Scope</h3>
+                    <small>To be DONE</small>
+                    <small>without global statement!!!</small>
+                </section>
+            </section>
 
-<!-- Exception Handling-->
-<section title="Exception Handling">
-        <section>
-            <h3>Exception Handling</h3>
-            <small>To be DONE</small>
-        </section>    
-</section>
+            <!-- Exception Handling-->
+            <section title="Exception Handling">
+                <section>
+                    <h3>Exception Handling</h3>
+                    <small>To be DONE</small>
+                </section>
+            </section>
 
-<!-- A short Program-->
-<section title="A short Program">
-        <section>
-            <h3>A short program</h3>
-            <small>To be DONE: Guess the number</small>
-        </section>    
-</section>
+            <!-- A short Program-->
+            <section title="A short Program">
+                <section>
+                    <h3>A short program</h3>
+                    <small>To be DONE: Guess the number</small>
+                </section>
+            </section>
 
-<!-- Pracice Questions -->
-<section title="Practice Questions">
-        <section>
-            <h2>Practice Questions</h2>
-        </section>
-        <section>
-           
-        </section>
-        <section>
-                
-        </section>
-        <section>
-                
-        </section>
-        <section>
-               
-        </section>
-    </section>
-    <section>
-        <h2>Thank you!!</h2>
-    </section>
+            <!-- Pracice Questions -->
+            <section title="Practice Questions">
+                <section>
+                    <h2>Practice Questions</h2>
+                </section>
+                <section>
+
+                </section>
+                <section>
+
+                </section>
+                <section>
+
+                </section>
+                <section>
+
+                </section>
+            </section>
+            <section>
+                <h2>Thank you!!</h2>
+            </section>
 
         </div>
 
@@ -800,5 +810,4 @@
     </script>
 
 </body>
-
 </html>
