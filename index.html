@@ -517,6 +517,235 @@
                 <h2>Thank you!!</h2>
             </section>
 
+<!-- LESSON 3 -->
+<section>
+    <h1>Introduction to Python</h1>
+    <h3>Lesson 3</h3>
+    <p>
+        <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+    </p>
+</section>
+
+<!-- Functions -->
+<section title="Functions">
+    <section>
+        <h2>Functions</h2>
+        <small>You already know <code>print(), input() and len()</code>. 
+            These are all built in functions but you can also write your own.</small>
+        <br><br>
+        <div class="fragment">
+        <small>Write a file called <code>helloFunc.py</code>:</small>
+         <pre><code class="python" data-trim contenteditable>
+            def hello():
+                print('Howdy!')
+                print('Howdy!!!')
+                print('Hello there.')
+            hello()
+            hello()
+            hello()
+        </code></pre>
+        </div>
+        <p class="fragment">Let's have a closer look:</p>
+    </section>
+    <section>
+        <p>Function definition:</p>
+         <pre><code class="python" data-trim contenteditable>
+            def hello():
+                print('Howdy!')
+                print('Howdy!!!')
+                print('Hello there.')
+        </code></pre>
+        <small><code>def</code> defines a function called hello.
+        The <q>body</q> is executed when we call this function, not when we define it.</small>
+        <div class="fragment">
+            <p>Function call:<p>
+            <pre><code class="python" data-trim contenteditable>
+            hello()
+            hello()
+            hello()
+           </code></pre>
+           </div>
+           <small class="fragment">Take care of indentation in python!
+               Try running this code a few times and to understand what it does.
+           </small>
+    </section>
+    <section>:
+            <h4>Why do we need functions?</h4>
+            <div class="fragment">
+                <small>...because we don't like to copy paste! 
+                    Have a look at what the code would look like without a function:</small>
+             <pre><code class="python" data-trim contenteditable>
+                    print('Howdy!')
+                    print('Howdy!!!')
+                    print('Hello there.')
+                    print('Howdy!')
+                    print('Howdy!!!')
+                    print('Hello there.')
+                    print('Howdy!')
+                    print('Howdy!!!')
+                    print('Hello there.')
+            </code></pre>
+            </div>
+            <small class="fragment">Imagine you need to change "Howdy" to "Good Morning" now..
+                With a function this is much less work and less error prone!
+            </small>
+        </section>
+</section>
+
+<!-- Functions with parameters -->
+<section title="Functions with parameters">
+        <section>
+            <h3>Functions with parameters</h3>
+            <small>When we called <code>print()</code> we passed in values, so called <q>arguments</q>.
+            Can we pass an argument to our function hello?</small>
+            <br><br>
+            <div class="fragment">
+             <pre><code class="python" data-trim contenteditable>
+                    def hello(name):
+                        print('Hello ' + name)
+                    
+                    hello('Alice')
+                    hello('Bob')
+            </code></pre>
+            </div>
+            <div class="fragment">
+            <small>What happens if you call it without a name now? Can you explain why?</small>
+            <small>What happens if you call <code>print(name)</code> after the function?</small>
+            </div>
+        </section>    
+</section>
+
+<!-- Return values and Return statements -->
+<section title="Return values">
+        <section>
+            <h3>Return values</h3>
+            <small>When we call the <code>len()</code> function with 'Hello' it will evaluate to the value 5.
+            We call this a <q>return value</q>.</small>
+            <small>A function can do something or return something... or both.</small>
+            <div class="fragment">
+                <small>When you define a function you can also define what it returns:</small>
+             <pre><code class="python" data-trim contenteditable>
+                    def getAnswer(number):
+                        if number == 1:
+                            return 'It is certain'
+                        elif number == 2:
+                            return 'It is decidedly so'
+                        elif number == 3:
+                            return 'Yes'
+                        elif number == 4:
+                            return 'Reply hazy try again'
+                        else: 
+                            return 'I dont know the answer to this'
+                    fortune = getAnswer(5)
+                    print(fortune)
+                        </code></pre>
+            </div>
+        </section>
+        <section>
+                <small>The result of getAnswer is stored in a variable called fortune.
+                    We can then pass this to print.
+                </small>
+                <pre><code class="python" data-trim contenteditable>
+                        fortune = getAnswer(3)
+                        print(fortune)
+                </code></pre>
+                <small>we can also chain this call:</small>
+                <pre><code class="python" data-trim contenteditable>
+                        print(getAnswer(3))
+                </code></pre>
+                <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using this function?</small>
+        </section>
+        <section>
+                <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
+                </small>
+                <pre><code class="python" data-trim contenteditable>
+                        number = input('Tell me a number: ')
+                        fortune = getAnswer(int(number))
+                        print(fortune)
+                </code></pre>
+                <small class="fragment">Remember that we need to create an int out of the input string!</small>
+        </section>
+</section>
+
+<!-- The None Value-->
+<section title="The None Value">
+        <section>
+            <h3>The None value</h3>
+            <small>In Python there is a value called <code>None</code> which means no value/absent value.
+            Just like <code>True</code> and <code>False</code> this must be capitalized: <code>None</code></small>
+            <br><br>
+
+            <div class="fragment">
+                <small>One example where <code>None</code> is used is the <code>print()</code> function.
+                 All it does is print on the screen, it doesn't return anything:</small>
+             <pre><code class="python" data-trim contenteditable>
+                    >>> spam = print('Hello!')
+                    Hello!
+                    >>> spam == None
+                    True  
+            </code></pre>
+            </div>
+            <div class="fragment">
+                <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
+                <small><code>return</code> without a value will also mean <code>None</code></small>
+            </div>
+        </section>    
+</section>
+
+<!-- Keyword arguments-->
+<section title="Keyword arguments">
+        <section>
+            <h3>Keyword arguments</h3>
+            <small>Needed???</small>
+        </section>    
+</section>
+
+<!-- Local and Global Scope-->
+<section title="Local and Global Scope">
+        <section>
+            <h3>Local and Global Scope</h3>
+            <small>To be DONE</small>
+            <small>without global statement!!!</small>
+        </section>    
+</section>
+
+<!-- Exception Handling-->
+<section title="Exception Handling">
+        <section>
+            <h3>Exception Handling</h3>
+            <small>To be DONE</small>
+        </section>    
+</section>
+
+<!-- A short Program-->
+<section title="A short Program">
+        <section>
+            <h3>A short program</h3>
+            <small>To be DONE: Guess the number</small>
+        </section>    
+</section>
+
+<!-- Pracice Questions -->
+<section title="Practice Questions">
+        <section>
+            <h2>Practice Questions</h2>
+        </section>
+        <section>
+           
+        </section>
+        <section>
+                
+        </section>
+        <section>
+                
+        </section>
+        <section>
+               
+        </section>
+    </section>
+    <section>
+        <h2>Thank you!!</h2>
+    </section>
 
         </div>
 
