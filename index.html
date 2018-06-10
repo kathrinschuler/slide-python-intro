@@ -531,49 +531,75 @@
             <section title="Booleans">
                 <section>
                     <h2>Booleans</h2>
-                    <p> Boolean values </p>
                     <br>
                     <small>The Boolean data type has only two values:</small>
                     <br>
                     <small>True and False</small>
-                    <small>Boolean is capitalized because the data type is named after mathematician George Boole</small>
+                    <small><i>(Fun fact: Boolean is capitalized because the data type is named after mathematician George Boole)</i></small>
                 </section>
 
                 <section>
-                    <h2>Booleans</h2>
-                    <br>
-                    <small>Like any other value, Boolean values are used in expressions and can be stored in variables.
-                        If you don’t use the proper case or you try to use True and False for variable names,
-                        Python will give you an error message.
+                    <small>Boolean values can be stored in variables, e.g. my_first_bool = True
                         <br><br>
-                        1. Type the following into your terminal
+                        Python will give you an error message if:
+                        <br>
+                        • You don’t use the proper case (e.g. true instead of True)
+                        <br>
+                        •You try to use True and False for variable names
                     </small>
-                    <pre><code class="python" data-trim contenteditable>
-                        >>> spam = True #then press enter
-                        >>> spam #if you press enter again what do you think you'll see?
-                    </code></pre>
                 </section>
-
                 <section>
-                    <h2>Booleans</h2>
-                    <br>
+
                     <small>
-                        Answer: Because a boolean can be a variable, just like a number or a string it returned True
+                        1. Type the following into your terminal then hit enter
                     </small>
+
                     <pre><code class="python" data-trim contenteditable>
                         >>> spam = True
-                        >>> spam
-                        True
                     </code></pre>
 
-                    <small>
+                    <div class="fragment">
+                        <small>
+                        2. Now type out spam again, what do you think
+                        you'll get if you hit enter?
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> spam
+                    </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small>
+                        3. If you guessed True, then you'd be right!
+                        </small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> True
+                    </code></pre>
+                    </div>
+
+
+                </section>
+
+                <section>
+
+
+                    <h4>
                         Some more questions to try in your terminal:
+                    </h4>
                         <br><br>
-                        2. What happens if you used the wrong case for True?
-                        <br>
-                        3. What happens if you try to use True or False as the name of a variable?
-                        <br>
-                    </small>
+                        <small>
+                            1. What happens if you type <code>true</code> with a lower case t?
+                        <br><br>
+                            2. What happens if you try to use <code>True</code> or
+                            <code>False</code> as the name of a variable?
+                            <br>e.g. <code>True = 17</code>
+                        <br><br>
+                        3. What happens if you type <code>True == False</code>?
+                            <br>Why do you think that happened?
+                        <br><br>
+                            4. What happens if you type <code>False == False?</code>
+                            <br>Why?
+                        </small>
+
                 </section>
             </section>
 
@@ -620,6 +646,24 @@
                     </tbody>
                     </table>
                     </section>
+                <section>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 == 42
+                    >>> 42 == 99
+                    >>> 2 != 3
+                    >>> 2 != 2
+                    >>> 'hello' == 'hello'
+                    >>> 'hello' -- 'Hello'
+                    >>> 'dog' != 'cat'
+                    >>> True != False
+                    >>> 42 == 42.0
+                    >>> 42 == '42'
+                    </code></pre>
+                </section>
+
                     </section>
 
 
