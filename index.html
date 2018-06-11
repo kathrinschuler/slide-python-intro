@@ -291,7 +291,7 @@
                                 >>> password_to_pc = 'top secret' # valid
                                 >>> _password = 'test'            # valid
                                 >>> myPassword = 'my pets name'   # valid
-            
+
                                 >>> 4password                     # cannot start with a number
                                 >>> password-to-pc                # cannot use hyphens
                                 >>> password to pc                # no spaces
@@ -307,7 +307,7 @@
                     <div class="fragment">
                         <h3>Conventions</h3>
                         <pre><code class="python" data-trim contenteditable>
-                                >>> bank_account_nr = 12345     # snake case 
+                                >>> bank_account_nr = 12345     # snake case
                                 >>> bankAccountNr = 12345       # camel case
                         </code></pre>
                         <p>Pick one and stick with it</p>
@@ -320,7 +320,7 @@
             <section title="First Program">
                 <section>
                     <h2>Your First Program</h2>
-                    <small>The interactive shell is good for trying things out but we wan't to write entire programs. 
+                    <small>The interactive shell is good for trying things out but we wan't to write entire programs.
                         In a program you can type multiple instructions before executing them.</small>
                     <br>
                     <br>
@@ -356,7 +356,7 @@
                     print('What is your name?')    # ask for their name
                     </code></pre>
                         <small>The <code>print()</code> function prints everything inside the parenthesis on the screen.
-                        We say that python is <q>calling</q> the <code>print()</code> function with a string 
+                        We say that python is <q>calling</q> the <code>print()</code> function with a string
                         value <q>passed to the function</q>. A value passed to a function is called an <q> argument</q>
                     </small>
                         <br>
@@ -447,7 +447,7 @@
                     <br>
                     <div class="fragment">
                         <small>myAge contains the value returned from input() as a string.
-                            To add 1 to it we need to convert it to an integer. 
+                            To add 1 to it we need to convert it to an integer.
                         </small>
                         <pre><code class="python" data-trim contenteditable>
                         int(myAge) + 1
@@ -523,6 +523,248 @@
                 <h2>Thank you!!</h2>
             </section>
 
+            <!-- Lesson 2 -->
+            <section>
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 2</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
+
+             <!-- Booleans -->
+            <section title="Booleans">
+                <section>
+                    <h2>Booleans</h2>
+                    <br>
+                    <small>The Boolean data type has only two values:</small>
+                    <br>
+                    <small>True and False</small>
+                    <small><i>(Fun fact: Boolean is capitalized because the data type is named after mathematician George Boole)</i></small>
+                </section>
+
+                <section>
+                    <small>Boolean values can be stored in variables, e.g. my_first_bool = True</small>
+                        <br><br>
+                        <small>Python will give you an error message if:</small>
+                        <ul>
+                            <li>You don’t use the proper case (e.g. true instead of True)</li>
+                            <li>You try to use True and False for variable names</li>
+                        </ul>
+                </section>
+                <section>
+
+                    <small>Type the following into your terminal then hit enter</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = True
+                    </code></pre>
+                    <div class="fragment">
+                        <small>Now type out spam again, what do you think you'll get if you hit enter?
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> spam
+                    </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small>
+                        If you guessed True, then you'd be right!
+                        </small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> True
+                    </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h4>
+                        Some more questions to try in your terminal:
+                    </h4>
+                            <ol>
+                                <li>What happens if you type <code>true</code> with a lower case t?</li>
+                                <li>What happens if you try to use <code>True</code> or
+                                    <code>False</code> as the name of a variable?
+                                        e.g. <code>True = 17</code></li>
+                                <li>What happens if you type <code>True == False</code>?
+                                    Why do you think that happens?</li>
+                                <li>What happens if you type <code>False == False?</code>. Why?</li>
+                            </ol>
+                </section>
+            </section>
+
+            <!--Comparison Operators-->
+            <section title="Comparison Operators">
+                <section>
+                    <h2>Comparison Operators</h2>
+                    <small>
+                        We use these to compare two values and return a True or False statement
+                    </small>
+
+                    <table style="font-size: 20px">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>==</td>
+                        <td>Equal to</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Not equal to</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Less than</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>More than</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Less than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>More than or equal to</td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>
+                        <font color="red">Beware!</font>
+                        <br>
+                        ==
+                    </h2>
+                    <h3>
+                    is not the same as:
+                    </h3>
+                    <h2>
+                    =
+                        <br>
+                        </h2>
+                    <small>^^Forget this at your peril</small>
+                </section>
+                <section>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 == 42
+
+                    >>> 42 == 99
+
+                    >>> 2 != 3
+
+                    >>> 2 != 2
+
+                    >>> 'hello' == 'hello'
+
+                    >>> 'hello' -- 'Hello'
+
+                    >>> 'dog' != 'cat'
+
+                    >>> True != False
+
+                    >>> 42 == 42.0
+
+                    >>> 42 == '42'
+
+                    </code></pre>
+                </section>
+                <section>
+                    <small>
+                    Answers:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 == 42
+                    True
+                    >>> 42 == 99
+                    False
+                    >>> 2 != 3
+                    True
+                    >>> 2 != 2
+                    False
+                    >>> 'hello' == 'hello'
+                    True
+                    >>> 'hello' -- 'Hello'
+                    False
+                    >>> 'dog' != 'cat'
+                    True
+                    >>> True != False
+                    True
+                    >>> 42 == 42.0
+                    True
+                    >>> 42 == '42'
+                    False
+                    </code></pre>
+                </section>
+                <section>
+                    <small>
+                    Now let's try using some comparison operators from the terminal:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 < 100
+
+                    >>> 42 > 100
+
+                    >>> 42 < 42
+
+                    >>> my_number = 42
+                    >>> my_number <= 42
+
+                    >>> my_age = 29
+                    >>> my_age >= 10
+
+                    </code></pre>
+                </section>
+                <section>
+                    <small>
+                    Answers:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 < 100
+                    True
+                    >>> 42 > 100
+                    False
+                    >>> 42 < 42
+                    False
+                    >>> my_number = 42
+                    >>> my_number <= 42
+                    True
+                    >>> my_age = 29
+                    >>> my_age >= 10
+                    True
+                    </code></pre>
+                </section>
+            </section>
+
+            <section title="Boolean Operators">
+                <section>
+                <h2>
+                    Boolean Operators
+                </h2>
+                <h3><br>
+                    <code>and</code><br>
+                    <code>or</code><br>
+                    <code>not</code><br><br>
+                </h3>
+                <small>
+                    Only 3 things to remeber, easy!
+                </small>
+            </section>
+            <section>
+                <h3>Example:</h3>
+                <img height="250" data-src="pics/strawberries_and_cream.jpg" alt="and-operator">
+                <img height="250" data-src="pics/strawberries_or_cream.jpg" alt="or-operator">
+                <img height="250" data-src="pics/strawberries_not_cream.jpg" alt="not-operator">
+            </section>
+        </section>
+
+            
             <!-- LESSON 3 -->
             <section>
                 <h1>Introduction to Python</h1>
@@ -536,7 +778,7 @@
             <section title="Functions">
                 <section>
                     <h2>Functions</h2>
-                    <small>You already know <code>print(), input() and len()</code>. 
+                    <small>You already know <code>print(), input() and len()</code>.
             These are all built in functions but you can also write your own.</small>
                     <br>
                     <br>
@@ -577,10 +819,10 @@
                Try running this code a few times and to understand what it does.
            </small>
                 </section>
-                <section>:
+                <section>
                     <h4>Why do we need functions?</h4>
                     <div class="fragment">
-                        <small>...because we don't like to copy paste! 
+                        <small>...because we don't like to copy paste!
                     Have a look at what the code would look like without a function:</small>
                         <pre><code class="python" data-trim contenteditable>
                     print('Howdy!')
@@ -612,7 +854,7 @@
                         <pre><code class="python" data-trim contenteditable>
                     def hello(name):
                         print('Hello ' + name)
-                    
+
                     hello('Alice')
                     hello('Bob')
             </code></pre>
@@ -643,7 +885,7 @@
                             return 'Yes'
                         elif number == 4:
                             return 'Reply hazy try again'
-                        else: 
+                        else:
                             return 'I dont know the answer to this'
                     fortune = getAnswer(5)
                     print(fortune)
@@ -692,7 +934,7 @@
                     >>> spam = print('Hello!')
                     Hello!
                     >>> spam == None
-                    True  
+                    True
             </code></pre>
                     </div>
                     <div class="fragment">
