@@ -793,7 +793,147 @@
                     <small>Lines of Python code can be grouped together in <q>Blocks</q>.
                     You can tell when a block begins and Ends by indentation.
                     </small>
+                </section>
+                <section>
+                    <h2>If statements</h2>
+                    <small>“If this condition is true, execute the code in the clause.” 
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    if name == 'Alice':
+                        print('Hi, Alice')
+                    </code></pre>
+                    <br>
+                    <div class="fragment">
+                    <small>In Python, an if statement consists of the following:
+                    </small>
+                    <br>
+                    <small>
+                        <ul>
+                            <li>The <code>if</code> keyword</li>
+                            <li>A condition</li>
+                            <li>A colon</li>
+                            <li>An indented Block (the <q>if clause</q>)</li>
+                        </ul>
+                    </small>
+                </div>
+                </section>
+                <section>
+                <pre><code class="python" data-trim contenteditable>
+                if name == 'Alice':
+                    print('Hi, Alice')
+                </code></pre>
+                <img height="450" data-src="pics/if_statement.jpg" alt="variable">
+                </section>
+                <section>
+                        <h2>Else statements</h2>
+                        <small>“If this condition is true, execute the code in the clause.
+                            Else, execute the code in the else-block"</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        if name == 'Alice':
+                            print('Hi, Alice')
+                        else:
+                            print('Hello, stranger')
+                        </code></pre>
+                        <br>
+                        <div class="fragment">
+                        <small>In Python, an else statement consists of the following:
+                        </small>
+                        <br>
+                        <small>
+                            <ul>
+                                <li>The <code>else</code> keyword</li>
+                                <li>A colon</li>
+                                <li>An indented Block (the <q>else clause</q>)</li>
+                            </ul>
+                        </small>
+                    </div>
                     </section>
+                    <section>
+                    <pre><code class="python" data-trim contenteditable>
+                    if name == 'Alice':
+                        print('Hi, Alice')
+                    else:
+                        print('Hello, stranger')
+                    </code></pre>
+                    <img height="450" data-src="pics/else_statement.png" alt="variable">
+                </section>
+                <section>
+                        <h2>elif statements</h2>
+                        <small>“If this condition is true, execute the code in the clause.
+                            Else if this condition is true, execute the code in this clause” 
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        if name == 'Alice':
+                            print('Hi, Alice')
+                        elif age < 12:
+                            print('You are not Alice, kiddo')
+                        </code></pre>
+                        <br>
+                        <div class="fragment">
+                        <small>In Python, an elif statement consists of the following:
+                        </small>
+                        <br>
+                        <small>
+                            <ul>
+                                <li>The <code>elif</code> keyword</li>
+                                <li>A condition</li>
+                                <li>A colon</li>
+                                <li>An indented Block (the <q>elif clause</q>)</li>
+                            </ul>
+                        </small>
+                    </div>
+                    </section>
+                    <section>
+                    <pre><code class="python" data-trim contenteditable>
+                    if name == 'Alice':
+                        print('Hi, Alice')
+                    elif age < 12:
+                        print('You are not Alice, kiddo')
+                    </code></pre>
+                    <img height="450" data-src="pics/elif_statement.png" alt="variable">
+                </section>
+                <section>
+                    <small>You can put as many elif statements as you like:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        if name == 'Alice':
+                            print('Hi, Alice.')
+                        elif age < 12:
+                            print('You are not Alice, kiddo.')
+                        elif age > 2000:
+                            print('Unlike you, Alice is not an undead, immortal vampire.')
+                        elif age > 100:
+                            print('You are not Alice, grannie.')
+                    </code></pre>
+                    <small class="fragment">The order of the statements matters. Can you see why?</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                            if name == 'Alice':
+                                print('Hi, Alice.')
+                            elif age < 12:
+                                print('You are not Alice, kiddo.')
+                            elif age > 100:
+                                print('You are not Alice, grannie.')
+                            elif age > 2000:
+                                print('Unlike you, Alice is not an undead, immortal vampire.')
+                            
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h2>Putting it all together:</h2>
+                    <pre><code class="python" data-trim contenteditable>
+                            if name == 'Alice':
+                                print('Hi, Alice.')
+                            elif age < 12:
+                                print('You are not Alice, kiddo.')
+                            elif age > 100:
+                                print('You are not Alice, grannie.')
+                            elif age > 2000:
+                                print('Unlike you, Alice is not an undead, immortal vampire.')
+                            else:
+                                print('I dont know who you are, but certainly not Alice')
+                        </code></pre>
+                </section>
             </section>
 
             
