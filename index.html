@@ -532,29 +532,46 @@
                 </p>
             </section>
 
+            <section title="Flow Control">
+                <section>
+                <h2>Flow Control</h2>
+                <img height="500" data-src="pics/flowchart_rain.jpg" alt="flowchart_rain">
+                </section>
+                <section>
+                <p>A programm is a series of instructions, 
+                    but the real power is that the program can decide 
+                    which instructions to execute and which to skip.</small>  
+                <p>This is called <q>Flow control</q>.</small>
+                </section>
+            </section>
+
              <!-- Booleans -->
             <section title="Booleans">
                 <section>
                     <h2>Booleans</h2>
                     <br>
-                    <small>The Boolean data type has only two values:</small>
+                    <small>Unlike the other datatypes, the Boolean data type has only two values:</small>
                     <br>
                     <small>True and False</small>
-                    <small><i>(Fun fact: Boolean is capitalized because the data type is named after mathematician George Boole)</i></small>
+                    <small><i>(Fun fact: True/False is capitalized because the data type is named after mathematician George Boole)</i></small>
                 </section>
 
                 <section>
-                    <small>Boolean values can be stored in variables, e.g. my_first_bool = True</small>
-                        <br><br>
+                    <small>Boolean values can be stored in variables, e.g.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> my_first_bool = True
+                        </code></pre>
+                        <br>
                         <small>Python will give you an error message if:</small>
+                        <small>
                         <ul>
                             <li>You don’t use the proper case (e.g. true instead of True)</li>
                             <li>You try to use True and False for variable names</li>
                         </ul>
+                    </small>
                 </section>
                 <section>
-
-                    <small>Type the following into your terminal then hit enter</small>
+                    <small>Type the following into your interactive shell</small>
                     <pre><code class="python" data-trim contenteditable>
                         >>> spam = True
                     </code></pre>
@@ -574,19 +591,23 @@
                     </code></pre>
                     </div>
                 </section>
+ 
                 <section>
-                    <h4>
-                        Some more questions to try in your terminal:
-                    </h4>
-                            <ol>
-                                <li>What happens if you type <code>true</code> with a lower case t?</li>
-                                <li>What happens if you try to use <code>True</code> or
-                                    <code>False</code> as the name of a variable?
-                                        e.g. <code>True = 17</code></li>
-                                <li>What happens if you type <code>True == False</code>?
-                                    Why do you think that happens?</li>
-                                <li>What happens if you type <code>False == False?</code>. Why?</li>
-                            </ol>
+                    <p>Some more questions to try in your terminal:</p>
+                    <small>What happens if you type <code>true</code> with a lower case t?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> true
+                        </code></pre>
+                        <small>What happens if you try to use <code>True</code> or
+                        <code>False</code> as the name of a variable?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> True = 2 + 2
+                        </code></pre>     
+                        <small>What happens if you type <code>False == False</code>? Why?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> False == False
+                        </code></pre> 
+                        <small>This is called <q>comparison operators</q> and we'll cover that next!</small>  
                 </section>
             </section>
 
@@ -598,7 +619,7 @@
                         We use these to compare two values and return a True or False statement
                     </small>
 
-                    <table style="font-size: 20px">
+                    <table style="font-size: 25px">
                     <thead>
                         <tr>
                             <th>Operator</th>
@@ -634,83 +655,37 @@
                     </table>
                 </section>
                 <section>
-                    <h2>
-                        <font color="red">Beware!</font>
-                        <br>
-                        ==
-                    </h2>
-                    <h3>
-                    is not the same as:
-                    </h3>
-                    <h2>
-                    =
-                        <br>
-                        </h2>
-                    <small>^^Forget this at your peril</small>
+                    <h2><font color="red"> Beware</font></h2>
+                    <h2>==</h2>
+                    <h2>is not the same as:</h2>
+                    <h2>=</h2>
                 </section>
                 <section>
+                    <h3>Time for some practice!</h3>
                     <small>
                     Type the following into your terminal and see what they return:
                     </small>
                     <pre><code class="python" data-trim contenteditable>
                     >>> 42 == 42
-
                     >>> 42 == 99
-
                     >>> 2 != 3
-
                     >>> 2 != 2
-
                     >>> 'hello' == 'hello'
-
-                    >>> 'hello' -- 'Hello'
-
+                    >>> 'hello' == 'Hello'
                     >>> 'dog' != 'cat'
-
                     >>> True != False
-
                     >>> 42 == 42.0
-
                     >>> 42 == '42'
-
                     </code></pre>
                 </section>
                 <section>
+                    <h3>Time for some practice!</h3>
                     <small>
-                    Answers:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    >>> 42 == 42
-                    True
-                    >>> 42 == 99
-                    False
-                    >>> 2 != 3
-                    True
-                    >>> 2 != 2
-                    False
-                    >>> 'hello' == 'hello'
-                    True
-                    >>> 'hello' -- 'Hello'
-                    False
-                    >>> 'dog' != 'cat'
-                    True
-                    >>> True != False
-                    True
-                    >>> 42 == 42.0
-                    True
-                    >>> 42 == '42'
-                    False
-                    </code></pre>
-                </section>
-                <section>
-                    <small>
-                    Now let's try using some comparison operators from the terminal:
+                    Type the following into your terminal and see what they return:
                     </small>
                     <pre><code class="python" data-trim contenteditable>
                     >>> 42 < 100
-
                     >>> 42 > 100
-
                     >>> 42 < 42
 
                     >>> my_number = 42
@@ -718,26 +693,6 @@
 
                     >>> my_age = 29
                     >>> my_age >= 10
-
-                    </code></pre>
-                </section>
-                <section>
-                    <small>
-                    Answers:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    >>> 42 < 100
-                    True
-                    >>> 42 > 100
-                    False
-                    >>> 42 < 42
-                    False
-                    >>> my_number = 42
-                    >>> my_number <= 42
-                    True
-                    >>> my_age = 29
-                    >>> my_age >= 10
-                    True
                     </code></pre>
                 </section>
             </section>
