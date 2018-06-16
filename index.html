@@ -699,9 +699,8 @@
 
             <section title="Boolean Operators">
                 <section>
-                <h2>
-                    Boolean Operators
-                </h2>
+                <h2>Boolean Operators</h2>
+                <small>Comparing booleans!</small>
                 <h3><br>
                     <code>and</code><br>
                     <code>or</code><br>
@@ -712,12 +711,90 @@
                 </small>
             </section>
             <section>
-                <h3>Example:</h3>
-                <img height="250" data-src="pics/strawberries_and_cream.jpg" alt="and-operator">
-                <img height="250" data-src="pics/strawberries_or_cream.jpg" alt="or-operator">
-                <img height="250" data-src="pics/strawberries_not_cream.jpg" alt="not-operator">
+                <h4>The <code>and</code> operator</h4>
+                <small>Evaluates to True if <i>both</i> booleans are True</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> (5 > 2) and (5 < 10)
+                >>> True
+
+                >>> (5 == 2) and (5 < 10)
+                >>> False
+                </code></pre>
+                <small>Example: You need to be older than 20 and younger than 30.</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> age = 27
+                >>> (age > 20) and (age < 30)
+                >>> True
+                </code></pre>
             </section>
-        </section>
+            <section>
+                <h4>The <code>or</code> operator</h4>
+                <small>Evaluates to True if <i>either</i> of the booleans are True</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> (age > 20) and (5 < 1)
+                >>> True
+
+                >>> (5 == 2) and (5 < 1)
+                >>> False
+                </code></pre>
+                <small>Example: To watch Netflix on your phone you need to be connected to Wifi OR have a mobile data connection.</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> wifi_connection = True 
+                >>> mobile_connection = False
+                >>> wifi_connection or mobile_connection
+                >>> True
+                </code></pre>
+            </section>
+
+            <section>
+                <h4>The <code>not</code> operator</h4>
+                <small>Unlike <code>and</code> and <code>or</code> the <code>not</code>
+                 operator only takes one Boolean</small>
+                <small>Evaluates to the opposite of the Boolean value</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> not True
+                >>> False
+
+                >>> not not False
+                >>> False
+                </code></pre>
+                <small>Example: If you are not in debt you can get a credit card</small>
+                <pre><code class="python" data-trim contenteditable>
+                >>> in_debt = True # owes money to someone
+                >>> not in_debt
+                >>> False # can not get a credit card
+                </code></pre>
+            </section>
+            <section>
+                    <h3>Time for some practice!</h3>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> (4 < 5) and (5 < 6)
+                    >>> (4 < 5) and (9 < 6)
+                    >>> (1 == 2) or (2 == 2)
+
+                    >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
+                    </code></pre>
+                </section>
+            </section>
+            <section title="Flow Control Statements">
+                <section>
+                    <h2>Flow Control Statements</h2>
+                </section>
+                <section>
+                    <h2>A bit of vocabulary</h2>
+                    <h4>Conditions</h4>
+                    <small>Conditions always evaluate down to a Boolean value, <code>True</code> or <code>False</code>. 
+                        A flow control statement decides what to do based on whether its condition is True or False.</small>
+                    <br><br>
+                        <h4>Blocks of Code</h4>
+                    <small>Lines of Python code can be grouped together in <q>Blocks</q>.
+                    You can tell when a block begins and Ends by indentation.
+                    </small>
+                    </section>
+            </section>
 
             
             <!-- LESSON 3 -->
