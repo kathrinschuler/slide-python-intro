@@ -93,6 +93,11 @@
                          4
 					</code></pre>
                     <small>Do you know any other operators?</small>
+                    <aside class="notes">
+                        - 2 + 2 is called an expression.<br>
+                        - Expressions consist of values (2, 2) and operators (such as +)<br>
+                        - Expressions evaluate to values.
+                    </aside>
                 </section>
                 <section>
                     <p>There are plenty of operators available:</p>
@@ -160,6 +165,12 @@
                                      ^
                         SyntaxError: invalid syntax
 					</code></pre>
+                    <aside class="notes">
+                        - Programs will crash if they contain code the computer can’t understand, which will cause Python to show an error message.
+                        An error message won’t break your computer, though, so don’t be afraid to make mistakes.
+                        A crash just means the program stopped running unexpectedly.<br>
+                        - Googling the error message helps
+                    </aside>
                 </section>
                 <section>
                     <h3>Syntax matters</h3>
@@ -177,6 +188,11 @@
                         SyntaxError: invalid syntax
 					    </code></pre>
                     </div>
+                    <aside class="notes">
+                        - These rules for putting operators and values together to form expressions are a fundamental part of Python as a programming language. <br>
+                        - Just like the grammar rules that help us communicate.<br>
+                        - If you type a bad python instruction it will not understand and display a SyntaxError
+                    </aside>
                 </section>
             </section>
 
@@ -216,6 +232,15 @@
                     </code></pre>
                         <small>What went wrong here?</small>
                     </div>
+                    <aside class="notes">
+                        - The integer (or int) data type indicates values that are whole numbers. <br>
+                        - Numbers with a decimal point, such as 3.14, are called floating-point numbers (or floats). <br>
+                        - Note that even though the value 42 is an integer, the value 42.0 would be a floating-point number.<br>
+                        - Python programs can also have text values called strings (strs). <br>
+                        - Always surround your string in single quote (') characters (as in 'Hello' or 'Goodbye cruel world!') so Python knows where the string begins and ends. <br>
+                        - You can even have a string with no characters in it, '', called a blank string.<br>
+                        - If you ever see the error message SyntaxError: EOL while scanning string literal, you probably forgot the final single quote character at the end of the string
+                    </aside>
                 </section>
                 <section>
                     <p>The behaviour of operator changes depending on the data types:</p>
@@ -258,6 +283,11 @@
                     </code></pre>
                         <img height="250" data-src="pics/variable.jpg" alt="variable">
                     </div>
+                    <aside class="notes">
+                        - You’ll store values in variables with an assignment statement. <br>
+                        - An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. <br>
+                        - If you enter the assignment statement spam = 42, then a variable named spam will have the integer value 42 stored in it. <br>
+                    </aside>
                 </section>
                 <section>
                     <h4>Try it out:</h4>
@@ -281,6 +311,12 @@
                     >>> spam
                     42
                     </code></pre>
+                    <aside class="notes">
+                        - A variable is initialized (or created) the first time a value is stored in it.<br>
+                        - After that, you can use it in expressions with other variables and values. <br>
+                        - When a variable is assigned a new value, the old value is forgotten, which is why spam evaluated to 42 instead of 40 at the end of the example. <br>
+                        - This is called overwriting the variable.
+                    </aside>
                 </section>
                 <section>
                     <pre><code class="python" data-trim contenteditable>
@@ -358,6 +394,10 @@
                     </code></pre>
                         <small>Make sure you save it!</small>
                     </div>
+                    <aside class="notes">
+                        - When there are no more lines of code to execute, the Python program terminates; that is, it stops running. <br>
+                        - (You can also say that the Python program exits.)
+                    </aside>
                 </section>
                 <section>
                     <h4>Comments</h4>
@@ -382,6 +422,15 @@
                         <small>The parenthesis are important. They mean we are calling a function. Just <code>print</code>
                     would refer to a variable.</small>
                     </div>
+                    <aside class="notes">
+                        - Python ignores comments, and you can use them to write notes or remind yourself what the code is trying to do.0 <br>
+                        - Any text for the rest of the line following a hash mark (#) is part of a comment. <br>
+                        - Sometimes, programmers will put a # in front of a line of code to temporarily remove it while testing a program. <br>
+                        - This is called commenting out code, and it can be useful when you’re trying to figure out why a program doesn’t work. <br>
+                        - You can remove the # later when you are ready to put the line back in.<br>
+                        - Python also ignores the blank line after the comment. You can add as many blank lines to your program as you want. This can make your code easier to read, like paragraphs in a book.<br>
+                        - When writing a function name, the opening and closing parentheses at the end identify it as the name of a function. <br>
+                    </aside>
                 </section>
                 <section>
                     <h4>The input() function</h4>
@@ -400,6 +449,10 @@
                         <small>If 'Kathrin' was stored in <code>myName</code> then this expression would print
                     "It is good to meet you, Kathrin"</small>
                     </div>
+                    <aside class="notes">
+                        - You can think of the input() function call as an expression that evaluates to whatever string the user typed in. <br>
+                        - If the user entered 'Al', then the expression would evaluate to myName = 'Al'.
+                    </aside>
                 </section>
                 <section>
                     <h4>The len() function</h4>
@@ -429,6 +482,12 @@
                     TypeError: Can't convert 'int' object to str implicitly
                     </code></pre>
                     </div>
+                    <aside class="notes">
+                        - Just like those examples, len(myName) evaluates to an integer.<br>
+                        - Python gives an error because you can use the + operator only to add two integers together or concatenate two strings.<br>
+                        - You can’t add an integer to a string because this is ungrammatical in Python. <br>
+                        - Similarly if you want to do get a number from the user as an input and do calculations on it. You will have to convert it first.
+                    </aside>
                 </section>
                 <section>
                     <h4>The str(), int() and float() functions</h4>
@@ -453,7 +512,9 @@
                         10.0
                         </code></pre>
                     </div>
-
+                    <aside class="notes">
+                        - int() function is useful if you want to round up/down
+                    </aside>
                 </section>
                 <section>
                     <small>How can you do calculations on a variable and then print it? </small>
@@ -496,6 +557,9 @@
                     >>> 42.0 == 0042.000
                     True
                     </code></pre></div>
+                    <aside class="notes">
+                        - Pay attention to comparing strings and integers/floats!!
+                    </aside>
                 </section>
             </section>
 
