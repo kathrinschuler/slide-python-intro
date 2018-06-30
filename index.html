@@ -1016,7 +1016,146 @@
                                 print('I dont know who you are, but certainly not Alice')
                         </code></pre>
                 </section>
+                <section>
+                        <h3>Time for some practice!</h3>
+                        <small>
+                            // TO BE CHANGED TO SOMETHING MEANINGFUL
+                            Can you write a small program that asks a user for his/her age and then decides if 
+                            they are old enough to enter the bar and consume alcohol?
+                        </small>
+
+                    </section>
             </section>
+            <section>
+                <section>
+                    <h2>While loop statements</h2>
+                    <img height="450" data-src="pics/while_loop.png" alt="variable">
+
+                </section>
+                <section>
+                    <small>You can make a block of code execute over and over again with a while statement. 
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    spam = 0
+                    while spam < 5:
+                        print('Hello, world.')
+                        spam = spam + 1
+                        </code></pre>
+                    <br>
+                        <div class="fragment">
+                            <small>A while statement consists of the following:</small>
+                        <br>
+                            <small>
+                            <ul>
+                                <li>The <code>while</code> keyword</li>
+                                <li>A condition</li>
+                                <li>A colon</li>
+                                <li>An indented Block (the <q>while clause</q>)</li>
+                            </ul>
+                    </small>
+                </div>
+                </section>
+                <!-- needed??? -->
+                <!-- <section>
+                    <h3>If statements vs while loops</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                            spam = 0
+                            if spam < 5:
+                                print('Hello, world.')
+                                spam = spam + 1
+                    </code></pre>  
+                    <br>
+                    <pre><code class="python" data-trim contenteditable>
+                            spam = 0
+                            while spam < 5:
+                                print('Hello, world.')
+                                spam = spam + 1
+                    </code></pre>
+                            <br>
+                </section> -->
+                <section>
+                    <h3>An annoying while loop</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                            name = ''
+                            while name != 'your name':
+                                print('Please type your name.')
+                                name = input()
+                            print('Thank you!')
+                    </code></pre>
+                    <small>Try it out! How can you reach the 'Thank you'? Why?</small>
+                </section>
+                <section>
+                    <h3>break statements</h3>
+                    <small> There is a shortcut to getting the program execution to break out of a while loop’s clause early. 
+                        If the execution reaches a break statement, it immediately exits the while loop
+                    </small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        while True:
+                            print('Please type your name.')
+                            name = input()
+                            if name == 'your name':
+                                break
+                        print('Thank you!')
+                    </code></pre>
+                </div>
+                <div class="fragment">
+                    <small>This does the same thing as the previous code.</small>
+                </div>
+                <aside class="notes">The first line creates an infinite loop; 
+                        it is a while loop whose condition is always True. 
+                        (The expression True, after all, always evaluates down to the value True.) 
+                        The program execution will always enter the loop and will exit it only when a break statement is executed. 
+                        (An infinite loop that never exits is a common programming bug.)<br>
+                    - You can exit an infinite loop using Ctrl-C to kill the program.</aside>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Practice Questions</h2>
+                </section>
+
+                <section>
+                    <h4>What are the two values of the Boolean data type? How do you write them?</h4>
+                </section>
+                <section>
+                    <h4>What do the following expressions evaluate to?</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                            (5 > 4) and (3 == 5)
+                            not (5 > 4)
+                            (5 > 4) or (3 == 5)
+                            not ((5 > 4) or (3 == 5))
+                            (True and True) and (True == False)
+                            (not False) or (not True)
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Write code that prints Hello if 1 is stored in spam, 
+                        prints Howdy if 2 is stored in spam, and prints Greetings! 
+                        if anything else is stored in spam.</h4>
+                </section>
+                <section>
+                    <h4>Look up what <code>continue</code> statements do. Can you understand the following code?</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                        while True:
+                            print('Who are you?')
+                            name = input()
+                            if name != 'Joe':
+                                continue
+                            print('Hello, Joe. What is the password? (It is a fish.)')
+                            password = input()
+                            if password == 'swordfish':
+                                break
+                        print('Access granted.')
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>Read about <code>for loops</code>. Can you write some code to print out all the numbers from 1 to 10?</h4>
+                    <small>Can you also print out all the numbers between 20 and 40 in steps of 2? (e.g. 20,22,24...)</small>
+                </section>
+
+            </section
 
             
             <!-- LESSON 3 -->
@@ -1158,7 +1297,7 @@
                     <pre><code class="python" data-trim contenteditable>
                         print(getAnswer(3))
                 </code></pre>
-                    <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using this function?</small>
+                    <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using the function <code>getAnswer()</code>?</small>
                 </section>
                 <section>
                     <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
