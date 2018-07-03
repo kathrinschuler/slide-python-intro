@@ -676,20 +676,26 @@
  
                 <section>
                     <p>Some more questions to try in your terminal:</p>
+                    <div class="fragment">
                     <small>What happens if you type <code>true</code> with a lower case t?</small>
                         <pre><code class="python" data-trim contenteditable>
                         >>> true
                         </code></pre>
+                    </div>
+                    <div class="fragment">
                         <small>What happens if you try to use <code>True</code> or
                         <code>False</code> as the name of a variable?</small>
                         <pre><code class="python" data-trim contenteditable>
                         >>> True = 2 + 2
-                        </code></pre>     
+                        </code></pre>
+                    </div>
+                    <div class="fragment">
                         <small>What happens if you type <code>False == False</code>? Why?</small>
                         <pre><code class="python" data-trim contenteditable>
                         >>> False == False
                         </code></pre> 
-                        <small>This is called <q>comparison operators</q> and we'll cover that next!</small>  
+                        <small>This is called <q>comparison operators</q> and we'll cover that next!</small>
+                    </div>
                 </section>
             </section>
 
@@ -813,7 +819,7 @@
                 <h4>The <code>or</code> operator</h4>
                 <small>Evaluates to True if <i>either</i> of the booleans are True</small>
                 <pre><code class="python" data-trim contenteditable>
-                >>> (age > 20) or (5 < 1)
+                >>> (27 > 20) or (5 < 1)
                 >>> True
 
                 >>> (5 == 2) or (5 < 1)
@@ -1019,11 +1025,28 @@
                 <section>
                         <h3>Time for some practice!</h3>
                         <small>
-                            // TO BE CHANGED TO SOMETHING MEANINGFUL
-                            Can you write a small program that asks a user for his/her age and then decides if 
-                            they are old enough to enter the bar and consume alcohol?
+                            Can you write a small program that asks a user if he/she has wifi and/or a mobile connection and then tells them if they can access the internet?
+                            Wifi should always be the preference if available.
+                            The expected output should look something like:
                         </small>
+                        <pre><code class="python" data-trim contenteditable>
+                            >>> "Do you have wifi?"   yes
+                            >>> "Do you have mobile data?"   yes
+                            >>> "You can access the internet through wifi"
 
+                            >>> "Do you have wifi?"   yes
+                            >>> "Do you have mobile data?"   no
+                            >>> "You can access the internet through wifi"
+
+                            >>> "Do you have wifi?"   no
+                            >>> "Do you have mobile data?"   yes
+                            >>> "You can access the internet through mobile data"
+
+                            >>> "Do you have wifi?"   no
+                            >>> "Do you have mobile data?"   no
+                            >>> "I am sorry, you cannot access the internet"
+                        </code></pre>
+                    <small>Think about how you can handle different cases of a user writing "yes" (yes/Yes/YES/Y, etc)</small>
                     </section>
             </section>
             <section>
