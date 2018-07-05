@@ -1049,7 +1049,7 @@
                     <small>Think about how you can handle different cases of a user writing "yes" (yes/Yes/YES/Y, etc)</small>
                     </section>
             </section>
-            <section>
+            <section title="While Loops">
                 <section>
                     <h2>While loop statements</h2>
                     <img height="450" data-src="pics/while_loop.png" alt="variable">
@@ -1134,7 +1134,7 @@
                 </section>
             </section>
 
-            <section>
+            <section title="Practice Questions">
                 <section>
                     <h2>Practice Questions</h2>
                 </section>
@@ -1178,7 +1178,7 @@
                     <small>Can you also print out all the numbers between 20 and 40 in steps of 2? (e.g. 20,22,24...)</small>
                 </section>
 
-            </section
+            </section>
 
             
             <!-- LESSON 3 -->
@@ -1208,7 +1208,7 @@
             hello()
             hello()
             hello()
-        </code></pre>
+            </code></pre>
                     </div>
                     <p class="fragment">Let's have a closer look:</p>
                 </section>
@@ -1280,6 +1280,27 @@
                         <small>What happens if you call <code>print(name)</code> after the function?</small>
                     </div>
                 </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can you write a function called <code>countdown</code> that takes a number as an input and then counts up down from this number?
+                        Can you call it with different arguments to test it?</small>
+                     <pre><code class="python" data-trim contenteditable>
+                    def countdown(number):
+                         # Your code goes here
+                    </code></pre>
+                    <small>This is how the call and output would look like:</small>
+
+                    <pre><code class="python" data-trim contenteditable>
+                    countdown(3)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 3
+                    >>> 2
+                    >>> 1
+                    >>> GO!
+                    </code></pre>
+                    <small>Bonus points: Can you ask the user to input the number? Can you also ask the user if he/she wants to count up or down and act accordingly?</small>
+                </section>
             </section>
 
             <!-- Return values and Return statements -->
@@ -1326,7 +1347,8 @@
                     <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
                 </small>
                     <pre><code class="python" data-trim contenteditable>
-                        number = input('Tell me a number: ')
+                        print('Tell me a number: ')
+                        number = input()
                         fortune = getAnswer(int(number))
                         print(fortune)
                 </code></pre>
@@ -1360,11 +1382,75 @@
                 </section>
             </section>
 
-            <!-- Keyword arguments-->
+            <!-- Named Arguments to the print function-->
             <section title="Keyword arguments">
                 <section>
                     <h3>Keyword arguments</h3>
-                    <small>Needed???</small>
+                    <small>Most arguments have a position in the function call. For example:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        import random
+                        number = random.randint(1,10)
+                </code></pre>
+                    <small>This will create a random number between 1 and 10. The first argument (1) will always be the lower bound.
+                        The second argument (10) will be the upper bound.</small>
+                    <br><br>
+                    <small>A small sidenote: <code>import</code> will always be at the top of the file!</small>
+                </section>
+                <section>
+                    <small>Let's have a loook at the print function:</small>
+                      <pre><code class="python" data-trim contenteditable>
+                          print('Hello')
+                          print('World')
+                        </code></pre>
+                    <small>will produce:</small>
+                      <pre><code class="python" data-trim contenteditable>
+                        >>> Hello
+                        >>> World
+                    </code></pre>
+                    <div class="fragment">
+                    <small>This is because print automatically adds a new line at the end. One way to avoid this is to override the line ending:</small>
+
+                 <pre><code class="python" data-trim contenteditable>
+                          print('Hello', end='')
+                          print('World')
+                </code></pre>
+                         <pre><code class="python" data-trim contenteditable>
+                        >>> HelloWorld
+                    </code></pre>
+                </div>
+                    <div class="fragment">
+                        <small><code>end</code> is called a keyword argument</small>
+                    </div>
+                </section>
+                <section>
+                    <small>Similarly, when you print multiple string values:</small>
+                     </code></pre>
+                         <pre><code class="python" data-trim contenteditable>
+                        print('cats', 'dogs', 'mice')
+                    </code></pre>
+                      <pre><code class="python" data-trim contenteditable>
+                        >>> cats dogs mice
+                    </code></pre>
+                    <small>Python automatically puts a single space between. If you want to change that behaviour,  you can change the <code>sep</code> argument of the print function:</small>
+                    <div class="fragment">
+                       <pre><code class="python" data-trim contenteditable>
+                        print('cats', 'dogs', 'mice', sep=',')
+                    </code></pre>
+                          <pre><code class="python" data-trim contenteditable>
+                        >>> cats,dogs,mice
+                    </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can get the following line on the screen? how?</small>
+                     <pre><code class="python" data-trim contenteditable>
+                        >>> shirts|trousers|blouses|shoes
+                    </code></pre>
+                    <small>Ask the user to input a number. Can you print all the numbers from 1 to the user's number like that?</small>
+                     <pre><code class="python" data-trim contenteditable>
+                        >>> 1|2|3|4|5
+                    </code></pre>
                 </section>
             </section>
 
