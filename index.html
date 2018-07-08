@@ -1341,10 +1341,9 @@
                     <pre><code class="python" data-trim contenteditable>
                         print(getAnswer(3))
                 </code></pre>
-                    <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using the function <code>getAnswer()</code>?</small>
                 </section>
                 <section>
-                    <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
+                    <small>We could write a program that asks the user for a number and then prints his fortune:
                 </small>
                     <pre><code class="python" data-trim contenteditable>
                         print('Tell me a number: ')
@@ -1458,9 +1457,62 @@
             <section title="Local and Global Scope">
                 <section>
                     <h3>Local and Global Scope</h3>
-                    <small>To be DONE</small>
-                    <small>without global statement!!!</small>
+                    <small>Parameters and variables that are assigned in a function are said to exist in that function’s <q>local scope</q>. 
+                        Variables that are assigned outside all functions are said to exist in the <q>global scope.</q> </small>
+                    <br><br>
+                        <small>Scope is like a container. When a scope is destrozed, all the variables in it are forgotten.</small>
+                    <br><br>
+                        <small>The global scope lasts from your when your program begins until it ends. </small>
                 </section>
+                <section>
+                    <small>Local variables can not be read from outside:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                            def spam():
+                                eggs = 31337
+                            spam()
+                            print(eggs)
+                        </code></pre>
+                        <small>eggs variable is only known in the local scope of spam!</small>
+
+                        <pre><code class="python" data-trim contenteditable>
+                            Traceback (most recent call last):
+                                File "C:/test3784.py", line 4, in <module>
+                                  print(eggs)
+                            NameError: name 'eggs' is not defined
+                    </code></pre>
+                </section>
+                <section>
+                    <small>Global variables can be read from inside:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        def spam():
+                            print(eggs)
+
+                        eggs = 42
+                        spam()
+                        </code></pre>
+                        <small>Will print out:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> 42
+                        </code></pre>
+                </section>
+                <section>
+                <small>Local and Global variables with the same name:</small>
+                <small>Consider the same example as before, with a tiny change:</small>
+                <pre><code class="python" data-trim contenteditable>
+                        def spam():
+                            eggs = 19
+                            print(eggs)
+
+                        eggs = 42
+                        spam()
+                        </code></pre>
+                <small>What will be printed? Why?</small>
+                <small>This can be very confusing... 
+                    And is the reason why you should avoid variables with the same name in global and local scope</small>
+                <br><br>
+                    <small>To read more about scope, please refer to the section in the book where it is explained further!</small>
+                </section>
+
             </section>
 
             <!-- Exception Handling-->
