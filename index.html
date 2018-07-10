@@ -1364,6 +1364,13 @@
                            print(datetime.today())
                 </code></pre>
                 </section>
+                <section>
+                    <h3>Time for practice!</h3>
+                    <small>Have a look at the <a href="https://docs.python.org/3.6/library/math.html#constants">math</a> module (especially the Constants).
+                    You don't only have functions in modules. You can also have general variables. Can you print out pi using the math module?</small>
+                        <br> <br>
+                        <small>If you look at the Trigonometric Functions section of the documentation, how would you calculate sin(0.9) using the math module? </small>
+                </section>
             </section>
 
             <!-- The None Value-->
@@ -1385,10 +1392,26 @@
                     True
             </code></pre>
                     </div>
-                    <div class="fragment">
+                </section>
+                <section>
                         <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
                         <small><code>return</code> without a value will also mean <code>None</code></small>
-                    </div>
+                    <pre><code class="python" data-trim contenteditable>
+                       def hello():
+                            print("test")
+                </code></pre>
+                <small>... is the same as ...</small>
+                <pre><code class="python" data-trim contenteditable>
+                    def hello():
+                         print("test")
+                         return None
+             </code></pre>
+             <small>... is the same as ...</small>
+             <pre><code class="python" data-trim contenteditable>
+                def hello():
+                     print("test")
+                     return
+         </code></pre>
                 </section>
             </section>
 
@@ -1479,8 +1502,11 @@
                 <section>
                     <small>Local variables can not be read from outside:</small>
                     <pre><code class="python" data-trim contenteditable>
+                            # Function Definitions    
                             def spam():
                                 eggs = 31337
+
+                            # Execution starts here
                             spam()
                             print(eggs)
                         </code></pre>
@@ -1488,7 +1514,7 @@
 
                     <pre><code class="python" data-trim contenteditable>
                             Traceback (most recent call last):
-                                File "C:/test3784.py", line 4, in <module>
+                                File "C:/test3784.py", line 4
                                   print(eggs)
                             NameError: name 'eggs' is not defined
                     </code></pre>
@@ -1496,9 +1522,11 @@
                 <section>
                     <small>Global variables can be read from inside:</small>
                     <pre><code class="python" data-trim contenteditable>
+                        # Function Definitions    
                         def spam():
                             print(eggs)
 
+                        # Execution starts here
                         eggs = 42
                         spam()
                         </code></pre>
@@ -1511,36 +1539,100 @@
                     <small>Local and Global variables with the same name:</small>
                     <small>Consider the same example as before, with a tiny change:</small>
                     <pre><code class="python" data-trim contenteditable>
+                        # Function Definitions
                         def spam():
                             eggs = 19
                             print(eggs)
 
+                        # Execution starts here
                         eggs = 42
                         spam()
                         </code></pre>
                     <small>What will be printed? Why?</small>
+                    <div class="fragment">
                     <small>This can be very confusing... 
                     And is the reason why you should avoid variables with the same name in global and local scope</small>
                     <br><br>
                     <small>To read more about scope, please refer to the section in the book where it is explained further!</small>
+                </div>
                 </section>
 
             </section>
 
-            <!-- Exception Handling-->
+            <!-- Exception Handling
             <section title="Exception Handling">
                 <section>
                     <h3>Exception Handling</h3>
                     <small>To be DONE</small>
                 </section>
-            </section>
+            </section> -->
 
             <!-- A short Program-->
             <section title="A short Program">
                 <section>
                     <h3>A short program</h3>
-                    <small>To be DONE: Guess the number</small>
+                    <h4>Guess the number</h4>
+                    <small>Let's see how we can put everything we have learnt so far together!
+                        The output of our program will look something like this:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    I am thinking of a number between 1 and 20.
+                    Take a guess.
+                    10
+                    Your guess is too low.
+                    Take a guess.
+                    15
+                    Your guess is too low.
+                    Take a guess.
+                    17
+                    Your guess is too high.
+                    Take a guess.
+                    16
+                    Good job! You guessed my number in 4 guesses!   
+                    </code></pre>
                 </section>
+                <section>
+                    <small>Let's start with a new file and start with the computer generating a number between 1 and 20:</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        import random
+                        # The computer generates a random number
+                        secret_number = random.randint(1,20)
+                        print('I am thinking of a number between 1 and 20')
+                    </code></pre>
+                </div>
+                </section>
+                <section>
+                        <small>As a next step let's ask the user to take 6 guesses. 
+                            (If he doesn't guess correctly we don't want to bother him forever, if he figures it out before we can stop asking and congratulate him.)</small>
+                        <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                                # Ask the player to guess maximum 6 times.
+                                total_guesses_taken = 0 
+                                while total_guesses_taken < 6:
+                                    print('Take a guess.')
+                                    guess = int(input())
+                                
+                                    if guess < secret_number:
+                                        print('Your guess is too low.')
+                                    elif guess > secret_number:
+                                        print('Your guess is too high.')
+                                    else:
+                                        break  # This is the correct guess, we can exit the while loop now
+                        </code></pre>
+                    </div>
+                    </section>
+                    <section>
+                            <small>Finally we can tell the user whether he or she was correct or not.</small>
+                            <div class="fragment">
+                            <pre><code class="python" data-trim contenteditable>
+                                if guess == secret_number:
+                                    print('Good job! You guessed my number in ' + str(total_guesses_taken) + ' guesses!')
+                                else:
+                                    print('Nope. The number I was thinking of was ' + str(secret_number))
+                            </code></pre>
+                        </div>
+                    </section>
             </section>
 
             <!-- Pracice Questions -->
@@ -1549,16 +1641,60 @@
                     <h2>Practice Questions</h2>
                 </section>
                 <section>
-
+                        <small>When does the code in a function execute: 
+                        when the function is defined or when the function is called?</small>
+                        <br><br>
+                        <small>What is the difference between a function and a function call?</small>
                 </section>
                 <section>
-
+                    <small>What happens to variables in a local scope when the function call returns?</small>
                 </section>
                 <section>
+                    <small>If you had a function named <code>bacon()</code> in a module named <code>spam</code>, how would you call it after <code>import spam?</code></small>
+                </section>
+            </section>
 
+            <section title="Practice Projects">
+                <section>
+                    <h3>Practice Project</h3>
+                    <h4>The Collatz Sequence</h4>
+                    <small>Step1: Write a function named <code>collatz()</code> that has one parameter named number. If number is even, then <code>collatz()</code> should print number // 2 and return this value. If number is odd, then <code>collatz()</code> should print and return 3 * number + 1.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        def collatz(number):
+                            # Your code
+                        </code></pre>
+                    </section>
+                <section>
+                    <small>Step 2: Then write a program that lets the user type in an integer and that keeps calling <code>collatz()</code> on that number until the function returns the value 1. </small>
+                    <br><br>
+                    <small>
+                        (Amazingly enough, this sequence actually works for any integer—sooner or later, using this sequence, you’ll arrive at 1! 
+                        Even mathematicians aren’t sure why.) </small>
+                        <br><br>
+                        <small><b>Things to remember:</b></small>
+                            <small>- Remember to convert the value from input() to an int, otherwise it will be a string value</small>
+                            <small>- You can check if a number is even using <code>number % 2 == 0</code> (If <code>number % 2 == 1</code> the number is odd).
+                            Maybe you can adapt the following code to help you?</small>
+                            <pre><code class="python" data-trim contenteditable>
+                                if number % 2 == 0:
+                                    print("This number is even")
+                                else:
+                                    print("This number is odd")
+                            </code></pre>
+                        </ul>
                 </section>
                 <section>
-
+                    <small>The output of your program could look something like this:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            Enter number: 3
+                            10
+                            5
+                            16
+                            8
+                            4
+                            2
+                            1
+                        </code></pre>
                 </section>
             </section>
             <section>
