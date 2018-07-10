@@ -1298,6 +1298,7 @@
                             return 'Reply hazy try again'
                         else:
                             return 'I dont know the answer to this'
+
                     fortune = getAnswer(5)
                     print(fortune)
                         </code></pre>
@@ -1305,8 +1306,7 @@
                 </section>
                 <section>
                     <small>The result of getAnswer is stored in a variable called fortune.
-                    We can then pass this to print.
-                </small>
+                    We can then pass this to print.</small>
                     <pre><code class="python" data-trim contenteditable>
                         fortune = getAnswer(3)
                         print(fortune)
@@ -1326,6 +1326,43 @@
                         print(fortune)
                 </code></pre>
                     <small class="fragment">Remember that we need to create an int out of the input string!</small>
+                    <small class="fragment">This way someone else could write the function and we can just use it!</small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Importing from Modules</h3>
+                    <small>A lot of functions already exist and we can just reuse them. A lot of those are also built in:</small>
+                       <pre><code class="python" data-trim contenteditable>
+                           import random
+                           random_number = random.randint(1, 10)
+                </code></pre>
+                    <small>We call random a <q>module</q>.</small>
+                    <br>
+                    <div class="fragment">
+                        <small>Another way of doing this:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                           from random import randint
+                           random_number = randint(1, 10)
+                        </code></pre>
+                        <small>This way you don't have to type random.randint every time.</small>
+                        <small>These modules and functions are all very well documented, for example: <a href="https://docs.python.org/3.6/library/random.html">https://docs.python.org/3.6/library/random.html</a></small>
+                    </div>
+                </section>
+                <section>
+                    <h3>Another example:</h3>
+                    <small>The  <a href="https://docs.python.org/3.6/library/datetime.html?highlight=datetime#datetime-objects">datetime</a> module</small>
+                    <small>The datetime module has different parts inside: date, time, datetime, ... The double naming of datetime can be confusing.</small>
+                      <pre><code class="python" data-trim contenteditable>
+                           import datetime
+                           print(datetime.datetime.today())
+                </code></pre>
+                    <small>or</small>
+                     <pre><code class="python" data-trim contenteditable>
+                           from datetime import datetime
+                           print(datetime.today())
+                </code></pre>
                 </section>
             </section>
 
