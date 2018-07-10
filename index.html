@@ -1052,24 +1052,6 @@
                     </small>
                     </div>
                 </section>
-                <!-- needed??? -->
-                <!-- <section>
-                    <h3>If statements vs while loops</h3>
-                    <pre><code class="python" data-trim contenteditable>
-                            spam = 0
-                            if spam < 5:
-                                print('Hello, world.')
-                                spam = spam + 1
-                    </code></pre>  
-                    <br>
-                    <pre><code class="python" data-trim contenteditable>
-                            spam = 0
-                            while spam < 5:
-                                print('Hello, world.')
-                                spam = spam + 1
-                    </code></pre>
-                            <br>
-                </section> -->
                 <section>
                     <h3>An annoying while loop</h3>
                     <pre><code class="python" data-trim contenteditable>
@@ -1123,7 +1105,7 @@
                     </code></pre>
                 </section>
                 <section>
-                    <h4>Write code that prints Hello if 1 is stored in spam, prints Howdy if 2 is stored in spam, and prints Greetings! if anything else is stored in spam.</h4>
+                    <h4>Write code that prints "Hello" if 1 is stored in spam, prints "Howdy" if 2 is stored in spam, and prints "Greetings!" if anything else is stored in spam.</h4>
                 </section>
                 <section>
                     <h4>Look up what <code>continue</code> statements do. Can you understand the following code?</h4>
@@ -1180,18 +1162,19 @@
                 </section>
                 <section>
                     <p>Function definition:</p>
-                    <pre><code class="python" data-trim contenteditable>
-            def hello():
-                print('Howdy!')
-                print('Howdy!!!')
-                print('Hello there.')
-        </code></pre>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                        def hello():
+                            print('Howdy!')
+                            print('Howdy!!!')
+                            print('Hello there.')
+                        </code>
+                    </pre>
                     <small><code>def</code> defines a function called hello.
         The <q>body</q> is executed when we call this function, not when we define it.</small>
                     <div class="fragment">
-                        <p>Function call:
-                            <p>
-                                <pre><code class="python" data-trim contenteditable>
+                        <p>Function call:</p>
+                        <pre><code class="python" data-trim contenteditable>
             hello()
             hello()
             hello()
@@ -1231,7 +1214,7 @@
                     <small>When we called <code>print()</code> we passed in values, so called <q>arguments</q>.
             Can we pass an argument to our function hello?</small>
                     <br>
-                    <br>
+
                     <div class="fragment">
                         <pre><code class="python" data-trim contenteditable>
                     def hello(name):
@@ -1243,26 +1226,51 @@
                     </div>
                     <div class="fragment">
                         <small>What happens if you call it without a name now? Can you explain why?</small>
-                        <small>What happens if you call <code>print(name)</code> after the function?</small>
+                        <!--<small>What happens if you call <code>print(name)</code> after the function?</small>-->
+                    </div>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> hello()
+                    >>> File "python", line 5
+                    TypeError: hello() missing 1 required positional argument: 'name'
+                    </code></pre>
                     </div>
                 </section>
                 <section>
                     <h3>Time for some practice</h3>
-                    <small>Can you write a function called <code>countdown</code> that takes a number as an input and then counts up down from this number?
+                    <small>Can you write a function called <code>print_sum(number1, number2)</code> that takes two numbers as an input and prints out the sum?
                         Can you call it with different arguments to test it?</small>
                     <pre><code class="python" data-trim contenteditable>
-                    def countdown(number):
+                    def print_sum(number1, number2):
                          # Your code goes here
                     </code></pre>
                     <small>This is how the call and output would look like:</small>
 
                     <pre><code class="python" data-trim contenteditable>
-                    countdown(3)
+                    print_sum(3, 7)
                     </code></pre>
                     <pre><code class="python" data-trim contenteditable>
-                    >>> 3
-                    >>> 2
+                    >>> "The sum of 3 and 7 is 10!"
+                    </code></pre>
+                    <small>Bonus points: Can you ask the user to input the number?</small>
+                </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can you write a function called <code>count</code> that takes a number as an input and then counts up to this number?
+                        Can you call it with different arguments to test it?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    def count(number):
+                         # Your code goes here
+                    </code></pre>
+                    <small>This is how the call and output would look like:</small>
+
+                    <pre><code class="python" data-trim contenteditable>
+                    count(3)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
                     >>> 1
+                    >>> 2
+                    >>> 3
                     >>> GO!
                     </code></pre>
                     <small>Bonus points: Can you ask the user to input the number? Can you also ask the user if he/she wants to count up or down and act accordingly?</small>
