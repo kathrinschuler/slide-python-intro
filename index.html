@@ -52,6 +52,8 @@
                 <h3><a href="#/lesson-2">Lesson 2</a></h3>
                 <h3><a href="#/lesson-3">Lesson 3</a></h3>
                 <h3><a href="#/lesson-4">Lesson 4</a></h3>
+
+                <h4><a href="#/lesson3-extra">Lesson 3</a> - Extra topics and more info for the curious!</h4>
             </section>
 
             <!-- About us -->
@@ -1153,6 +1155,7 @@
                 print('Howdy!')
                 print('Howdy!!!')
                 print('Hello there.')
+                return
             hello()
             hello()
             hello()
@@ -1168,6 +1171,7 @@
                             print('Howdy!')
                             print('Howdy!!!')
                             print('Hello there.')
+                            return
                         </code>
                     </pre>
                     <small><code>def</code> defines a function called hello.
@@ -1205,6 +1209,19 @@
                 With a function this is much less work and less error prone!
             </small>
                 </section>
+                <section>
+                    <h4>Why do we need functions?</h4>
+                    <small>Functions are abstractions (as explained <a href=" https://www.cs.utah.edu/~zachary/computing/lessons/uces-10/uces-10/node11.html">here</a>)</small>
+                    <br><br>
+                    <small> If you just want to use a function in your program, you don't have to know how it works inside!
+
+                        It's sort of like driving a car. With an automobile, you don't need to understand every detail about the engine and drive train and wheels,
+                        if all you want to do is drive the car.
+
+The only time you need to know how a function works inside is when you need to write the function, or change how it works.
+                        (It's like a car again; you need to know how a car works in order to build one or fix one.)
+                        But once a function is written and working, you never need to look at its insides again.</small>
+                </section>
             </section>
 
             <!-- Functions with parameters -->
@@ -1217,9 +1234,12 @@
 
                     <div class="fragment">
                         <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
                     def hello(name):
                         print('Hello ' + name)
+                        return
 
+                    # Code starts here
                     hello('Alice')
                     hello('Bob')
             </code></pre>
@@ -1237,8 +1257,39 @@
                     </div>
                 </section>
                 <section>
+                    <small>A function can take multiple parameters:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
+                    def hello(name, age):
+                        print('Hello ' + name)
+                        print('You are ' + str(age) + ' years old')
+                        return
+
+                    # Code starts here
+                    hello('Alice', 17)
+                    hello('Bob', 45)
+                </code></pre>
+                </section>
+                <section id="two-params">
+                    <small>And you can pass user input to a function too!</small>
+                        <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
+                    def hello(name, age):
+                        print('Hello ' + name)
+                        print('You are ' + str(age) + ' years old')
+                        return
+
+                    # Code starts here
+                    name = input("What's your name?")
+                    age = int(input("What's your age?")
+                    hello(name, age)
+
+                    hello('Bob', 45)
+                </code></pre>
+                </section>
+                <section>
                     <h3>Time for some practice</h3>
-                    <small>Can you write a function called <code>print_sum(number1, number2)</code> that takes two numbers as an input and prints out the sum?
+                    <small>Can you write a function called <code>print_sum(number1, number2)</code> that takes two numbers as arguments and prints out the sum?
                         Can you call it with different arguments to test it?</small>
                     <pre><code class="python" data-trim contenteditable>
                     def print_sum(number1, number2):
@@ -1252,11 +1303,11 @@
                     <pre><code class="python" data-trim contenteditable>
                     >>> "The sum of 3 and 7 is 10!"
                     </code></pre>
-                    <small>Bonus points: Can you ask the user to input the number?</small>
+                    <small>Bonus points: Can you ask the user to input the number? (Hint: The input should be outside of the function and then passed to it. For a similar example check <a href="#/two-params">here</a>)</small>
                 </section>
                 <section>
                     <h3>Time for some practice</h3>
-                    <small>Can you write a function called <code>count</code> that takes a number as an input and then counts up to this number?
+                    <small>Can you write a function called <code>count</code> that takes a number as an argument and then counts up to this number?
                         Can you call it with different arguments to test it?</small>
                     <pre><code class="python" data-trim contenteditable>
                     def count(number):
@@ -1273,7 +1324,8 @@
                     >>> 3
                     >>> GO!
                     </code></pre>
-                    <small>Bonus points: Can you ask the user to input the number? Can you also ask the user if he/she wants to count up or down and act accordingly?</small>
+                    <small>Hint: You can use a for-loop for this</small>
+                    <small>Bonus points: Can you ask the user to input the number? Can you also ask the user if he/she wants to count up or down and act accordingly? (Hint: Ask the user and then pass it to the function you wrote before)</small>
                 </section>
             </section>
 
@@ -1282,23 +1334,20 @@
                 <section>
                     <h3>Return values</h3>
                     <small>When we call the <code>len()</code> function with 'Hello' it will evaluate to the value 5.
-            We call this a <q>return value</q>.</small>
-                    <small>A function can do something or return something... or both.</small>
+            We call this a <q>return value</q>. A function can do something and then either leave it at and return nothing to the user or it can return something.</small>
                     <div class="fragment">
                         <small>When you define a function you can also define what it returns:</small>
                         <pre><code class="python" data-trim contenteditable>
+                    # Function definition
                     def getAnswer(number):
                         if number == 1:
                             return 'It is certain'
                         elif number == 2:
                             return 'It is decidedly so'
-                        elif number == 3:
-                            return 'Yes'
-                        elif number == 4:
-                            return 'Reply hazy try again'
                         else:
                             return 'I dont know the answer to this'
 
+                    # Code starts here
                     fortune = getAnswer(5)
                     print(fortune)
                         </code></pre>
@@ -1321,12 +1370,27 @@
                 </small>
                     <pre><code class="python" data-trim contenteditable>
                         print('Tell me a number: ')
-                        number = input()
-                        fortune = getAnswer(int(number))
+                        number = int(input())
+                        fortune = getAnswer(number)
                         print(fortune)
                 </code></pre>
                     <small class="fragment">Remember that we need to create an int out of the input string!</small>
-                    <small class="fragment">This way someone else could write the function and we can just use it!</small>
+                    <small class="fragment">This way someone else could write the function getAnswer and we can just use it!</small>
+                </section>
+                  <section>
+                    <h3>Time for practice!</h3>
+                    <small>Can you write a function called get_max that takes two numbers and returns the bigger one? Your code would look something like this:</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             # Function definitions:
+                             def get_max(age):
+                                # Your code goes here..
+
+                             # Code execution starts here
+                             maximum = get_max(3,7)
+                             print(maximum) # This should print 7
+                </code></pre>
+                    <small>Hint: You will need if statements.</small>
+                      <small>Hint 2: This is just a practice function. Python has a built-in function <a href="https://docs.python.org/3.6/library/functions.html#max">max()</a> that does exactly that!</small>
                 </section>
             </section>
 
@@ -1371,6 +1435,166 @@
                         <br> <br>
                         <small>If you look at the Trigonometric Functions section of the documentation, how would you calculate sin(0.9) using the math module? </small>
                 </section>
+                <section>
+                    <h3>Time for practice!</h3>
+                    <small>Can you write a function called 'get_birth_year' that takes someone's age as an input and returns the year the person was born? Your code would look something like this:</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             # Your import statements go here:
+
+                             # Function definitions:
+                             def get_birth_year(age):
+                                # Your code goes here. Do some magic and return birth year:
+
+                             # Code execution starts here
+                             age = # Ask the user for his age
+                             birth_year = # Call your function with age
+                             print('You were born in ' + str(birth_year))
+                </code></pre>
+                    <small>Hint: You will need to find out how you can get the current year</small>
+                </section>
+            </section>
+
+                        <!-- A short Program-->
+            <section title="A short Program">
+                <section>
+                    <h3>A short program</h3>
+                    <h4>Guess the number</h4>
+                    <small>Let's see how we can put everything we have learnt so far together!
+                        The output of our program will look something like this:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    I am thinking of a number between 1 and 20.
+                    Take a guess.
+                    10
+                    Your guess is too low.
+                    Take a guess.
+                    15
+                    Your guess is too low.
+                    Take a guess.
+                    17
+                    Your guess is too high.
+                    Take a guess.
+                    16
+                    Good job! You guessed my number in 4 guesses!
+                    </code></pre>
+                </section>
+                <section>
+                    <small>Let's start with a new file and start with the computer generating a number between 1 and 20:</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        import random
+                        # The computer generates a random number
+                        secret_number = random.randint(1,20)
+                        print('I am thinking of a number between 1 and 20')
+                    </code></pre>
+                </div>
+                </section>
+                <section>
+                        <small>As a next step let's ask the user to take 6 guesses.
+                            (If he doesn't guess correctly we don't want to bother him forever, if he figures it out before we can stop asking and congratulate him.)</small>
+                        <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                                # Ask the player to guess maximum 6 times.
+                                total_guesses_taken = 0
+                                while total_guesses_taken < 6:
+                                    total_guesses_taken = total_guesses_taken + 1
+                                    print('Take a guess.')
+                                    guess = int(input())
+
+                                    if guess < secret_number:
+                                        print('Your guess is too low.')
+                                    elif guess > secret_number:
+                                        print('Your guess is too high.')
+                                    else:
+                                        break  # This is the correct guess, we can exit the while loop now
+                        </code></pre>
+                    </div>
+                    </section>
+                    <section>
+                            <small>Finally we can tell the user whether he or she was correct or not.</small>
+                            <div class="fragment">
+                            <pre><code class="python" data-trim contenteditable>
+                                if guess == secret_number:
+                                    print('Good job! You guessed my number in ' + str(total_guesses_taken) + ' guesses!')
+                                else:
+                                    print('Nope. The number I was thinking of was ' + str(secret_number))
+                            </code></pre>
+                        </div>
+                    </section>
+            </section>
+
+            <!-- Pracice Questions -->
+            <section title="Practice Questions">
+                <section>
+                    <h2>Practice Questions</h2>
+                </section>
+                <section>
+                        <small>When does the code in a function execute:
+                        when the function is defined or when the function is called?</small>
+                        <br><br>
+                        <small>What is the difference between a function and a function call?</small>
+                </section>
+                <section>
+                    <small>What happens to variables in a local scope when the function call returns?</small>
+                </section>
+                <section>
+                    <small>If you had a function named <code>bacon()</code> in a module named <code>spam</code>, how would you call it after <code>import spam?</code></small>
+                </section>
+            </section>
+
+            <section title="Practice Projects">
+                <section>
+                    <h3>Practice Project</h3>
+                    <h4>The Collatz Sequence</h4>
+                    <small>Step1: Write a function named <code>collatz()</code> that has one parameter named number. If number is even, then <code>collatz()</code> should print number // 2 and return this value. If number is odd, then <code>collatz()</code> should print and return 3 * number + 1.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        def collatz(number):
+                            # Your code
+                        </code></pre>
+                    </section>
+                <section>
+                    <small>Step 2: Then write a program that lets the user type in an integer and that keeps calling <code>collatz()</code> on that number until the function returns the value 1. </small>
+                    <br><br>
+                    <small>
+                        (Amazingly enough, this sequence actually works for any integer—sooner or later, using this sequence, you’ll arrive at 1!
+                        Even mathematicians aren’t sure why.) </small>
+                        <br><br>
+                        <small><b>Things to remember:</b></small>
+                            <small>- Remember to convert the value from input() to an int, otherwise it will be a string value</small>
+                            <small>- You can check if a number is even using <code>number % 2 == 0</code> (If <code>number % 2 == 1</code> the number is odd).
+                            Maybe you can adapt the following code to help you?</small>
+                            <pre><code class="python" data-trim contenteditable>
+                                if number % 2 == 0:
+                                    print("This number is even")
+                                else:
+                                    print("This number is odd")
+                            </code></pre>
+                        </ul>
+                </section>
+                <section>
+                    <small>The output of your program could look something like this:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            Enter number: 3
+                            10
+                            5
+                            16
+                            8
+                            4
+                            2
+                            1
+                        </code></pre>
+                </section>
+            </section>
+            <section>
+                <h2>Thank you!!</h2>
+            </section>
+
+            <section id="lesson3-extra">
+                <h1>Introduction to Python</h1>
+                <h3>Extra Info for the curious</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
             </section>
 
             <!-- The None Value-->
@@ -1379,19 +1603,7 @@
                     <h3>The None value</h3>
                     <small>In Python there is a value called <code>None</code> which means no value/absent value.
             Just like <code>True</code> and <code>False</code> this must be capitalized: <code>None</code></small>
-                    <br>
-                    <br>
 
-                    <div class="fragment">
-                        <small>One example where <code>None</code> is used is the <code>print()</code> function.
-                 All it does is print on the screen, it doesn't return anything:</small>
-                        <pre><code class="python" data-trim contenteditable>
-                    >>> spam = print('Hello!')
-                    Hello!
-                    >>> spam == None
-                    True
-            </code></pre>
-                    </div>
                 </section>
                 <section>
                         <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
@@ -1557,149 +1769,6 @@
                 </div>
                 </section>
 
-            </section>
-
-            <!-- Exception Handling
-            <section title="Exception Handling">
-                <section>
-                    <h3>Exception Handling</h3>
-                    <small>To be DONE</small>
-                </section>
-            </section> -->
-
-            <!-- A short Program-->
-            <section title="A short Program">
-                <section>
-                    <h3>A short program</h3>
-                    <h4>Guess the number</h4>
-                    <small>Let's see how we can put everything we have learnt so far together!
-                        The output of our program will look something like this:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    I am thinking of a number between 1 and 20.
-                    Take a guess.
-                    10
-                    Your guess is too low.
-                    Take a guess.
-                    15
-                    Your guess is too low.
-                    Take a guess.
-                    17
-                    Your guess is too high.
-                    Take a guess.
-                    16
-                    Good job! You guessed my number in 4 guesses!   
-                    </code></pre>
-                </section>
-                <section>
-                    <small>Let's start with a new file and start with the computer generating a number between 1 and 20:</small>
-                    <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
-                        import random
-                        # The computer generates a random number
-                        secret_number = random.randint(1,20)
-                        print('I am thinking of a number between 1 and 20')
-                    </code></pre>
-                </div>
-                </section>
-                <section>
-                        <small>As a next step let's ask the user to take 6 guesses. 
-                            (If he doesn't guess correctly we don't want to bother him forever, if he figures it out before we can stop asking and congratulate him.)</small>
-                        <div class="fragment">
-                        <pre><code class="python" data-trim contenteditable>
-                                # Ask the player to guess maximum 6 times.
-                                total_guesses_taken = 0 
-                                while total_guesses_taken < 6:
-                                    print('Take a guess.')
-                                    guess = int(input())
-                                
-                                    if guess < secret_number:
-                                        print('Your guess is too low.')
-                                    elif guess > secret_number:
-                                        print('Your guess is too high.')
-                                    else:
-                                        break  # This is the correct guess, we can exit the while loop now
-                                    total_guesses_taken = total_guesses_taken + 1
-                        </code></pre>
-                    </div>
-                    </section>
-                    <section>
-                            <small>Finally we can tell the user whether he or she was correct or not.</small>
-                            <div class="fragment">
-                            <pre><code class="python" data-trim contenteditable>
-                                if guess == secret_number:
-                                    print('Good job! You guessed my number in ' + str(total_guesses_taken) + ' guesses!')
-                                else:
-                                    print('Nope. The number I was thinking of was ' + str(secret_number))
-                            </code></pre>
-                        </div>
-                    </section>
-            </section>
-
-            <!-- Pracice Questions -->
-            <section title="Practice Questions">
-                <section>
-                    <h2>Practice Questions</h2>
-                </section>
-                <section>
-                        <small>When does the code in a function execute: 
-                        when the function is defined or when the function is called?</small>
-                        <br><br>
-                        <small>What is the difference between a function and a function call?</small>
-                </section>
-                <section>
-                    <small>What happens to variables in a local scope when the function call returns?</small>
-                </section>
-                <section>
-                    <small>If you had a function named <code>bacon()</code> in a module named <code>spam</code>, how would you call it after <code>import spam?</code></small>
-                </section>
-            </section>
-
-            <section title="Practice Projects">
-                <section>
-                    <h3>Practice Project</h3>
-                    <h4>The Collatz Sequence</h4>
-                    <small>Step1: Write a function named <code>collatz()</code> that has one parameter named number. If number is even, then <code>collatz()</code> should print number // 2 and return this value. If number is odd, then <code>collatz()</code> should print and return 3 * number + 1.</small>
-                    <pre><code class="python" data-trim contenteditable>
-                        def collatz(number):
-                            # Your code
-                        </code></pre>
-                    </section>
-                <section>
-                    <small>Step 2: Then write a program that lets the user type in an integer and that keeps calling <code>collatz()</code> on that number until the function returns the value 1. </small>
-                    <br><br>
-                    <small>
-                        (Amazingly enough, this sequence actually works for any integer—sooner or later, using this sequence, you’ll arrive at 1! 
-                        Even mathematicians aren’t sure why.) </small>
-                        <br><br>
-                        <small><b>Things to remember:</b></small>
-                            <small>- Remember to convert the value from input() to an int, otherwise it will be a string value</small>
-                            <small>- You can check if a number is even using <code>number % 2 == 0</code> (If <code>number % 2 == 1</code> the number is odd).
-                            Maybe you can adapt the following code to help you?</small>
-                            <pre><code class="python" data-trim contenteditable>
-                                if number % 2 == 0:
-                                    print("This number is even")
-                                else:
-                                    print("This number is odd")
-                            </code></pre>
-                        </ul>
-                </section>
-                <section>
-                    <small>The output of your program could look something like this:</small>
-                    <pre><code class="python" data-trim contenteditable>
-                            Enter number: 3
-                            10
-                            5
-                            16
-                            8
-                            4
-                            2
-                            1
-                        </code></pre>
-                </section>
-            </section>
-            <section>
-                <h2>Thank you!!</h2>
             </section>
 
         </div>
