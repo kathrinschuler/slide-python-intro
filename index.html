@@ -1911,14 +1911,26 @@ The only time you need to know how a function works inside is when you need to w
                         >>> spam[1] = 'aardvark'
                         >>> spam
                         ['cat', 'aardvark', 'rat', 'elephant']
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> spam[2] = spam[1]
                         >>> spam
                         ['cat', 'aardvark', 'aardvark', 'elephant']
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
                         >>> spam[-1] = 12345
                         >>> spam
                         ['cat', 'aardvark', 'aardvark', 12345]
                         </code></pre>
                 </section>
+                <section>
+                        <h4>Appending to a list</h4>
+                            <small>You can add just one element to a list using <code>append</code></small>
+                            <pre><code class="python" data-trim contenteditable>
+                                    >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                                    >>> spam.append('dog')
+                                </code></pre>  
+                        </section>
                 <section>
                      <h4>List Concatenation</h4>
                     <small>The + operator can combine two lists to create a new list value in the same way it combines two strings into a new string value.
@@ -1926,14 +1938,18 @@ The only time you need to know how a function works inside is when you need to w
                     <pre><code class="python" data-trim contenteditable>
                     >>> [1, 2, 3] + ['A', 'B', 'C']
                     [1, 2, 3, 'A', 'B', 'C']
+
                     >>> ['X', 'Y', 'Z'] * 3
                     ['X', 'Y', 'Z', 'X', 'Y', 'Z', 'X', 'Y', 'Z']
+                </code></pre>
+                <pre><code class="python" data-trim contenteditable>
                     >>> spam = [1, 2, 3]
                     >>> spam = spam + ['A', 'B', 'C']
                     >>> spam
                     [1, 2, 3, 'A', 'B', 'C']
                         </code></pre>
                 </section>
+                
                 <section>
                     <h4>Removing Values from Lists</h4>
                     <small>The del statement will delete values at an index in a list. 
@@ -1947,7 +1963,20 @@ The only time you need to know how a function works inside is when you need to w
                             >>> spam
                             ['cat', 'bat']
                         </code></pre>
+                        <small>There is another way here too (to remove by element, not by index)!</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                                >>> spam.remove('cat')
+                            </code></pre>
                     </section>
+                    <section>
+                            <h3>Time for some practice!</h3>
+                            <pre><code class="python">spam = [2, 4, 6, 8, 10]</code></pre>
+                            <small>1. How would you assign the value 'hello' as the third value in spam?</small>
+                            <small>2. Can you append ['cat', 'dog', 'bird'] to spam?</small>
+                            <small>3. Can you delete the last element? Can you delete the first?</small>
+                            <small>4. Can you delete the element 'dog'?</small>
+                        </section>
             </section>
 
             <section>
@@ -1978,12 +2007,10 @@ The only time you need to know how a function works inside is when you need to w
                                     catName4 = input()
                                     print('Enter the name of cat 5:')
                                     catName5 = input()
-                                    print('Enter the name of cat 6:')
-                                    catName6 = input()
 
                                     print('The cat names are:')
                                     print(catName1 + ' ' + catName2 + ' ' + catName3 + ' ' + catName4 + ' ' +
-                                    catName5 + ' ' + catName6)
+                                    catName5)
                                 </code></pre>
                                 <small>This is very repetitive.. and not extensible (What if you have 7 cats?)</small>
                         </section>
@@ -2019,14 +2046,14 @@ The only time you need to know how a function works inside is when you need to w
                     <small>Iterating over a "real" list works the same way:</small>
                     <pre><code class="python" data-trim contenteditable>
                         >>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
-                        >>> for i in range(len(supplies)):
-                            print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+                        >>> for supply in supplies
+                            print('The supply is: ' + supply)
                     </code></pre>
                     <pre><code class="python" data-trim contenteditable>
-                            Index 0 in supplies is: pens
-                            Index 1 in supplies is: staplers
-                            Index 2 in supplies is: flame-throwers
-                            Index 3 in supplies is: binders
+                            The supply is: pens
+                            The supply is: staplers
+                            The supply is: flame-throwers
+                            The supply is: binders
                         </code></pre>
                     </div>
                 </section>
@@ -2041,6 +2068,100 @@ The only time you need to know how a function works inside is when you need to w
                         </code></pre>
                         <small>Bonus: Can you make it a function that takes a list as input?</small>
                         <small>Bonus2: Can you ask the user for numbers like we asked for cat names?</small>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>in and not in</h3>
+                    <small>You can find out whether a value is or isn't in a list with the <code>in</code>
+                    and <code>not in</code> expressions.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
+                        True
+                        >>> spam = ['hello', 'hi', 'howdy', 'heyas']
+                        >>> 'cat' in spam
+                        False
+                        >>> 'howdy' not in spam
+                        False
+                        >>> 'cat' not in spam
+                        True
+                    </code></pre>
+                </section>
+                <section>
+                    <small>For example, the following program lets the user type in a pet name and then checks to see whether the name is in a list of pets. </small>
+                    <pre><code class="python" data-trim contenteditable>
+                            myPets = ['Zophie', 'Pooka', 'Fat-tail']
+                            print('Enter a pet name:')
+                            name = input()
+                            if name not in myPets:
+                                print('I do not have a pet named ' + name)
+                            else:
+                                print(name + ' is my pet.')
+                        </code></pre>
+                        <small>The output might look something like this:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                Enter a pet name:
+                                Footfoot
+                                I do not have a pet named Footfoot
+                        </code></pre>
+                    </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Sample Program</h3>
+                    <small>Remember the fortune teller program from earlier? We can simplify that by using a list:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            import random
+                            messages = ['It is certain',
+                                'It is decidedly so',
+                                'Yes definitely',
+                                'Reply hazy try again',
+                                'Ask again later',
+                                'Concentrate and ask again',
+                                'My reply is no',
+                                'Outlook not so good',
+                                'Very doubtful']
+                            
+                            random_index = random.randint(0, len(messages) - 1)
+                            print(messages[random_index])
+                    </code></pre>
+                    <small>Can you explain why we need the -1?</small>
+                </section>
+                </section>
+            <section>
+                <section>
+                    <h3>Practice Questions</h3>
+                </section>
+                <section>
+                    <h4>What is [ ]?</h4>
+                </section>
+                <section>
+                    <h4>For the following 3 question assume:</h4>
+                    <pre><code class="python">spam = ['a', 'b', 'c', 'd']</code></pre>
+                    <small>1. What does <code>spam[int(int('3' * 2) // 11)]</code> evaluate to?</small><br>
+                    <small>2. What does <code>spam[-1] evaluate to?</code></small>
+                    <br>
+                    <small>3. What does <code>spam[:2] evaluate to?</code></small>
+                </section>
+                <!-- <section>
+                        <h4>For the following 3 question assume:</h4>
+                        <pre><code class="python">bacon = [3.14, 'cat', 11, 'cat', True]</code></pre>
+                        <small>1. What does <code>spam[int(int('3' * 2) // 11)]</code> evaluate to?</small><br>
+                        <small>2. What does <code>spam[-1] evaluate to?</code></small>
+                        <br>
+                        <small>3. What does <code>spam[:2] evaluate to?</code></small>
+                </section> -->
+                <section>
+                    <h4>How can you delete an element from a list?</h4>
+                </section>
+                <section>
+                    <h4>Read about methods on Lists: <code>append()</code>, <code>insert()</code>, <code>remove()</code> and <code>index()</code></h4>
+                    <small>Assume:</small>
+                    <pre><code class="python">bacon = [3.14, 'cat', 11, 'cat', True]</code></pre>
+                    <small>1. What does <code>bacon.index('cat')</code> evaluate to?</small><br>
+                    <small>2. What does <code>bacon.remove('cat')</code> do? What does bacon look like now?</small>
+                    <br>
+                    <small>3. What does <code>bacon.append(99)</code> do? What does bacon look like now?</small>
                 </section>
             </section>
         </div>
