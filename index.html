@@ -1628,21 +1628,16 @@ The only time you need to know how a function works inside is when you need to w
             </section>
 
             <!-- Named Arguments to the print function-->
-            <section title="Keyword arguments">
+            <section title="Keyword arguments" id="keyword-args">
                 <section>
                     <h3>Keyword arguments</h3>
-                    <small>Most arguments have a position in the function call. For example:</small>
-                    <pre><code class="python" data-trim contenteditable>
-                        import random
-                        number = random.randint(1,10)
-                </code></pre>
-                    <small>This will create a random number between 1 and 10. The first argument (1) will always be the lower bound.
-                        The second argument (10) will be the upper bound.</small>
-                    <br><br>
-                    <small>A small sidenote: <code>import</code> will always be at the top of the file!</small>
+                    <small>Most arguments have a position in the function call. The first argument will be the first named parameter, etc.</small>
+                    <small>But the print function can take as many arguments as you give it.</small>
+                    <pre><code class="python">print("test", "bla", "something else", "etc")</code></pre>
+                    <small>Does that mean you can't specify anything else?</small>
                 </section>
                 <section>
-                    <small>Let's have a loook at the print function:</small>
+                    <small>Let's have a closer look at the print function:</small>
                     <pre><code class="python" data-trim contenteditable>
                           print('Hello')
                           print('World')
@@ -1664,7 +1659,7 @@ The only time you need to know how a function works inside is when you need to w
                     </code></pre>
                     </div>
                     <div class="fragment">
-                        <small><code>end</code> is called a keyword argument</small>
+                        <small><code>end</code> is called a keyword argument because you have to call it by it's name</small>
                     </div>
                 </section>
                 <section>
@@ -2130,7 +2125,7 @@ The only time you need to know how a function works inside is when you need to w
                 </section>
             <section>
                 <section>
-                    <h3>Practice Questions</h3>
+                    <h2>Practice Questions</h2>
                 </section>
                 <section>
                     <h4>What is [ ]?</h4>
@@ -2143,25 +2138,31 @@ The only time you need to know how a function works inside is when you need to w
                     <br>
                     <small>3. What does <code>spam[:2] evaluate to?</code></small>
                 </section>
-                <!-- <section>
-                        <h4>For the following 3 question assume:</h4>
-                        <pre><code class="python">bacon = [3.14, 'cat', 11, 'cat', True]</code></pre>
-                        <small>1. What does <code>spam[int(int('3' * 2) // 11)]</code> evaluate to?</small><br>
-                        <small>2. What does <code>spam[-1] evaluate to?</code></small>
-                        <br>
-                        <small>3. What does <code>spam[:2] evaluate to?</code></small>
-                </section> -->
                 <section>
                     <h4>How can you delete an element from a list?</h4>
                 </section>
                 <section>
-                    <h4>Read about methods on Lists: <code>append()</code>, <code>insert()</code>, <code>remove()</code> and <code>index()</code></h4>
+                    <h4>Read about methods on Lists: <code>append()</code>, <code>remove()</code> and <code>index()</code></h4>
                     <small>Assume:</small>
                     <pre><code class="python">bacon = [3.14, 'cat', 11, 'cat', True]</code></pre>
                     <small>1. What does <code>bacon.index('cat')</code> evaluate to?</small><br>
                     <small>2. What does <code>bacon.remove('cat')</code> do? What does bacon look like now?</small>
                     <br>
                     <small>3. What does <code>bacon.append(99)</code> do? What does bacon look like now?</small>
+                </section>
+                <section>
+                    <h4>Can you write a function that gets the largest number from a list?</h4>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Practice Project</h3>
+                    <h4>Comma Code</h4>
+                    <small>Say you have a list value like this: </small>
+                    <pre><code class="python">spam = ['apples', 'bananas', 'tofu', 'cats']</code></pre>
+                    <small>Write a function that takes a list value as an argument and returns a string with all the items separated by a comma and a space, with and inserted before the last item. 
+                        For example, passing the previous spam list to the function would return 'apples, bananas, tofu, and cats'. 
+                        But your function should be able to work with any list value passed to it.</small>
                 </section>
             </section>
         </div>
