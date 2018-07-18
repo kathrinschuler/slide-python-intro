@@ -2067,7 +2067,7 @@ The only time you need to know how a function works inside is when you need to w
             </section>
             <section>
                 <section>
-                    <h3>in and not in</h3>
+                    <h3>Check if a value exists</h3>
                     <small>You can find out whether a value is or isn't in a list with the <code>in</code>
                     and <code>not in</code> expressions.</small>
                     <pre><code class="python" data-trim contenteditable>
@@ -2122,8 +2122,210 @@ The only time you need to know how a function works inside is when you need to w
                     </code></pre>
                     <small>Can you explain why we need the -1?</small>
                 </section>
+            </section>
+
+            <!-- Dictionaries -->
+            <section title="Dictionaries">
+                <section>
+                    <h3>Dictionaries</h3>
+                    <small>Dictionaries are like lists - a collection of many values, but the index can be of any type, not just an integer.</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> cat['size']
+                            'fat'
+                            >>> 'Cat has a ' + cat['disposition'] + ' disposition'
+                            'Cat has a loud disposition'
+                        </code>
+                    </pre>
+                    <small class="fragment">For dictionaries, indexes are known are keys. Each element is a key-value pair.</small>
                 </section>
-            <section>
+
+                <section>
+                    <h3>Dictionaries vs. Lists</h3>
+                    <small>Dictionaries are not like lists in that the order of the dictionaries don't matter</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> tab = {'disposition': 'loud', 'size': 'fat', 'color': 'gray'}
+                            >>> cat == tab
+                            True
+                        </code>
+                    </pre>
+                    <small class="fragment">Since there's no ordering, slicing a dictionary doesn't make sense.</small>
+                </section>
+
+                <section>
+                    <small>Python will give you a <code>KeyError</code> if a key does not exist in your dictionary:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> cat['age']
+                            Traceback (most recent call last):
+                              File "python", line 1
+                            KeyError: 'age'
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <small>Dictionaries let you organise data in a more intuitive way.</small>
+                    <br>
+                    <small class="fragment">Maybe you want to describe information about a specific equity:</small>
+                    <br>
+                    <div class="fragment">
+                        <small><ul>
+                        <li>Ticker</li>
+                        <li>Price</li>
+                        <li>Tradable</li>
+                        <li>Exchange</li>
+                        </ul></small>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> equity = {
+                                'ticker': 'AAPL',
+                                'price': 104.6,
+                                'tradeable': True,
+                                'exchange': 'US'
+                            }
+                            >>> equity['ticker']
+                            'AAPL'
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <small>Or maybe you want to keep the ages of everyone in the room</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Tom']
+                            23
+                            >>> ages['Kathrin']
+                            25
+                        </code></pre>
+                </section>
+            </section>
+
+            <!-- Working with dictionaries -->
+            <section title="Working with dictionaries">
+                <section>
+                    <h3>Working with dictionaries</h3>
+                    <small>We've just seen how to read from a dictionary, but how do we modify one?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Tom']
+                            23
+                            >>> ages['Tom'] = ages['Tom'] + 1
+                            >>> ages['Tom']
+                            24
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Naomi joins the class! Now we need to record her age</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Naomi']
+                            Traceback (most recent call last):
+                              File "python", line 1
+                            KeyError: 'Naomi'
+                            >>> ages['Naomi'] = 26
+                            >>> ages
+                            {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25, 'Naomi': 26}
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Kathrin goes on holiday so we want to remove her age</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> del ages['Kathrin']
+                            >>> ages
+                            {'Tom': 23, 'Gabriel': 27}
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Check if a key exists</h3>
+                    <small>Now we want to check if we've recorded someone's age</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> 'Naomi' in ages
+                            False
+                            >>> 'Kathrin' in ages
+                            True
+                        </code></pre>
+                    <div class="fragment">
+                        <small>We can combine this with <code>if</code> and <code>else</code> to do some interesting things</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                if 'Gabriel' in ages:
+                                  print('Gabriel is ' + str(ages['Gabriel']) + ' years old')
+                                else:
+                                  print("We do not have Gabriel's age")
+                            </code></pre>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Looping over dictionaries -->
+            <section title="For loops with dictionaries">
+                <section>
+                    <h3>For loops with dictionaries</h3>
+                    <small>Dictionaries provide three functions which return lists of things you can use in a for loop</small>
+                    <br><br>
+                    <div class="fragment">
+                        <small>Here's how to loop through the <em>values</em> of a dictionary</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                                >>> for age in ages.values():
+                                ...   print(age)
+                                
+                                23
+                                27
+                                25
+                            </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <small>And here's how to loop through the <em>keys</em> of a dictionary</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> for name in ages.keys():
+                            ...   print(name)
+
+                            Tom
+                            Gabriel
+                            Kathrin
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Or how about both at the same time?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> for item in ages.items():
+                            ...   print(item)
+                            ...   print(item[0] + ' -> ' + str(item[1]))
+                            
+                            ('Tom', 23)
+                            'Tom -> 23'
+                            ('Gabriel', 27)
+                            'Gabriel -> 27'
+                            ('Kathrin', 25)
+                            'Kathrin -> 25'
+                        </code></pre>
+                    <small class="fragment">Using <code>items()</code> will give you the <em>key-value pairs</em></small>
+                    <br>
+                    <small class="fragment"></small>
+                </section>
+            </section>
+                        <section>
                 <section>
                     <h2>Practice Questions</h2>
                 </section>
@@ -2153,250 +2355,110 @@ The only time you need to know how a function works inside is when you need to w
                 <section>
                     <h4>Can you write a function that gets the largest number from a list?</h4>
                 </section>
+                <section>
+                    <h4>What does the code for an empty dictionary look like?</h4>
+                </section>
+                <section>
+                    <h4>Can you write a dictionary with a key 'foo' and value 42?</h4>
+                </section>
+                <section>
+                    <h4>What happens if you try to access <code>spam['foo']</code> if <code>spam = {'bar': 100}?</code></h4>
+                </section>
+                <section>
+                    <h4>What's the difference between the following codes? Assume <code>spam</code> is a dictionary</h4>
+                    <small><ul>
+                        <li>between the expressions <code>'cat' in spam</code> and <code>'cat' in spam.keys()</code>?</li>
+                        <li>between the expressions <code>'cat' in spam</code> and <code>'cat' in spam.values()</code>?</li>
+                    </ul></small>
+                </section>
             </section>
             <section>
                 <section>
-                    <h3>Practice Project</h3>
+                    <h3>Practice Project - Lists</h3>
                     <h4>Comma Code</h4>
                     <small>Say you have a list value like this: </small>
                     <pre><code class="python">spam = ['apples', 'bananas', 'tofu', 'cats']</code></pre>
-                    <small>Write a function that takes a list value as an argument and returns a string with all the items separated by a comma and a space, with and inserted before the last item. 
-                        For example, passing the previous spam list to the function would return 'apples, bananas, tofu, and cats'. 
+                    <small>Write a function that takes a list value as an argument and returns a string with all the items separated by a comma and a space, with and inserted before the last item.
+                        For example, passing the previous spam list to the function would return 'apples, bananas, tofu, and cats'.
                         But your function should be able to work with any list value passed to it.</small>
                 </section>
             </section>
+            <section>
+                  <section>
+                    <h3>Practice Project - Dictionaries</h3>
+                    <h4>Fantasy Game Inventory</h4>
+                    <small style="font-size: 16px;">You are creating a fantasy video game.
+                        The data structure to model the player’s inventory will be a dictionary where the keys are string values describing the item in the inventory
+                        and the value is an integer value detailing how many of that item the player has.
+                        For example, the dictionary value <code>{'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}</code> means the player has 1 rope, 6 torches, 42 gold coins, and so on.</small>
+                    <br><br>
+                      <small style="font-size: 16px;">Write a function named <code>displayInventory()</code> that would take any possible “inventory” (dictionary) and display it like the following:</small>
+                        <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            Inventory:
+                            12 arrow
+                            42 gold coin
+                            1 rope
+                            6 torch
+                            1 dagger
 
-            <!-- Dictionaries -->
-            <section title="Dictionaries">
-                <section>
-                    <h3>Dictionaries</h3>
-                    <small>Dictionaries are like lists - a collection of many values, but the index can be of any type, not just an integer.</small>
-                    <br>
-                    <br>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
-                            >>> cat['size']
-                            'fat'
-                            >>> 'Cat has a ' + cat['disposition'] + ' disposition'
-                            'Cat has a loud disposition'
-                        </code>
-                    </pre>
-                    <small class="fragment">For dictionaries, indexes are known are keys. Each element is a key-value pair.</small>
+                            Total number of items: 63
+                        </code></pre>
                 </section>
-
                 <section>
-                    <h3>Dictionaries vs. Lists</h3>
-                    <small>Dictionaries are not like lists in that the order of the dictionaries don't matter</small>
-                    <br>
-                    <br>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
-                            >>> tab = {'disposition': 'loud', 'size': 'fat', 'color': 'gray'}
-                            >>> cat == tab
-                            True
-                        </code>
-                    </pre>
-                    <small class="fragment">Since there's no ordering, slicing a dictionary doesn't make sense.</small>
+                    <h4>Fantasy Game Inventory</h4>
+                    <small style="font-size: 16px;">Imagine a treasure represented as a list of strings like this:</small>
+                      <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+                      </code></pre>
+                    <small style="font-size: 16px;">Write a function named <code>addToInventory(inventory, addedItems)</code>, where the inventory parameter is a dictionary
+                        representing the player’s inventory (like in the previous project) and the addedItems parameter is a list like treasure.
+                        The addToInventory() function should return a dictionary that represents the updated inventory.
+                        Note that the addedItems list can contain multiples of the same item. Your code could look something like this:</small>
+                      <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            #Function definitions
+                            def displayInventory(inventory):
+                                # Code you wrote before
+
+                            def addToInventory(inventory, addedItems):
+                                # your code goes here
+
+                            # Code execution starts here
+                            inv = {'gold coin': 42, 'rope': 1}
+                            treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+                            inv = addToInventory(inv, dragonLoot)
+                            displayInventory(inv)
+                        </code></pre>
+                    <small style="font-size: 16px;">And the output could look something like this...</small>
                 </section>
-
                 <section>
-                    <h3>Freedom in keys</h3>
-                    <small>The keys of a dictionary don't have to be a string or an integer.</small>
-                    <br>
-                    <small>INSERT EXAMPLE HERE. Not sure if we need this slide since I can't think of a good example...</small>
-                </section>
+                       <small style="font-size: 16px;">And the output would look something like:</small>
+                       <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            Inventory:
+                            45 gold coin
+                            1 rope
+                            1 ruby
+                            1 dagger
 
-                <section>
-                    <small>Python will give you a <code>KeyError</code> if a key does not exist in your dictionary:</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
-                            >>> cat['age']
-                            Traceback (most recent call last):
-                              File "python", line 1
-                            KeyError: 'age'
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <h3>Organising data with dictionaries</h3>
-                    <small>Dictionaries let you organise data in a more intuitive way.</small>
-                    <br>
-                    <small class="fragment">Maybe you want to describe information about a specific equity:</small>
-                    <br>
-                    <div class="fragment">
-                        <small><ul>
-                        <li>Ticker</li>
-                        <li>Price</li>
-                        <li>Tradable</li>
-                        <li>Exchange</li>
-                        </ul></small>
-                    </div>
-                </section>
-
-                <section>
-                    <h3>Organising data with dictionaries</h3>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> equity = {
-                                'ticker': 'AAPL',
-                                'price': 104.6,
-                                'tradeable': True,
-                                'exchange': 'US'
-                            }
-                            >>> equity['ticker']
-                            'AAPL'
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <h3>Organising data with dictionaries</h3>
-                    <small>Or maybe you want to keep the ages of everyone in the room</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> ages['Tom']
-                            23
-                            >>> ages['Kathrin']
-                            25
-                        </code>
-                    </pre>
+                            Total number of items: 48
+                        </code></pre>
                 </section>
             </section>
+            <section>
+                <h3>What now?</h3>
+                <small><ul>
+                    <li>Sign up to other courses (Gid's pandas course, Hannah's Intro to CS)</li>
+                    <li><a href="https://www.practicepython.org/">https://www.practicepython.org/</a> has loads of exercises</li>
+                    <li><a href="https://www.hackerrank.com/domains/python">https://www.hackerrank.com/</a> has amazing exercises and challenges</li>
+                    <li><a href="https://www.codewars.com/?language=python">https://www.codewars.com/</a> takes a fun challenge approach</li>
+                    <li><a href="https://exercism.io/tracks/python">https://exercism.io/tracks/python</a> seems fun too!</li>
+                    <li><a href="https://www.codecademy.com/learn/learn-python?composer_curriculum_redirect=python">https://www.codeacademy.com</a> has an interactive course</li>
+                    <li>.. so does <a href="https://www.udacity.com/course/intro-to-computer-science--cs101">udacity!</a></li>
+                    <li>Find a project and just go with it (Google is your friend)</li>
 
-            <!-- Working with dictionaries -->
-            <section title="Working with dictionaries">
-                <section>
-                    <h3>Working with dictionaries</h3>
-                    <small>We've just seen how to read from a dictionary, but how do we modify one?</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> ages['Tom']
-                            23
-                            >>> ages['Tom'] = ages['Tom'] + 1
-                            >>> ages['Tom']
-                            24
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <small>Naomi joins the class! Now we need to record her age</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> ages['Naomi']
-                            Traceback (most recent call last):
-                              File "python", line 1
-                            KeyError: 'Naomi'
-                            >>> ages['Naomi'] = 26
-                            >>> ages
-                            {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25, 'Naomi': 26}
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <small>Kathrin goes on holiday so we want to remove her age</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> del ages['Kathrin']
-                            >>> ages
-                            {'Tom': 23, 'Gabriel': 27}
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <h3>Check if a key exists</h3>
-                    <small>Now we want to check if we've recorded someone's age</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> 'Naomi' in ages
-                            False
-                            >>> 'Kathrin' in ages
-                            True
-                        </code>
-                    </pre>
-                    <div class="fragment">
-                        <small>We can combine this with <code>if</code> and <code>else</code> to do some interesting things</small>
-                        <pre>
-                            <code class="python" data-trim contenteditable>
-                                if 'Gabriel' in ages:
-                                  print('Gabriel is ' + str(ages['Gabriel']) + ' years old')
-                                else:
-                                  print("We do not have Gabriel's age")
-                            </code>
-                        </pre>
-                    </div>
-                </section>
+                </ul></small>
             </section>
-
-            <!-- Looping over dictionaries -->
-            <section title="For loops with dictionaries">
-                <section>
-                    <h3>For loops with dictionaries</h3>
-                    <small>Dictionaries provide three functions which return lists of things you can use in a for loop</small>
-                    <br>
-                    <div class="fragment">
-                        <small>Here's how to loop through the <em>values</em> of a dictionary</small>
-                        <pre>
-                            <code class="python" data-trim contenteditable>
-                                >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                                >>> for age in ages.values():
-                                ...   print(age)
-                                
-                                23
-                                27
-                                25
-                            </code>
-                        </pre>
-                    </div>
-                </section>
-
-                <section>
-                    <small>And here's how to loop through the <em>keys</em> of a dictionary</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> for name in ages.keys():
-                            ...   print(name)
-
-                            Tom
-                            Gabriel
-                            Kathrin
-                        </code>
-                    </pre>
-                </section>
-
-                <section>
-                    <small>Or how about both at the same time?</small>
-                    <pre>
-                        <code class="python" data-trim contenteditable>
-                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
-                            >>> for item in ages.items():
-                            ...   print(item)
-                            ...   print(item[0] + ' -> ' + str(item[1]))
-                            
-                            ('Tom', 23)
-                            'Tom -> 23'
-                            ('Gabriel', 27)
-                            'Gabriel -> 27'
-                            ('Kathrin', 25)
-                            'Kathrin -> 25'
-                        </code>
-                    </pre>
-                    <small class="fragment">Using <code>items()</code> will give you the <em>key-value pairs</em></small>
-                    <br>
-                    <small class="fragment"></small>
-                </section>
+             <section>
+                <h2>Thank you!!</h2>
             </section>
         </div>
     </div>
