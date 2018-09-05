@@ -2507,7 +2507,116 @@ The only time you need to know how a function works inside is when you need to w
             </section>
             </section>
 
-            
+            <section>
+                <section>
+                    <h4>Opening an Excel file</h4>
+                    <small>Make sure you have <i>example.xlsx</i> ready in the same folder as your Notebook. Now let's open our first excel file:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         # Needed imports: This is the python excel module
+                         import openpyxl
+                        </code>
+                    </pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Open our excel workbook from a file path.
+                        wb = openpyxl.load_workbook('example.xlsx')
+                        type(wb)
+                        </code>
+                    </pre>
+                    <small><code>type(wb)</code> simply lets you inspect the type of the object in that variable. You don't need it to proceed and it's advisable to remove it in order to reduce the spam output.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out[3]: openpyxl.workbook.workbook.Workbook
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>Getting sheets from a workbook</h4>
+                    <small>You can get all the sheets as a list by accessing worksheets:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         wb.worksheets
+                        </code></pre>
+                    <small>Note that this is <i>not</i> a function call, that's why there are no '()'</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out [7]: [&lt;Worksheet "Sheet1"&gt;, &lt;Worksheet "Sheet2"&gt;, &lt;Worksheet "Sheet3"&gt;]
+                    </code></pre>
+                    <small>You can now assign a variable to the sheet we want to work with. You can also inspect that</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Access the first sheet of the workbook
+                        sheet = wb.worksheets[0]
+                        sheet.title
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out [7]: 'Sheet1'
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Getting cells from a sheet</h4>
+                    <small>You can access the cells similarly to Excel:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         sheet['A1'].value
+                        </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out[9]: datetime.datetime(2015, 4, 5, 13, 34, 2)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        c = sheet['B1']
+                        print('Row ' + str(c.row) + ', Column ' + c.column + ' is ' + c.value)
+                        print('Cell ' + c.coordinate + ' is ' + c.value)
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out [11]: Row 1, Column B is Apples
+                                  Cell B1 is Apples
+                    </code></pre>
+                    <small>As you may have noticed, c is a Cell object. If you want the value you will need to access it using .value</small>
+                    <small>You can access many properties on a cell, such as row, column, coordinate and value</small>
+                </section>
+                <section>
+                    <small>You can also access the cells using the cell() function on your sheet</small>
+                    <pre><code class="python" data-trim="True">
+                        sheet.cell(row=1, column=2)
+                        sheet.cell(row=1, column=2).value
+                     </code></pre>
+                    <small>This way you can iterate over cells:</small>
+                    <pre><code class="python" data-trim="True">
+                        for i in range(1,8,2):
+                            print(i, sheet.cell(row=i, column=2).value)
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        1 Apples
+                        3 Pears
+                        5 Apples
+                        7 Strawberries
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>What about number of columns and rows?</h4>
+                    <small>You can access those on the sheet!</small>
+                    <pre><code class="python" data-trim="True">
+                        sheet.max_row
+                        sheet.max_column
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        OUT[14]: 7
+                                 3
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>We can access complete rows or columns:</h4>
+                    <pre><code class="python" data-trim="True">
+                        for cell in sheet.columns[1]:
+                            print(cell.value)
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out[12]: Apples
+                                 Cherries
+                                 Pears
+                                 Oranges
+                                 Apples
+                                 Bananas
+                                 Strawberries
+                    </code></pre>
+                </section>
+            </section>
+
+
             <section>
                 <h3>What now?</h3>
                 <small><ul>
@@ -2519,7 +2628,6 @@ The only time you need to know how a function works inside is when you need to w
                     <li><a href="https://www.codecademy.com/learn/learn-python?composer_curriculum_redirect=python">https://www.codeacademy.com</a> has an interactive course</li>
                     <li>.. so does <a href="https://www.udacity.com/course/intro-to-computer-science--cs101">udacity!</a></li>
                     <li>Find a project and just go with it (Google is your friend)</li>
-
                 </ul></small>
             </section>
             <section>
