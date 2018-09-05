@@ -2616,6 +2616,120 @@ The only time you need to know how a function works inside is when you need to w
                 </section>
             </section>
 
+            <section>
+                <section>
+                    <h3>Sample Project</h3>
+                    <h4>Reading and analysing Data from a spreadsheet</h4>
+                    <small>To start, open a new Jupyter notebook and write code for the folloing tasks. You can copy paste from the previous slides to do that:<br><br>
+                    <ol>
+                        <li>Import the module openpyxl</li>
+                        <li>Open the Excel file and save it to a variable called 'wb'</li>
+                        <li>Access the first sheet and save it to a variable called 'sheet'</li>
+                    </ol>
+                    </small><br><br>
+                    <small>In this example we would like to analyse the dataset and report to how many ports are down per switch.</small>
+                </section>
+                <section>
+                    <small>Preparing the sheet:</small>
+                    <pre><code class="python" data-trim="True">
+                        In [1]: import openpyxl
+                        In [2]: wb = openpyxl.load_workbook('dataset.xlsx')
+                        In [3]: sheet = wb.worksheets[0]
+                    </code></pre>
+                    <div class="fragment">
+                     <small>Let's create a datastructure to fill in our analysis. We are choosing a dictionary, this way we can store it as key: switch-name -> value: number of nodes that are down</small>
+                    <pre><code class="python" data-trim="True">
+                        down_nodes = {}
+                    </code></pre>
+                    <small>The result will look something like this:</small>
+                    <pre><code class="python" data-trim="True">
+                        {
+                            'ATS1-1A-NODE-SW1' : 1,
+                            'ATS1-1A-NODE-SW2' : 3,
+                            ....
+                        }
+                    </code></pre>
+                        </div>
+                </section>
+                 <section>
+                     <small>Now we can start looping over our sheet (not including the header!) - In this case rows and columns are indexed with 1.</small>
+                     <pre><code class="python" data-trim data-noescape>
+                         for row_number in range(2, sheet.max_row + 1):<div class="fragment">
+                            # Retrieve switch name from the cell in column 1
+                            switch_name = sheet.cell(row=row_number, column=1).value</div><div class="fragment">
+                            # If we see switch_name for the first time we add it
+                            if switch_name not in down_nodes:
+                                down_nodes[switch_name] = 0</div><div class="fragment" >
+                            # Retrieve status from the cell in column 6
+                            status = sheet.cell(row=row_number, column=6).value</div><div class="fragment">
+                            # If the status is "down" we want to increase the number:
+                            if status == 'down':
+                                down_nodes[switch_name] = down_nodes[switch_name] + 1</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Inspecting the results</h4>
+                    <pre><code class="python" data-trim="True">
+                        down_nodes
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        {
+                            'ATS1-1A-NODE-SW1': 1,
+                            'ATS1-1A-NODE-SW2': 4,
+                            'ATS2-1A-NODE-SW1': 6,
+                            'ATSS-7A-CORP-SW1': 24,
+                            'ATSS-7A-CORP-SW2': 11
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Writing the results to a file</h4>
+                    <small>Let's say you want to write the results to a file, with the simple format:</small>
+                       <table style="font-size: 20px">
+                        <thead>
+                            <tr>
+                                <th>Switch Name</th>
+                                <th># Down</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ATS1-1A-NODE-SW1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>ATS1-1A-NODE-SW2</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    <small>There are many options available:
+                    <ul>
+                        <li>Write to another sheet in your excel file (or even a new excel file)</li>
+                        <li>Write to a simple text file</li>
+                        <li>Save them as comma separated values (so they can be opened in excel) - i.e. csv</li>
+                        <li>....</li>
+                    </ul></small>
+                </section>
+                <section>
+                    <h4>Let's start with a simple texfile:</h4>
+                    <pre><code class="python" data-trim="True" data-noescape>
+                        # Creating a new file, make it writeable
+                        resultFile = open('results.txt', 'w')
+
+                        # Empty the file (don't do this if you just append to a file)
+                        resultFile.truncate()<div class="fragment">
+                        # Iterate over our dictionary and write to file
+                        for item in down_nodes.items():
+                            resultFile.write(item[0] + ': ' + str(item[1]) + '\n')</div><div class="fragment">
+                        # Close the file
+                        resultFile.close()</div>
+                    </code></pre>
+                    <small>And you have successfully created a text file using Python!! :) </small>
+                </section>
+            </section>
+
+
 
             <section>
                 <h3>What now?</h3>
