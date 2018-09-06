@@ -2727,8 +2727,56 @@ The only time you need to know how a function works inside is when you need to w
                     </code></pre>
                     <small>And you have successfully created a text file using Python!! :) </small>
                 </section>
+                <section>
+                    <h4>What about writing to a new sheet and save?</h4>
+                      <pre><code class="python" data-trim="True" data-noescape>
+                          # There is no second sheet yet, so we can create it:
+                          results_sheet = wb.create_sheet('Results')<div class="fragment">
+                          # Create Header row
+                          results_sheet.cell(row=1, column=1).value = 'Switch'
+                          results_sheet.cell(row=1, column=2).value = '# Down'</div><div class="fragment">
+                          # Write to the sheet (start from row 2)
+                          row = 2
+                          for item in down_nodes.items():
+                              results_sheet.cell(row=row, column=1).value = item[0]
+                              results_sheet.cell(row=row, column=2).value = item[1]
+                              row = row + 1</div><div class="fragment">
+                          # Now you just need to save the sheet (choose the same name or another one)
+                          # We recommend to keep the original "clean" and save to a new name.
+                          wb.save('dataset_results.xlsx')</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>What if we want to apply some colours?</h4>
+                    <small>Let's find all the unknown duplex types and highlight them!</small>
+                    <pre><code class="python" data-trim="True" data-noescape>
+                        # First we need to define/create our fill-style
+                        fill_style_green = openpyxl.styles.PatternFill("solid", fgColor=openpyxl.styles.colors.GREEN)<div class="fragment">
+                        # Now we can iterate over all the rows and assign
+                        # the style to them
+                        for row in sheet.rows:
+                            duplex_cell = row[2]
+                            if duplex_cell.value == 'unknown':
+                                duplex_cell.fill = fill_style_green</div><div class="fragment">
+                        # Don't forget to save!
+                        wb.save('dataset_results.xlsx')</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Let's see what we have done!</h4>
+                    <div class="paragraph">
+                        <p>
+                            <span class="image">
+                                <img src="pics/excel/duplex_pic.PNG" alt="duplex" width="550" height="300">
+                            </span>
+                            <span class="image">
+                                <img src="pics/excel/results_pic.PNG" alt="results" width="280" height="300">
+                            </span>
+                        </p>
+                    </div>
+                    <small>You can find more ideas in the <a href="https://openpyxl.readthedocs.io/en/stable/index.html">openpyxl documentation</a></small>
+                </section>
             </section>
-
 
 
             <section>
