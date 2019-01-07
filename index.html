@@ -2601,8 +2601,8 @@ The only time you need to know how a function works inside is when you need to w
                 <section>
                     <h4>We can access complete rows or columns:</h4>
                     <pre><code class="python" data-trim="True">
-                        for cell in sheet.columns[1]:
-                            print(cell.value)
+                        for cells in sheet.iter_rows(min_col=2, max_col=2):
+                            print(cells[0].value)
                     </code></pre>
                     <pre><code class="python" data-trim="True">
                         Out[12]: Apples
@@ -2613,6 +2613,10 @@ The only time you need to know how a function works inside is when you need to w
                                  Bananas
                                  Strawberries
                     </code></pre>
+                    <small>iter_rows returns a list of rows with cells from min_col to max_col!<br>
+                        You can use iter_cols to get list of columns, iter_cols uses min_row and max_row to select which rows to return.<br>
+                        Note that those value start from 1 and not 0!
+                    </small>
                 </section>
             </section>
 
