@@ -1145,14 +1145,58 @@
                         print('Access granted.')
                         </code></pre>
                 </section>
-                <section>
-                    <h4>Read about <code>for loops</code>. Can you write some code to print out all the numbers from 1 to 10?</h4>
-                    <small>Can you also print out all the numbers between 20 and 40 in steps of 2? (e.g. 20,22,24...)</small>
-                </section>
+
 
             </section>
 
+            <section title="For Loops">
+                <section>
+                    <h2>For loops</h2>
+                    <small> While loops execute the same code until a condition is met, but what if we want to run some code a set number of times?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            for i in range(5):
+                                print(i)
+                        </code></pre>
 
+                    <small>In Python, a for loop consists of the following:
+                    </small>
+                        <br>
+                        <small>
+                        <ul>
+                            <li>The <code>for</code> keyword</li>
+                            <li>A variable name</li>
+                            <li>The <code>in</code> keyword </code></li>
+                            <li>A sequence of items that we loop though <code>range()</code></li>
+                            <li>A colon</li>
+                            <li>An indented block of code that we execute for each in item we are looping over</li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h3> range() function</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                        range(start, stop, step)
+                    </code></pre>
+                    <small> Range is a function that returns a list of values up to a stop value. The list returned excludes the stop value. </small>
+                    <small> Try it out! Replace the range function in the loop on the previous sleep with the following: </small>
+                    <ul>
+                        <li><code>range(0,5)</code></li>
+                        <li><code>range(3,10)</code>
+                        <li><code>range(10,20,2)</code></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Practice questions</h3>
+                    <ul>
+                        <li> Can you write code that counts down from 5 </li>
+                        <li> Can you write code that asks the user for their name and says "Hello, [name]" five times </li>
+                        <li> Can you write code that sums up all the numbers from 1 to 10 </li>
+                    </ul>
+                </section>
+                </section>
+            </section>
             <!-- LESSON 3 -->
             <section id="lesson-3">
                 <h1>Introduction to Python</h1>
