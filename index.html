@@ -1122,6 +1122,56 @@
                 </section>
             </section>
 
+            </section>
+
+            <section title="For Loops">
+                <section>
+                    <h2>For loops</h2>
+                    <small> While loops execute the same code until a condition is met, but what if we want to run some code a set number of times?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            for i in range(5):
+                                print(i)
+                        </code></pre>
+
+                    <small>In Python, a for loop consists of the following:
+                    </small>
+                        <br>
+                        <small>
+                        <ul>
+                            <li>The <code>for</code> keyword</li>
+                            <li>A variable name</li>
+                            <li>The <code>in</code> keyword </code></li>
+                            <li>A sequence of items that we loop though, in this case <code>range()</code></li>
+                            <li>A colon</li>
+                            <li>An indented block of code that we execute for each in item we are looping over</li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h3> range() function</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                        range(start, stop, step)
+                    </code></pre>
+                    <small> Range is a function that returns a list like sequence of values up to a stop value. </small>
+                    <small> The list returned excludes the stop value. </small>
+                    <small> Try it out! Replace the range function in the loop on the previous sleep with the following: </small>
+                    <ul>
+                        <li><code>range(0,5)</code></li>
+                        <li><code>range(3,10)</code>
+                        <li><code>range(10,20,2)</code></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Time for practice</h3>
+                    <ul>
+                        <li> Can you write code that counts down from 5? </li>
+                        <li> Can you write code that asks the user for their name and says "Hello, [name]" five times? </li>
+                    </ul>
+                </section>
+                </section>
+
             <section title="Practice Questions">
                 <section>
                     <h2>Practice Questions</h2>
@@ -1146,56 +1196,18 @@
                         </code></pre>
                 </section>
 
-
-            </section>
-
-            <section title="For Loops">
                 <section>
-                    <h2>For loops</h2>
-                    <small> While loops execute the same code until a condition is met, but what if we want to run some code a set number of times?</small>
-                    <pre><code class="python" data-trim contenteditable>
-                            for i in range(5):
-                                print(i)
-                        </code></pre>
-
-                    <small>In Python, a for loop consists of the following:
-                    </small>
-                        <br>
-                        <small>
-                        <ul>
-                            <li>The <code>for</code> keyword</li>
-                            <li>A variable name</li>
-                            <li>The <code>in</code> keyword </code></li>
-                            <li>A sequence of items that we loop though <code>range()</code></li>
-                            <li>A colon</li>
-                            <li>An indented block of code that we execute for each in item we are looping over</li>
-                        </ul>
-                    </small>
+                    <h4> Can you write code that sums up all the numbers from 1 to 10? </h4>
+                    <small> Hint: you should use a for loop and you need "somewhere" to store your sum.</small>
                 </section>
 
                 <section>
-                    <h3> range() function</h3>
-                    <pre><code class="python" data-trim contenteditable>
-                        range(start, stop, step)
-                    </code></pre>
-                    <small> Range is a function that returns a list of values up to a stop value. The list returned excludes the stop value. </small>
-                    <small> Try it out! Replace the range function in the loop on the previous sleep with the following: </small>
-                    <ul>
-                        <li><code>range(0,5)</code></li>
-                        <li><code>range(3,10)</code>
-                        <li><code>range(10,20,2)</code></li>
-                    </ul>
+                    <h4> Can you write code that prints all the values from 1 to 50 and skips 27? </h4>
+                    <small> Hint: the continue statement will be useful.</small>
                 </section>
 
-                <section>
-                    <h3>Practice questions</h3>
-                    <ul>
-                        <li> Can you write code that counts down from 5 </li>
-                        <li> Can you write code that asks the user for their name and says "Hello, [name]" five times </li>
-                        <li> Can you write code that sums up all the numbers from 1 to 10 </li>
-                    </ul>
-                </section>
-                </section>
+
+
             </section>
             <!-- LESSON 3 -->
             <section id="lesson-3">
