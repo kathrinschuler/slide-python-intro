@@ -40,7 +40,7 @@
             <!-- Intro Slide -->
             <section>
                 <h1>Introduction to Python</h1>
-                <h3>Lessons 1-4</h3>
+                <h3>Lessons 1-5</h3>
                 <p>
                     <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
                 </p>
@@ -52,6 +52,9 @@
                 <h3><a href="#/lesson-2">Lesson 2</a></h3>
                 <h3><a href="#/lesson-3">Lesson 3</a></h3>
                 <h3><a href="#/lesson-4">Lesson 4</a></h3>
+                <h3><a href="#/lesson-5">Lesson 5</a></h3>
+
+                <h4><a href="#/lesson3-extra">Lesson 3</a> - Extra topics and more info for the curious!</h4>
             </section>
 
             <!-- About us -->
@@ -64,9 +67,19 @@
                     <p>Financial Software Developer at Bloomberg</p>
                     <br>
                 </section>
+                 <section>
+                    <h2>Natalie Keating</h2>
+                    <p>Financial Software Developer at Bloomberg</p>
+                    <br>
+                </section>
                 <section>
                     <h2>Naomi Christie</h2>
                     <p>News Automation Engineer at Bloomberg</p>
+                    <br>
+                </section>
+                <section>
+                    <h2>Tucker Vento</h2>
+                    <p>System Reliability Engineer at Bloomberg</p>
                     <br>
                 </section>
             </section>
@@ -94,9 +107,7 @@
 					</code></pre>
                     <small>Do you know any other operators?</small>
                     <aside class="notes">
-                        - 2 + 2 is called an expression.<br>
-                        - Expressions consist of values (2, 2) and operators (such as +)<br>
-                        - Expressions evaluate to values.
+                        - 2 + 2 is called an expression.<br> - Expressions consist of values (2, 2) and operators (such as +)<br> - Expressions evaluate to values.
                     </aside>
                 </section>
                 <section>
@@ -166,10 +177,7 @@
                         SyntaxError: invalid syntax
 					</code></pre>
                     <aside class="notes">
-                        - Programs will crash if they contain code the computer can’t understand, which will cause Python to show an error message.
-                        An error message won’t break your computer, though, so don’t be afraid to make mistakes.
-                        A crash just means the program stopped running unexpectedly.<br>
-                        - Googling the error message helps
+                        - Programs will crash if they contain code the computer can’t understand, which will cause Python to show an error message. An error message won’t break your computer, though, so don’t be afraid to make mistakes. A crash just means the program stopped running unexpectedly.<br> - Googling the error message helps
                     </aside>
                 </section>
                 <section>
@@ -189,9 +197,7 @@
 					    </code></pre>
                     </div>
                     <aside class="notes">
-                        - These rules for putting operators and values together to form expressions are a fundamental part of Python as a programming language. <br>
-                        - Just like the grammar rules that help us communicate.<br>
-                        - If you type a bad python instruction it will not understand and display a SyntaxError
+                        - These rules for putting operators and values together to form expressions are a fundamental part of Python as a programming language. <br> - Just like the grammar rules that help us communicate.<br> - If you type a bad python instruction it will not understand and display a SyntaxError
                     </aside>
                 </section>
             </section>
@@ -233,13 +239,7 @@
                         <small>What went wrong here?</small>
                     </div>
                     <aside class="notes">
-                        - The integer (or int) data type indicates values that are whole numbers. <br>
-                        - Numbers with a decimal point, such as 3.14, are called floating-point numbers (or floats). <br>
-                        - Note that even though the value 42 is an integer, the value 42.0 would be a floating-point number.<br>
-                        - Python programs can also have text values called strings (strs). <br>
-                        - Always surround your string in single quote (') characters (as in 'Hello' or 'Goodbye cruel world!') so Python knows where the string begins and ends. <br>
-                        - You can even have a string with no characters in it, '', called a blank string.<br>
-                        - If you ever see the error message SyntaxError: EOL while scanning string literal, you probably forgot the final single quote character at the end of the string
+                        - The integer (or int) data type indicates values that are whole numbers. <br> - Numbers with a decimal point, such as 3.14, are called floating-point numbers (or floats). <br> - Note that even though the value 42 is an integer, the value 42.0 would be a floating-point number.<br> - Python programs can also have text values called strings (strs). <br> - Always surround your string in single quote (') characters (as in 'Hello' or 'Goodbye cruel world!') so Python knows where the string begins and ends. <br> - You can even have a string with no characters in it, '', called a blank string.<br> - If you ever see the error message SyntaxError: EOL while scanning string literal, you probably forgot the final single quote character at the end of the string
                     </aside>
                 </section>
                 <section>
@@ -284,9 +284,7 @@
                         <img height="250" data-src="pics/variable.jpg" alt="variable">
                     </div>
                     <aside class="notes">
-                        - You’ll store values in variables with an assignment statement. <br>
-                        - An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. <br>
-                        - If you enter the assignment statement spam = 42, then a variable named spam will have the integer value 42 stored in it. <br>
+                        - You’ll store values in variables with an assignment statement. <br> - An assignment statement consists of a variable name, an equal sign (called the assignment operator), and the value to be stored. <br> - If you enter the assignment statement spam = 42, then a variable named spam will have the integer value 42 stored in it. <br>
                     </aside>
                 </section>
                 <section>
@@ -312,10 +310,7 @@
                     42
                     </code></pre>
                     <aside class="notes">
-                        - A variable is initialized (or created) the first time a value is stored in it.<br>
-                        - After that, you can use it in expressions with other variables and values. <br>
-                        - When a variable is assigned a new value, the old value is forgotten, which is why spam evaluated to 42 instead of 40 at the end of the example. <br>
-                        - This is called overwriting the variable.
+                        - A variable is initialized (or created) the first time a value is stored in it.<br> - After that, you can use it in expressions with other variables and values. <br> - When a variable is assigned a new value, the old value is forgotten, which is why spam evaluated to 42 instead of 40 at the end of the example. <br> - This is called overwriting the variable.
                     </aside>
                 </section>
                 <section>
@@ -395,8 +390,7 @@
                         <small>Make sure you save it!</small>
                     </div>
                     <aside class="notes">
-                        - When there are no more lines of code to execute, the Python program terminates; that is, it stops running. <br>
-                        - (You can also say that the Python program exits.)
+                        - When there are no more lines of code to execute, the Python program terminates; that is, it stops running. <br> - (You can also say that the Python program exits.)
                     </aside>
                 </section>
                 <section>
@@ -423,13 +417,7 @@
                     would refer to a variable.</small>
                     </div>
                     <aside class="notes">
-                        - Python ignores comments, and you can use them to write notes or remind yourself what the code is trying to do.0 <br>
-                        - Any text for the rest of the line following a hash mark (#) is part of a comment. <br>
-                        - Sometimes, programmers will put a # in front of a line of code to temporarily remove it while testing a program. <br>
-                        - This is called commenting out code, and it can be useful when you’re trying to figure out why a program doesn’t work. <br>
-                        - You can remove the # later when you are ready to put the line back in.<br>
-                        - Python also ignores the blank line after the comment. You can add as many blank lines to your program as you want. This can make your code easier to read, like paragraphs in a book.<br>
-                        - When writing a function name, the opening and closing parentheses at the end identify it as the name of a function. <br>
+                        - Python ignores comments, and you can use them to write notes or remind yourself what the code is trying to do.0 <br> - Any text for the rest of the line following a hash mark (#) is part of a comment. <br> - Sometimes, programmers will put a # in front of a line of code to temporarily remove it while testing a program. <br> - This is called commenting out code, and it can be useful when you’re trying to figure out why a program doesn’t work. <br> - You can remove the # later when you are ready to put the line back in.<br> - Python also ignores the blank line after the comment. You can add as many blank lines to your program as you want. This can make your code easier to read, like paragraphs in a book.<br> - When writing a function name, the opening and closing parentheses at the end identify it as the name of a function. <br>
                     </aside>
                 </section>
                 <section>
@@ -450,8 +438,7 @@
                     "It is good to meet you, Kathrin"</small>
                     </div>
                     <aside class="notes">
-                        - You can think of the input() function call as an expression that evaluates to whatever string the user typed in. <br>
-                        - If the user entered 'Al', then the expression would evaluate to myName = 'Al'.
+                        - You can think of the input() function call as an expression that evaluates to whatever string the user typed in. <br> - If the user entered 'Al', then the expression would evaluate to myName = 'Al'.
                     </aside>
                 </section>
                 <section>
@@ -483,10 +470,7 @@
                     </code></pre>
                     </div>
                     <aside class="notes">
-                        - Just like those examples, len(myName) evaluates to an integer.<br>
-                        - Python gives an error because you can use the + operator only to add two integers together or concatenate two strings.<br>
-                        - You can’t add an integer to a string because this is ungrammatical in Python. <br>
-                        - Similarly if you want to do get a number from the user as an input and do calculations on it. You will have to convert it first.
+                        - Just like those examples, len(myName) evaluates to an integer.<br> - Python gives an error because you can use the + operator only to add two integers together or concatenate two strings.<br> - You can’t add an integer to a string because this is ungrammatical in Python. <br> - Similarly if you want to do get a number from the user as an input and do calculations on it. You will have to convert it first.
                     </aside>
                 </section>
                 <section>
@@ -556,10 +540,260 @@
                     True
                     >>> 42.0 == 0042.000
                     True
-                    </code></pre></div>
+                    </code></pre>
+                    </div>
                     <aside class="notes">
                         - Pay attention to comparing strings and integers/floats!!
                     </aside>
+                </section>
+            </section>
+
+             <!-- Booleans -->
+            <section title="Booleans">
+                <section>
+                    <h2>Booleans</h2>
+                    <br>
+                    <small>Unlike the other datatypes, the Boolean data type has only two values:</small>
+                    <br>
+                    <small>True and False</small>
+                    <small><i>(Fun fact: True/False is capitalized because the data type is named after mathematician George Boole)</i></small>
+                </section>
+
+                <section>
+                    <small>Boolean values can be stored in variables, e.g.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> my_first_bool = True
+                        </code></pre>
+                    <br>
+                    <small>Python will give you an error message if:</small>
+                    <small>
+                        <ul>
+                            <li>You don’t use the proper case (e.g. true instead of True)</li>
+                            <li>You try to use True and False for variable names</li>
+                        </ul>
+                    </small>
+                </section>
+                <section>
+                    <small>Type the following into your interactive shell</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = True
+                    </code></pre>
+                    <div class="fragment">
+                        <small>Now type out spam again, what do you think you'll get if you hit enter?
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> spam
+                    </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small>
+                        If you guessed True, then you'd be right!
+                        </small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> True
+                    </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Some more questions to try in your terminal:</p>
+                    <div class="fragment">
+                        <small>What happens if you type <code>true</code> with a lower case t?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> true
+                        </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small>What happens if you try to use <code>True</code> or
+                        <code>False</code> as the name of a variable?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> True = 2 + 2
+                        </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small>What happens if you type <code>False == False</code>? Why?</small>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> False == False
+                        </code></pre>
+                        <small>This is called <q>comparison operators</q> and we'll cover that next!</small>
+                    </div>
+                </section>
+            </section>
+
+            <!--Comparison Operators-->
+            <section title="Comparison Operators">
+                <section>
+                    <h2>Comparison Operators</h2>
+                    <small>
+                        We use these to compare two values and return a True or False statement
+                    </small>
+
+                    <table style="font-size: 25px">
+                        <thead>
+                            <tr>
+                                <th>Operator</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>==</td>
+                                <td>Equal to</td>
+                            </tr>
+                            <tr>
+                                <td>!=</td>
+                                <td>Not equal to</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <</td>
+                                        <td>Less than</td>
+                            </tr>
+                            <tr>
+                                <td>></td>
+                                <td>More than</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <=</td>
+                                        <td>Less than or equal to</td>
+                            </tr>
+                            <tr>
+                                <td>>=</td>
+                                <td>More than or equal to</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>
+                        <font color="red"> Beware</font>
+                    </h2>
+                    <h2>==</h2>
+                    <h2>is not the same as:</h2>
+                    <h2>=</h2>
+                </section>
+                <section>
+                    <h3>Time for some practice!</h3>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 == 42
+                    >>> 42 == 99
+                    >>> 2 != 3
+                    >>> 2 != 2
+                    >>> 'hello' == 'hello'
+                    >>> 'hello' == 'Hello'
+                    >>> 'dog' != 'cat'
+                    >>> True != False
+                    >>> 42 == 42.0
+                    >>> 42 == '42'
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Time for some practice!</h3>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 42 < 100
+                    >>> 42 > 100
+                    >>> 42 < 42
+
+                    >>> my_number = 42
+                    >>> my_number <= 42
+
+                    >>> my_age = 29
+                    >>> my_age >= 10
+                    </code></pre>
+                <small>Click <a href="https://repl.it/@kathrinschuler/Lesson1ExBooleans">here</a> for another exercise</small>
+            </section>
+                </section>
+            </section>
+
+            <section title="Boolean Operators">
+                <section>
+                    <h2>Boolean Operators</h2>
+                    <small>Comparing booleans!</small>
+                    <h3><br>
+                        <code>and</code><br>
+                        <code>or</code><br>
+                        <code>not</code><br><br>
+                    </h3>
+                    <small>
+                    Only 3 things to remember, easy!
+                </small>
+                </section>
+                <section>
+                    <h4>The <code>and</code> operator</h4>
+                    <small>Evaluates to True if <i>both</i> booleans are True</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> (5 > 2) and (5 < 10)
+                >>> True
+
+                >>> (5 == 2) and (5 < 10)
+                >>> False
+                </code></pre>
+                    <small>Example: You need to be older than 20 and younger than 30.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> age = 27
+                >>> (age > 20) and (age < 30)
+                >>> True
+                </code></pre>
+                </section>
+                <section>
+                    <h4>The <code>or</code> operator</h4>
+                    <small>Evaluates to True if <i>either</i> of the booleans are True</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> (27 > 20) or (5 < 1)
+                >>> True
+
+                >>> (5 == 2) or (5 < 1)
+                >>> False
+                </code></pre>
+                    <small>Example: To watch Netflix on your phone you need to be connected to Wifi OR have a mobile data connection.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> wifi_connection = True
+                >>> mobile_connection = False
+                >>> wifi_connection or mobile_connection
+                >>> True
+                </code></pre>
+                </section>
+
+                <section>
+                    <h4>The <code>not</code> operator</h4>
+                    <small>Unlike <code>and</code> and <code>or</code> the <code>not</code>
+                 operator only takes one Boolean</small>
+                    <small>Evaluates to the opposite of the Boolean value</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> not True
+                >>> False
+
+                >>> not not False
+                >>> False
+                </code></pre>
+                    <small>Example: If you are not in debt you can get a credit card</small>
+                    <pre><code class="python" data-trim contenteditable>
+                >>> in_debt = True # owes money to someone
+                >>> not in_debt
+                >>> False # can not get a credit card
+                </code></pre>
+                </section>
+                <section>
+                    <h3>Time for some practice!</h3>
+                    <small>
+                    Type the following into your terminal and see what they return:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> (4 < 5) and (5 < 6)
+                    >>> (4 < 5) and (9 < 6)
+                    >>> (1 == 2) or (2 == 2)
+
+                    >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
+                    </code></pre>
+                    <small>Click <a href="https://repl.it/@kathrinschuler/Lesson1ExBooleanOperators">here</a> for another exercise</small>
+
                 </section>
             </section>
 
@@ -600,6 +834,20 @@
                         print('I have eaten' + 99 + 'burritos')
                         </code></pre>
                 </section>
+                <section>
+                    <h4>What are the two values of the Boolean data type? How do you write them?</h4>
+                </section>
+                <section>
+                    <h4>What do the following expressions evaluate to?</h4>
+                    <pre><code class="python" data-trim contenteditable>
+                            (5 > 4) and (3 == 5)
+                            not (5 > 4)
+                            (5 > 4) or (3 == 5)
+                            not ((5 > 4) or (3 == 5))
+                            (True and True) and (True == False)
+                            (not False) or (not True)
+                    </code></pre>
+                </section>
             </section>
             <section>
                 <h2>Thank you!!</h2>
@@ -614,253 +862,22 @@
                 </p>
             </section>
 
+            <section>
+                <h2>Warmup Exercise</h2>
+                <a href="https://repl.it/@kathrinschuler/Lesson2Ex1">Lesson 1 Recap</a>
+            </section>
+
             <section title="Flow Control">
                 <section>
-                <h2>Flow Control</h2>
-                <img height="500" data-src="pics/flowchart_rain.jpg" alt="flowchart_rain">
+                    <h2>Flow Control</h2>
+                    <img height="500" data-src="pics/flowchart_rain.jpg" alt="flowchart_rain">
                 </section>
                 <section>
-                <p>A programm is a series of instructions, 
-                    but the real power is that the program can decide 
-                    which instructions to execute and which to skip.</small>  
-                <p>This is called <q>Flow control</q>.</small>
+                    <small>A programm is a series of instructions, but the real power is that the program can decide which instructions to execute and which to skip.</small>
+                        <small>This is called <q>Flow control</q>.</small>
                 </section>
             </section>
 
-             <!-- Booleans -->
-            <section title="Booleans">
-                <section>
-                    <h2>Booleans</h2>
-                    <br>
-                    <small>Unlike the other datatypes, the Boolean data type has only two values:</small>
-                    <br>
-                    <small>True and False</small>
-                    <small><i>(Fun fact: True/False is capitalized because the data type is named after mathematician George Boole)</i></small>
-                </section>
-
-                <section>
-                    <small>Boolean values can be stored in variables, e.g.</small>
-                    <pre><code class="python" data-trim contenteditable>
-                            >>> my_first_bool = True
-                        </code></pre>
-                        <br>
-                        <small>Python will give you an error message if:</small>
-                        <small>
-                        <ul>
-                            <li>You don’t use the proper case (e.g. true instead of True)</li>
-                            <li>You try to use True and False for variable names</li>
-                        </ul>
-                    </small>
-                </section>
-                <section>
-                    <small>Type the following into your interactive shell</small>
-                    <pre><code class="python" data-trim contenteditable>
-                        >>> spam = True
-                    </code></pre>
-                    <div class="fragment">
-                        <small>Now type out spam again, what do you think you'll get if you hit enter?
-                        </small>
-                        <pre><code class="python" data-trim contenteditable>
-                        >>> spam
-                    </code></pre>
-                    </div>
-                    <div class="fragment">
-                        <small>
-                        If you guessed True, then you'd be right!
-                        </small>
-                    <pre><code class="python" data-trim contenteditable>
-                        >>> True
-                    </code></pre>
-                    </div>
-                </section>
- 
-                <section>
-                    <p>Some more questions to try in your terminal:</p>
-                    <small>What happens if you type <code>true</code> with a lower case t?</small>
-                        <pre><code class="python" data-trim contenteditable>
-                        >>> true
-                        </code></pre>
-                        <small>What happens if you try to use <code>True</code> or
-                        <code>False</code> as the name of a variable?</small>
-                        <pre><code class="python" data-trim contenteditable>
-                        >>> True = 2 + 2
-                        </code></pre>     
-                        <small>What happens if you type <code>False == False</code>? Why?</small>
-                        <pre><code class="python" data-trim contenteditable>
-                        >>> False == False
-                        </code></pre> 
-                        <small>This is called <q>comparison operators</q> and we'll cover that next!</small>  
-                </section>
-            </section>
-
-            <!--Comparison Operators-->
-            <section title="Comparison Operators">
-                <section>
-                    <h2>Comparison Operators</h2>
-                    <small>
-                        We use these to compare two values and return a True or False statement
-                    </small>
-
-                    <table style="font-size: 25px">
-                    <thead>
-                        <tr>
-                            <th>Operator</th>
-                            <th>Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>==</td>
-                        <td>Equal to</td>
-                    </tr>
-                    <tr>
-                        <td>!=</td>
-                        <td>Not equal to</td>
-                    </tr>
-                    <tr>
-                        <td><</td>
-                        <td>Less than</td>
-                    </tr>
-                    <tr>
-                        <td>></td>
-                        <td>More than</td>
-                    </tr>
-                    <tr>
-                        <td><=</td>
-                        <td>Less than or equal to</td>
-                    </tr>
-                    <tr>
-                        <td>>=</td>
-                        <td>More than or equal to</td>
-                    </tr>
-                    </tbody>
-                    </table>
-                </section>
-                <section>
-                    <h2><font color="red"> Beware</font></h2>
-                    <h2>==</h2>
-                    <h2>is not the same as:</h2>
-                    <h2>=</h2>
-                </section>
-                <section>
-                    <h3>Time for some practice!</h3>
-                    <small>
-                    Type the following into your terminal and see what they return:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    >>> 42 == 42
-                    >>> 42 == 99
-                    >>> 2 != 3
-                    >>> 2 != 2
-                    >>> 'hello' == 'hello'
-                    >>> 'hello' == 'Hello'
-                    >>> 'dog' != 'cat'
-                    >>> True != False
-                    >>> 42 == 42.0
-                    >>> 42 == '42'
-                    </code></pre>
-                </section>
-                <section>
-                    <h3>Time for some practice!</h3>
-                    <small>
-                    Type the following into your terminal and see what they return:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    >>> 42 < 100
-                    >>> 42 > 100
-                    >>> 42 < 42
-
-                    >>> my_number = 42
-                    >>> my_number <= 42
-
-                    >>> my_age = 29
-                    >>> my_age >= 10
-                    </code></pre>
-                </section>
-            </section>
-
-            <section title="Boolean Operators">
-                <section>
-                <h2>Boolean Operators</h2>
-                <small>Comparing booleans!</small>
-                <h3><br>
-                    <code>and</code><br>
-                    <code>or</code><br>
-                    <code>not</code><br><br>
-                </h3>
-                <small>
-                    Only 3 things to remeber, easy!
-                </small>
-            </section>
-            <section>
-                <h4>The <code>and</code> operator</h4>
-                <small>Evaluates to True if <i>both</i> booleans are True</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> (5 > 2) and (5 < 10)
-                >>> True
-
-                >>> (5 == 2) and (5 < 10)
-                >>> False
-                </code></pre>
-                <small>Example: You need to be older than 20 and younger than 30.</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> age = 27
-                >>> (age > 20) and (age < 30)
-                >>> True
-                </code></pre>
-            </section>
-            <section>
-                <h4>The <code>or</code> operator</h4>
-                <small>Evaluates to True if <i>either</i> of the booleans are True</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> (age > 20) or (5 < 1)
-                >>> True
-
-                >>> (5 == 2) or (5 < 1)
-                >>> False
-                </code></pre>
-                <small>Example: To watch Netflix on your phone you need to be connected to Wifi OR have a mobile data connection.</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> wifi_connection = True 
-                >>> mobile_connection = False
-                >>> wifi_connection or mobile_connection
-                >>> True
-                </code></pre>
-            </section>
-
-            <section>
-                <h4>The <code>not</code> operator</h4>
-                <small>Unlike <code>and</code> and <code>or</code> the <code>not</code>
-                 operator only takes one Boolean</small>
-                <small>Evaluates to the opposite of the Boolean value</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> not True
-                >>> False
-
-                >>> not not False
-                >>> False
-                </code></pre>
-                <small>Example: If you are not in debt you can get a credit card</small>
-                <pre><code class="python" data-trim contenteditable>
-                >>> in_debt = True # owes money to someone
-                >>> not in_debt
-                >>> False # can not get a credit card
-                </code></pre>
-            </section>
-            <section>
-                    <h3>Time for some practice!</h3>
-                    <small>
-                    Type the following into your terminal and see what they return:
-                    </small>
-                    <pre><code class="python" data-trim contenteditable>
-                    >>> (4 < 5) and (5 < 6)
-                    >>> (4 < 5) and (9 < 6)
-                    >>> (1 == 2) or (2 == 2)
-
-                    >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
-                    </code></pre>
-                </section>
-            </section>
             <section title="Flow Control Statements">
                 <section>
                     <h2>Flow Control Statements</h2>
@@ -871,7 +888,7 @@
                     <small>Conditions always evaluate down to a Boolean value, <code>True</code> or <code>False</code>. 
                         A flow control statement decides what to do based on whether its condition is True or False.</small>
                     <br><br>
-                        <h4>Blocks of Code</h4>
+                    <h4>Blocks of Code</h4>
                     <small>Lines of Python code can be grouped together in <q>Blocks</q>.
                     You can tell when a block begins and Ends by indentation.
                     </small>
@@ -886,10 +903,10 @@
                     </code></pre>
                     <br>
                     <div class="fragment">
-                    <small>In Python, an if statement consists of the following:
+                        <small>In Python, an if statement consists of the following:
                     </small>
-                    <br>
-                    <small>
+                        <br>
+                        <small>
                         <ul>
                             <li>The <code>if</code> keyword</li>
                             <li>A condition</li>
@@ -897,27 +914,27 @@
                             <li>An indented Block (the <q>if clause</q>)</li>
                         </ul>
                     </small>
-                </div>
+                    </div>
                 </section>
                 <section>
-                <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                 if name == 'Alice':
                     print('Hi, Alice')
                 </code></pre>
-                <img height="450" data-src="pics/if_statement.jpg" alt="variable">
+                    <img height="450" data-src="pics/if_statement.jpg" alt="variable">
                 </section>
                 <section>
-                        <h2>Else statements</h2>
-                        <small>“If this condition is true, execute the code in the clause.
+                    <h2>Else statements</h2>
+                    <small>“If this condition is true, execute the code in the clause.
                             Else, execute the code in the else-block"</small>
-                        <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         if name == 'Alice':
                             print('Hi, Alice')
                         else:
                             print('Hello, stranger')
                         </code></pre>
-                        <br>
-                        <div class="fragment">
+                    <br>
+                    <div class="fragment">
                         <small>In Python, an else statement consists of the following:
                         </small>
                         <br>
@@ -929,8 +946,8 @@
                             </ul>
                         </small>
                     </div>
-                    </section>
-                    <section>
+                </section>
+                <section>
                     <pre><code class="python" data-trim contenteditable>
                     if name == 'Alice':
                         print('Hi, Alice')
@@ -940,18 +957,18 @@
                     <img height="450" data-src="pics/else_statement.png" alt="variable">
                 </section>
                 <section>
-                        <h2>elif statements</h2>
-                        <small>“If this condition is true, execute the code in the clause.
+                    <h2>elif statements</h2>
+                    <small>“If this condition is true, execute the code in the clause.
                             Else if this condition is true, execute the code in this clause” 
                         </small>
-                        <pre><code class="python" data-trim contenteditable>
+                    <pre><code class="python" data-trim contenteditable>
                         if name == 'Alice':
                             print('Hi, Alice')
                         elif age < 12:
                             print('You are not Alice, kiddo')
                         </code></pre>
-                        <br>
-                        <div class="fragment">
+                    <br>
+                    <div class="fragment">
                         <small>In Python, an elif statement consists of the following:
                         </small>
                         <br>
@@ -964,8 +981,8 @@
                             </ul>
                         </small>
                     </div>
-                    </section>
-                    <section>
+                </section>
+                <section>
                     <pre><code class="python" data-trim contenteditable>
                     if name == 'Alice':
                         print('Hi, Alice')
@@ -988,7 +1005,7 @@
                     </code></pre>
                     <small class="fragment">The order of the statements matters. Can you see why?</small>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                             if name == 'Alice':
                                 print('Hi, Alice.')
                             elif age < 12:
@@ -1017,16 +1034,33 @@
                         </code></pre>
                 </section>
                 <section>
-                        <h3>Time for some practice!</h3>
-                        <small>
-                            // TO BE CHANGED TO SOMETHING MEANINGFUL
-                            Can you write a small program that asks a user for his/her age and then decides if 
-                            they are old enough to enter the bar and consume alcohol?
+                    <h3>Time for some practice!</h3>
+                    <small>
+                            Can you write a small program that asks a user if he/she has wifi and/or a mobile connection and then tells them if they can access the internet?
+                            Wifi should always be the preference if available.
+                            The expected output should look something like:
                         </small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> "Do you have wifi?"   yes
+                            >>> "Do you have mobile data?"   yes
+                            >>> "You can access the internet through wifi"
 
-                    </section>
+                            >>> "Do you have wifi?"   yes
+                            >>> "Do you have mobile data?"   no
+                            >>> "You can access the internet through wifi"
+
+                            >>> "Do you have wifi?"   no
+                            >>> "Do you have mobile data?"   yes
+                            >>> "You can access the internet through mobile data"
+
+                            >>> "Do you have wifi?"   no
+                            >>> "Do you have mobile data?"   no
+                            >>> "I am sorry, you cannot access the internet"
+                        </code></pre>
+                    <small>Think about how you can handle different cases of a user writing "yes" (yes/Yes/YES/Y, etc)</small>
+                </section>
             </section>
-            <section>
+            <section title="While Loops">
                 <section>
                     <h2>While loop statements</h2>
                     <img height="450" data-src="pics/while_loop.png" alt="variable">
@@ -1042,10 +1076,10 @@
                         spam = spam + 1
                         </code></pre>
                     <br>
-                        <div class="fragment">
-                            <small>A while statement consists of the following:</small>
+                    <div class="fragment">
+                        <small>A while statement consists of the following:</small>
                         <br>
-                            <small>
+                        <small>
                             <ul>
                                 <li>The <code>while</code> keyword</li>
                                 <li>A condition</li>
@@ -1053,26 +1087,8 @@
                                 <li>An indented Block (the <q>while clause</q>)</li>
                             </ul>
                     </small>
-                </div>
+                    </div>
                 </section>
-                <!-- needed??? -->
-                <!-- <section>
-                    <h3>If statements vs while loops</h3>
-                    <pre><code class="python" data-trim contenteditable>
-                            spam = 0
-                            if spam < 5:
-                                print('Hello, world.')
-                                spam = spam + 1
-                    </code></pre>  
-                    <br>
-                    <pre><code class="python" data-trim contenteditable>
-                            spam = 0
-                            while spam < 5:
-                                print('Hello, world.')
-                                spam = spam + 1
-                    </code></pre>
-                            <br>
-                </section> -->
                 <section>
                     <h3>An annoying while loop</h3>
                     <pre><code class="python" data-trim contenteditable>
@@ -1090,7 +1106,7 @@
                         If the execution reaches a break statement, it immediately exits the while loop
                     </small>
                     <div class="fragment">
-                    <pre><code class="python" data-trim contenteditable>
+                        <pre><code class="python" data-trim contenteditable>
                         while True:
                             print('Please type your name.')
                             name = input()
@@ -1098,42 +1114,90 @@
                                 break
                         print('Thank you!')
                     </code></pre>
-                </div>
-                <div class="fragment">
-                    <small>This does the same thing as the previous code.</small>
-                </div>
-                <aside class="notes">The first line creates an infinite loop; 
-                        it is a while loop whose condition is always True. 
-                        (The expression True, after all, always evaluates down to the value True.) 
-                        The program execution will always enter the loop and will exit it only when a break statement is executed. 
-                        (An infinite loop that never exits is a common programming bug.)<br>
-                    - You can exit an infinite loop using Ctrl-C to kill the program.</aside>
+                    </div>
+                    <div class="fragment">
+                        <small>This does the same thing as the previous code.</small>
+                    </div>
+                    <aside class="notes">The first line creates an infinite loop; it is a while loop whose condition is always True. (The expression True, after all, always evaluates down to the value True.) The program execution will always enter the loop and will exit it only when a break statement is executed. (An infinite loop that never exits is a common programming bug.)<br> - You can exit an infinite loop using Ctrl-C to kill the program.</aside>
                 </section>
+                <section>
+                    <h3>continue statements</h3>
+                    <small>Like break statements, continue statements are used inside of loops.  Unlike break statements, they cause the program execution to jump back to the start of the loop (and re-evaluate the condition).
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                        num = 0
+                        while num < 10:
+                            num = num + 1
+                            if num % 2 == 0:
+                                # number is even
+                                continue
+                            print(num)
+                        </code></pre>
+                    </div>
             </section>
 
-            <section>
+            </section>
+
+            <section title="For Loops">
+                <section>
+                    <h2>For loops</h2>
+                    <small> While loops execute the same code until a condition is met, but what if we want to run some code a set number of times?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            i = 0
+                            while i < 5:
+                                print(i)
+                                i = i + 1
+
+                            for i in range(5):
+                                print(i)
+                        </code></pre>
+
+                    <small>In Python, a for loop consists of the following:
+                    </small>
+                        <br>
+                        <small>
+                        <ul>
+                            <li>The <code>for</code> keyword</li>
+                            <li>A variable name</li>
+                            <li>The <code>in</code> keyword </code></li>
+                            <li>A sequence of items that we loop though, in this case <code>range()</code></li>
+                            <li>A colon</li>
+                            <li>An indented block of code that we execute for each in item we are looping over</li>
+                        </ul>
+                    </small>
+                </section>
+
+                <section>
+                    <h3> range() function</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                        range(start, stop, step)
+                    </code></pre>
+                    <small> Range is a function that returns a list like sequence of values up to a stop value. </small>
+                    <small> The list returned excludes the stop value. </small>
+                    <small> Try it out! Replace the range function in the loop on the previous slide with the following: </small>
+                    <ul>
+                        <li><code>range(0,5)</code></li>
+                        <li><code>range(3,10)</code>
+                        <li><code>range(10,20,2)</code></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Time for practice</h3>
+                    <ul>
+                        <li> Can you write code that counts down from 5? </li>
+                        <li> Can you write code that asks the user for their name and says "Hello, [name]" five times? </li>
+                    </ul>
+                </section>
+                </section>
+
+            <section title="Practice Questions">
                 <section>
                     <h2>Practice Questions</h2>
                 </section>
 
                 <section>
-                    <h4>What are the two values of the Boolean data type? How do you write them?</h4>
-                </section>
-                <section>
-                    <h4>What do the following expressions evaluate to?</h4>
-                    <pre><code class="python" data-trim contenteditable>
-                            (5 > 4) and (3 == 5)
-                            not (5 > 4)
-                            (5 > 4) or (3 == 5)
-                            not ((5 > 4) or (3 == 5))
-                            (True and True) and (True == False)
-                            (not False) or (not True)
-                    </code></pre>
-                </section>
-                <section>
-                    <h4>Write code that prints Hello if 1 is stored in spam, 
-                        prints Howdy if 2 is stored in spam, and prints Greetings! 
-                        if anything else is stored in spam.</h4>
+                    <h4>Write code that stores input in a variable called spam, prints "Hello" if 1 is stored in spam, prints "Howdy" if 2 is stored in spam, and prints "Greetings!" if anything other int is stored in spam.</h4>
                 </section>
                 <section>
                     <h4>Look up what <code>continue</code> statements do. Can you understand the following code?</h4>
@@ -1143,21 +1207,30 @@
                             name = input()
                             if name != 'Joe':
                                 continue
-                            print('Hello, Joe. What is the password? (It is a fish.)')
+                               
+                        print('Hello, Joe.')
+                        while True:
+                            print('What is the password? (It is a fish.)')
                             password = input()
                             if password == 'swordfish':
                                 break
+                            print('WRONG!')
                         print('Access granted.')
                         </code></pre>
                 </section>
+
                 <section>
-                    <h4>Read about <code>for loops</code>. Can you write some code to print out all the numbers from 1 to 10?</h4>
-                    <small>Can you also print out all the numbers between 20 and 40 in steps of 2? (e.g. 20,22,24...)</small>
+                    <h4> Can you write code that sums up all the numbers from 1 to 10? </h4>
+                    <small> Hint: you should use a for loop and you need "somewhere" to store your sum.</small>
                 </section>
 
-            </section
+                <section>
+                    <h4> Can you write code that prints all the values from 1 to 50 and skips 27? </h4>
+                </section>
 
-            
+
+
+            </section>
             <!-- LESSON 3 -->
             <section id="lesson-3">
                 <h1>Introduction to Python</h1>
@@ -1167,42 +1240,51 @@
                 </p>
             </section>
 
+            <section>
+                <h2>Warmup Exercise</h2>
+                <a href="https://repl.it/@kathrinschuler/Lesson3warmup">Lesson 2 Recap</a><br>
+                <a href="https://repl.it/@kathrinschuler/Lesson3warmup2">Lesson 3 Warmup: Fix the errors</a><br>
+                <a href="https://repl.it/@kathrinschuler/Lesson3warmupLoops">Lesson 3 Warmup: Loops Recap</a><br>
+            </section>
+
             <!-- Functions -->
             <section title="Functions">
                 <section>
                     <h2>Functions</h2>
                     <small>You already know <code>print(), input() and len()</code>.
-            These are all built in functions but you can also write your own.</small>
+            These are all built in functions but you can also write your own. Functions are just a named container for a block of code.</small>
                     <br>
                     <br>
                     <div class="fragment">
-                        <small>Write a file called <code>helloFunc.py</code>:</small>
                         <pre><code class="python" data-trim contenteditable>
             def hello():
                 print('Howdy!')
                 print('Howdy!!!')
                 print('Hello there.')
+                return
             hello()
             hello()
             hello()
-        </code></pre>
+            </code></pre>
                     </div>
                     <p class="fragment">Let's have a closer look:</p>
                 </section>
                 <section>
                     <p>Function definition:</p>
-                    <pre><code class="python" data-trim contenteditable>
-            def hello():
-                print('Howdy!')
-                print('Howdy!!!')
-                print('Hello there.')
-        </code></pre>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                        def hello():
+                            print('Howdy!')
+                            print('Howdy!!!')
+                            print('Hello there.')
+                            return
+                        </code>
+                    </pre>
                     <small><code>def</code> defines a function called hello.
         The <q>body</q> is executed when we call this function, not when we define it.</small>
                     <div class="fragment">
-                        <p>Function call:
-                            <p>
-                                <pre><code class="python" data-trim contenteditable>
+                        <p>Function call:</p>
+                        <pre><code class="python" data-trim contenteditable>
             hello()
             hello()
             hello()
@@ -1233,6 +1315,19 @@
                 With a function this is much less work and less error prone!
             </small>
                 </section>
+                <section>
+                    <h4>Why do we need functions?</h4>
+                    <small>Functions are abstractions (as explained <a href=" https://www.cs.utah.edu/~zachary/computing/lessons/uces-10/uces-10/node11.html">here</a>)</small>
+                    <br><br>
+                    <small> If you just want to use a function in your program, you don't have to know how it works inside!
+
+                        It's sort of like driving a car. With an automobile, you don't need to understand every detail about the engine and drive train and wheels,
+                        if all you want to do is drive the car.
+
+The only time you need to know how a function works inside is when you need to write the function, or change how it works.
+                        (It's like a car again; you need to know how a car works in order to build one or fix one.)
+                        But once a function is written and working, you never need to look at its insides again.</small>
+                </section>
             </section>
 
             <!-- Functions with parameters -->
@@ -1242,20 +1337,101 @@
                     <small>When we called <code>print()</code> we passed in values, so called <q>arguments</q>.
             Can we pass an argument to our function hello?</small>
                     <br>
-                    <br>
+
                     <div class="fragment">
                         <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
                     def hello(name):
                         print('Hello ' + name)
+                        return
 
+                    # Code starts here
                     hello('Alice')
                     hello('Bob')
             </code></pre>
                     </div>
                     <div class="fragment">
                         <small>What happens if you call it without a name now? Can you explain why?</small>
-                        <small>What happens if you call <code>print(name)</code> after the function?</small>
+                        <!--<small>What happens if you call <code>print(name)</code> after the function?</small>-->
                     </div>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> hello()
+                    >>> File "python", line 5
+                    TypeError: hello() missing 1 required positional argument: 'name'
+                    </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <small>A function can take multiple parameters:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
+                    def hello(name, age):
+                        print('Hello ' + name)
+                        print('You are ' + str(age) + ' years old')
+                        return
+
+                    # Code starts here
+                    hello('Alice', 17)
+                    hello('Bob', 45)
+                </code></pre>
+                </section>
+                <section id="two-params">
+                    <small>And you can pass user input to a function too!</small>
+                        <pre><code class="python" data-trim contenteditable>
+                    # Function definitions
+                    def hello(name, age):
+                        print('Hello ' + name)
+                        print('You are ' + str(age) + ' years old')
+                        return
+
+                    # Code starts here
+                    user_name = input("What's your name?")
+                    user_age = int(input("What's your age?"))
+                    hello(user_name, user_age)
+
+                    hello('Bob', 45)
+                </code></pre>
+                </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can you write a function called <code>print_sum(number1, number2)</code> that takes two numbers as arguments and prints out the sum?
+                        Can you call it with different arguments to test it?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    def print_sum(number1, number2):
+                         # Your code goes here
+                    </code></pre>
+                    <small>This is how the call and output would look like:</small>
+
+                    <pre><code class="python" data-trim contenteditable>
+                    print_sum(3, 7)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> "The sum of 3 and 7 is 10!"
+                    </code></pre>
+                    <small>Bonus points: Can you ask the user to input the number? (Hint: The input should be outside of the function and then passed to it. For a similar example check <a href="#/two-params">here</a>)</small>
+                </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can you write a function called <code>count</code> that takes a number as an argument and then counts up to this number?
+                        Can you call it with different arguments to test it?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    def count(number):
+                         # Your code goes here
+                    </code></pre>
+                    <small>This is how the call and output would look like:</small>
+
+                    <pre><code class="python" data-trim contenteditable>
+                    count(3)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> 1
+                    >>> 2
+                    >>> 3
+                    >>> GO!
+                    </code></pre>
+                    <small>Hint: You can use a for-loop for this</small>
+                    <small>Bonus points: Can you ask the user to input the number? Can you also ask the user if he/she wants to count up or down and act accordingly? (Hint: Ask the user and then pass it to the function you wrote before)</small>
                 </section>
             </section>
 
@@ -1264,22 +1440,20 @@
                 <section>
                     <h3>Return values</h3>
                     <small>When we call the <code>len()</code> function with 'Hello' it will evaluate to the value 5.
-            We call this a <q>return value</q>.</small>
-                    <small>A function can do something or return something... or both.</small>
+            We call this a <q>return value</q>. A function can do something and then either leave it at and return nothing to the user or it can return something.</small>
                     <div class="fragment">
                         <small>When you define a function you can also define what it returns:</small>
                         <pre><code class="python" data-trim contenteditable>
+                    # Function definition
                     def getAnswer(number):
                         if number == 1:
                             return 'It is certain'
                         elif number == 2:
                             return 'It is decidedly so'
-                        elif number == 3:
-                            return 'Yes'
-                        elif number == 4:
-                            return 'Reply hazy try again'
                         else:
                             return 'I dont know the answer to this'
+
+                    # Code starts here
                     fortune = getAnswer(5)
                     print(fortune)
                         </code></pre>
@@ -1287,8 +1461,7 @@
                 </section>
                 <section>
                     <small>The result of getAnswer is stored in a variable called fortune.
-                    We can then pass this to print.
-                </small>
+                    We can then pass this to print.</small>
                     <pre><code class="python" data-trim contenteditable>
                         fortune = getAnswer(3)
                         print(fortune)
@@ -1297,77 +1470,166 @@
                     <pre><code class="python" data-trim contenteditable>
                         print(getAnswer(3))
                 </code></pre>
-                    <small class="fragment">Can you write a program that asks the user for a number and then prints his fortune using the function <code>getAnswer()</code>?</small>
                 </section>
                 <section>
-                    <small>Can you write a program that asks the user for a number and then prints his fortune using this function?
+                    <small>We could write a program that asks the user for a number and then prints his fortune:
                 </small>
                     <pre><code class="python" data-trim contenteditable>
-                        number = input('Tell me a number: ')
-                        fortune = getAnswer(int(number))
+                        print('Tell me a number: ')
+                        number = int(input())
+                        fortune = getAnswer(number)
                         print(fortune)
                 </code></pre>
                     <small class="fragment">Remember that we need to create an int out of the input string!</small>
+                    <small class="fragment">This way someone else could write the function getAnswer and we can just use it!</small>
+                </section>
+                  <section>
+                    <h3>Time for practice!</h3>
+                    <small>Can you write a function called get_max that takes two numbers and returns the bigger one? Your code would look something like this:</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             # Function definitions:
+                             def get_max(number1, number2):
+                                # Your code goes here..
+
+                             # Code execution starts here
+                             maximum = get_max(3,7)
+                             print(maximum) # This should print 7
+                </code></pre>
+                    <small>Hint: You will need if statements.</small>
+                    <small>Hint 2: This is just a practice function. Python has a built-in function <a href="https://docs.python.org/3.6/library/functions.html#max">max()</a> that does exactly that!</small>
+                </section>
+                <section>
+                    <p>Another review exercise is <a href=" https://repl.it/@kathrinschuler/Lesson3Ex1">here!</a></p>
                 </section>
             </section>
 
-            <!-- The None Value-->
-            <section title="The None Value">
+            <section>
                 <section>
-                    <h3>The None value</h3>
-                    <small>In Python there is a value called <code>None</code> which means no value/absent value.
-            Just like <code>True</code> and <code>False</code> this must be capitalized: <code>None</code></small>
+                    <h3>Importing from Modules</h3>
+                    <small>A lot of functions already exist and we can just reuse them. A lot of those are also built in:</small>
+                       <pre><code class="python" data-trim contenteditable>
+                           import random
+                           random_number = random.randint(1, 10)
+                </code></pre>
+                    <small>We call random a <q>module</q>.</small>
                     <br>
-                    <br>
-
                     <div class="fragment">
-                        <small>One example where <code>None</code> is used is the <code>print()</code> function.
-                 All it does is print on the screen, it doesn't return anything:</small>
+                        <small>Another way of doing this:</small>
                         <pre><code class="python" data-trim contenteditable>
-                    >>> spam = print('Hello!')
-                    Hello!
-                    >>> spam == None
-                    True
-            </code></pre>
-                    </div>
-                    <div class="fragment">
-                        <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
-                        <small><code>return</code> without a value will also mean <code>None</code></small>
+                           from random import randint
+                           random_number = randint(1, 10)
+                        </code></pre>
+                        <small>This way you don't have to type random.randint every time.</small>
+                        <small>These modules and functions are all very well documented, for example: <a href="https://docs.python.org/3.6/library/random.html">https://docs.python.org/3.6/library/random.html</a></small>
                     </div>
                 </section>
-            </section>
-
-            <!-- Keyword arguments-->
-            <section title="Keyword arguments">
                 <section>
-                    <h3>Keyword arguments</h3>
-                    <small>Needed???</small>
+                    <h3>Another example:</h3>
+                    <small>The  <a href="https://docs.python.org/3.6/library/datetime.html?highlight=datetime#datetime-objects">datetime</a> module</small>
+                    <small>The datetime module has different parts inside: date, time, datetime, ... The double naming of datetime can be confusing.</small>
+                      <pre><code class="python" data-trim contenteditable>
+                           import datetime
+                           print(datetime.datetime.today())
+                </code></pre>
+                    <small>or</small>
+                     <pre><code class="python" data-trim contenteditable>
+                           from datetime import datetime
+                           print(datetime.today())
+                </code></pre>
+                </section>
+                <section>
+                    <h3>Time for practice!</h3>
+                    <small>Have a look at the <a href="https://docs.python.org/3.6/library/math.html#constants">math</a> module (especially the Constants).
+                    You don't only have functions in modules. You can also have general variables. Can you print out pi using the math module?</small>
+                        <br> <br>
+                        <small>If you look at the Trigonometric Functions section of the documentation, how would you calculate sin(0.9) using the math module? </small>
+                </section>
+                <section>
+                    <h3>Time for practice!</h3>
+                    <small>Can you write a function called 'get_birth_year' that takes someone's age as an input and returns the year the person was born? Your code would look something like this:</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             # Your import statements go here:
+
+                             # Function definitions:
+                             def get_birth_year(age):
+                                # Your code goes here. Do some magic and return birth year:
+
+                             # Code execution starts here
+                             age = # Ask the user for his age
+                             birth_year = # Call your function with age
+                             print('You were born in ' + str(birth_year))
+                </code></pre>
+                    <small>Hint: You will need to find out how you can get the current year</small>
                 </section>
             </section>
 
-            <!-- Local and Global Scope-->
-            <section title="Local and Global Scope">
-                <section>
-                    <h3>Local and Global Scope</h3>
-                    <small>To be DONE</small>
-                    <small>without global statement!!!</small>
-                </section>
-            </section>
-
-            <!-- Exception Handling-->
-            <section title="Exception Handling">
-                <section>
-                    <h3>Exception Handling</h3>
-                    <small>To be DONE</small>
-                </section>
-            </section>
-
-            <!-- A short Program-->
+                        <!-- A short Program-->
             <section title="A short Program">
                 <section>
                     <h3>A short program</h3>
-                    <small>To be DONE: Guess the number</small>
+                    <h4>Guess the number</h4>
+                    <small>Let's see how we can put everything we have learnt so far together!
+                        The output of our program will look something like this:
+                    </small>
+                    <pre><code class="python" data-trim contenteditable>
+                    I am thinking of a number between 1 and 20.
+                    Take a guess.
+                    10
+                    Your guess is too low.
+                    Take a guess.
+                    15
+                    Your guess is too low.
+                    Take a guess.
+                    17
+                    Your guess is too high.
+                    Take a guess.
+                    16
+                    Good job! You guessed my number in 4 guesses!
+                    </code></pre>
                 </section>
+                <section>
+                    <small>Let's start with a new file and start with the computer generating a number between 1 and 20:</small>
+                    <div class="fragment">
+                    <pre><code class="python" data-trim contenteditable>
+                        import random
+                        # The computer generates a random number
+                        secret_number = random.randint(1,20)
+                        print('I am thinking of a number between 1 and 20')
+                    </code></pre>
+                </div>
+                </section>
+                <section>
+                        <small>As a next step let's ask the user to take 6 guesses.
+                            (If he doesn't guess correctly we don't want to bother him forever, if he figures it out before we can stop asking and congratulate him.)</small>
+                        <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                                # Ask the player to guess maximum 6 times.
+                                total_guesses_taken = 0
+                                while total_guesses_taken < 6:
+                                    total_guesses_taken = total_guesses_taken + 1
+                                    print('Take a guess.')
+                                    guess = int(input())
+
+                                    if guess < secret_number:
+                                        print('Your guess is too low.')
+                                    elif guess > secret_number:
+                                        print('Your guess is too high.')
+                                    else:
+                                        break  # This is the correct guess, we can exit the while loop now
+                        </code></pre>
+                    </div>
+                    </section>
+                    <section>
+                            <small>Finally we can tell the user whether he or she was correct or not.</small>
+                            <div class="fragment">
+                            <pre><code class="python" data-trim contenteditable>
+                                if guess == secret_number:
+                                    print('Good job! You guessed my number in ' + str(total_guesses_taken) + ' guesses!')
+                                else:
+                                    print('Nope. The number I was thinking of was ' + str(secret_number))
+                            </code></pre>
+                        </div>
+                    </section>
             </section>
 
             <!-- Pracice Questions -->
@@ -1376,24 +1638,1368 @@
                     <h2>Practice Questions</h2>
                 </section>
                 <section>
-
+                        <small>When does the code in a function execute:
+                        when the function is defined or when the function is called?</small>
+                        <br><br>
+                        <small>What is the difference between a function and a function call?</small>
                 </section>
                 <section>
-
+                    <small>What happens to variables in a local scope when the function call returns?</small>
                 </section>
                 <section>
+                    <small>If you had a function named <code>bacon()</code> in a module named <code>spam</code>, how would you call it after <code>import spam?</code></small>
+                </section>
+            </section>
 
+            <section title="Practice Projects">
+                <section>
+                    <h3>Practice Project</h3>
+                    <h4>The Collatz Sequence</h4>
+                    <small>Step1: Write a function named <code>collatz()</code> that has one parameter named number. If number is even, then <code>collatz()</code> should print number // 2 and return this value. If number is odd, then <code>collatz()</code> should print and return 3 * number + 1.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        def collatz(number):
+                            # Your code
+                        </code></pre>
+                    </section>
+                <section>
+                    <small>Step 2: Then write a program that lets the user type in an integer and that keeps calling <code>collatz()</code> on that number until the function returns the value 1. </small>
+                    <br><br>
+                    <small>
+                        (Amazingly enough, this sequence actually works for any integer—sooner or later, using this sequence, you’ll arrive at 1!
+                        Even mathematicians aren’t sure why.) </small>
+                        <br><br>
+                        <small><b>Things to remember:</b></small>
+                            <small>- Remember to convert the value from input() to an int, otherwise it will be a string value</small>
+                            <small>- You can check if a number is even using <code>number % 2 == 0</code> (If <code>number % 2 == 1</code> the number is odd).
+                            Maybe you can adapt the following code to help you?</small>
+                            <pre><code class="python" data-trim contenteditable>
+                                if number % 2 == 0:
+                                    print("This number is even")
+                                else:
+                                    print("This number is odd")
+                            </code></pre>
+                        </ul>
                 </section>
                 <section>
-
+                    <small>The output of your program could look something like this:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            Enter number: 3
+                            10
+                            5
+                            16
+                            8
+                            4
+                            2
+                            1
+                        </code></pre>
                 </section>
             </section>
             <section>
                 <h2>Thank you!!</h2>
             </section>
 
-        </div>
+            <section id="lesson3-extra">
+                <h1>Introduction to Python</h1>
+                <h3>Extra Info for the curious</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
 
+            <!-- The None Value-->
+            <section title="The None Value">
+                <section>
+                    <h3>The None value</h3>
+                    <small>In Python there is a value called <code>None</code> which means no value/absent value.
+            Just like <code>True</code> and <code>False</code> this must be capitalized: <code>None</code></small>
+
+                </section>
+                <section>
+                        <small>Behind the scenes Python adds <code>return None</code> to the end of every function where nothing else is specified.</small>
+                        <small><code>return</code> without a value will also mean <code>None</code></small>
+                    <pre><code class="python" data-trim contenteditable>
+                       def hello():
+                            print("test")
+                </code></pre>
+                <small>... is the same as ...</small>
+                <pre><code class="python" data-trim contenteditable>
+                    def hello():
+                         print("test")
+                         return None
+             </code></pre>
+             <small>... is the same as ...</small>
+             <pre><code class="python" data-trim contenteditable>
+                def hello():
+                     print("test")
+                     return
+         </code></pre>
+                </section>
+            </section>
+
+            <!-- Named Arguments to the print function-->
+            <section title="Keyword arguments" id="keyword-args">
+                <section>
+                    <h3>Keyword arguments</h3>
+                    <small>Most arguments have a position in the function call. The first argument will be the first named parameter, etc.</small>
+                    <small>But the print function can take as many arguments as you give it.</small>
+                    <pre><code class="python">print("test", "bla", "something else", "etc")</code></pre>
+                    <small>Does that mean you can't specify anything else?</small>
+                </section>
+                <section>
+                    <small>Let's have a closer look at the print function:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                          print('Hello')
+                          print('World')
+                        </code></pre>
+                    <small>will produce:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> Hello
+                        >>> World
+                    </code></pre>
+                    <div class="fragment">
+                        <small>This is because print automatically adds a new line at the end. One way to avoid this is to override the line ending:</small>
+
+                        <pre><code class="python" data-trim contenteditable>
+                          print('Hello', end='')
+                          print('World')
+                </code></pre>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> HelloWorld
+                    </code></pre>
+                    </div>
+                    <div class="fragment">
+                        <small><code>end</code> is called a keyword argument because you have to call it by it's name</small>
+                    </div>
+                </section>
+                <section>
+                    <small>Similarly, when you print multiple string values:</small>
+                    </code>
+                    </pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        print('cats', 'dogs', 'mice')
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> cats dogs mice
+                    </code></pre>
+                    <small>Python automatically puts a single space between. If you want to change that behaviour,  you can change the <code>sep</code> argument of the print function:</small>
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                        print('cats', 'dogs', 'mice', sep=',')
+                    </code></pre>
+                        <pre><code class="python" data-trim contenteditable>
+                        >>> cats,dogs,mice
+                    </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Time for some practice</h3>
+                    <small>Can get the following line on the screen? how?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> shirts|trousers|blouses|shoes
+                    </code></pre>
+                    <small>Ask the user to input a number. Can you print all the numbers from 1 to the user's number like that?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 1|2|3|4|5
+                    </code></pre>
+                </section>
+            </section>
+
+            <!-- Local and Global Scope-->
+            <section title="Local and Global Scope">
+                <section>
+                    <h3>Local and Global Scope</h3>
+                    <small>Parameters and variables that are assigned in a function are said to exist in that function’s <q>local scope</q>. 
+                        Variables that are assigned outside all functions are said to exist in the <q>global scope.</q> </small>
+                    <br><br>
+                    <small>Scope is like a container. When a scope is destrozed, all the variables in it are forgotten.</small>
+                    <br><br>
+                    <small>The global scope lasts from your when your program begins until it ends. </small>
+                </section>
+                <section>
+                    <small>Local variables can not be read from outside:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            # Function Definitions    
+                            def spam():
+                                eggs = 31337
+
+                            # Execution starts here
+                            spam()
+                            print(eggs)
+                        </code></pre>
+                    <small>eggs variable is only known in the local scope of spam!</small>
+
+                    <pre><code class="python" data-trim contenteditable>
+                            Traceback (most recent call last):
+                                File "C:/test3784.py", line 4
+                                  print(eggs)
+                            NameError: name 'eggs' is not defined
+                    </code></pre>
+                </section>
+                <section>
+                    <small>Global variables can be read from inside:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Function Definitions    
+                        def spam():
+                            print(eggs)
+
+                        # Execution starts here
+                        eggs = 42
+                        spam()
+                        </code></pre>
+                    <small>Will print out:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 42
+                        </code></pre>
+                </section>
+                <section>
+                    <small>Local and Global variables with the same name:</small>
+                    <small>Consider the same example as before, with a tiny change:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Function Definitions
+                        def spam():
+                            eggs = 19
+                            print(eggs)
+
+                        # Execution starts here
+                        eggs = 42
+                        spam()
+                        </code></pre>
+                    <small>What will be printed? Why?</small>
+                    <div class="fragment">
+                    <small>This can be very confusing... 
+                    And is the reason why you should avoid variables with the same name in global and local scope</small>
+                    <br><br>
+                    <small>To read more about scope, please refer to the section in the book where it is explained further!</small>
+                </div>
+                </section>
+            </section>
+
+            <!-- LESSON 4 -->
+            <section id="lesson-4">
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 4</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
+
+
+            <section>
+                <h2>Warmup Exercise</h2>
+                <a href="https://repl.it/@nchristie/Lesson4Warmup">Lesson 3 Recap</a>
+            </section>
+
+
+            <!-- Lists -->
+            <section title="Lists">
+                <section>
+                    <h2>Lists</h2>
+                    <small>Lists can contain multiple values, which makes it easier to write programs that handle large amounts of data. Lists can even contain other lists</small>
+                    <br>
+                    <br>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> [1, 2, 5]
+                        [1, 2, 5]
+                        >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                        >>> spam
+                        ['cat', 'bat', 'rat', 'elephant']
+                    </code></pre>
+                    <small class="fragment">spam is assigned the whole list!</small>
+                </section>
+                <section>
+                    <p>List Indexes</p>
+                    <small>You can access the elements in a list with indexes:</small>
+                    <img height="90" data-src="pics/list_indexes.png" alt="list_indexes">
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[0]
+                            'cat'
+                            >>> spam[1]
+                            'bat'
+                            >>> spam[2]
+                            'rat'
+                            >>> ['cat', 'bat', 'rat', 'elephant'][3]
+                            'elephant'
+                        </code></pre>
+                    <small>The first index is always 0</small>
+                </section>
+                <section>
+                    <small>Python will give you an <code>IndexError</code> if you use an index that exceeds the number of values in your list:</small>
+                     <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[10000]
+                            Traceback (most recent call last):
+                              File "python", line 1
+                                spam[10000]
+                            IndexError: list index out of range
+                        </code></pre>
+                    <div class="fragment">
+                        <small>Indexes can only be integers:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[1.0]
+                            Traceback (most recent call last):
+                              File "python", line 1
+                                spam[1.0]
+                            TypeError: list indices must be integers, not float
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                <h4>Python lists can contain other lists</h4>
+                     <pre><code class="python" data-trim contenteditable>
+                            >>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+                            >>> spam[0]
+                            ['cat', 'bat']
+                            >>> spam[0][1]
+                            'bat'
+                            >>> spam[1][4]
+                            50
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>Negative Indexes</h4>
+                    <small>While indexes start at 0 and go up, you can also use negative integers for the index.
+                        The integer value -1 refers to the last index in a list, the value -2 refers to the second-to-last index in a list, and so on.</small>
+                      <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[-1]
+                            'elephant'
+                            >>> spam[-3]
+                            'bat'
+                            >>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+                            'The elephant is afraid of the bat.'
+                        </code></pre>
+                </section>
+                <section>
+                     <h4>Slices</h4>
+                    <small>Just as an index can get a single value from a list, a slice can get several values from a list, in the form of a new list.</small>
+                      <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[0:4]
+                            ['cat', 'bat', 'rat', 'elephant']
+                            >>> spam[1:3]
+                            ['bat', 'rat']
+                            >>> spam[0:-1]
+                            ['cat', 'bat', 'rat']
+                        </code></pre>
+                    <small>In a slice, the first integer is the index where the slice starts.
+                        The second integer is the index where the slice ends (not inclusive!).
+                        A slice evaluates to a new list value.</small>
+                    <div class="fragment">
+                        <small>As a short cut you can leave out the first or the last integer:</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             >>> spam[:2]  # Beginning to index 2
+                             ['cat', 'bat']
+                             >>> spam[1:]  # Index 1 to end
+                             ['bat', 'rat', 'elephant']
+                             >>> spam[:]   # everything
+                             ['cat', 'bat', 'rat', 'elephant']
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h4>Lists support len() too</h4>
+                     <small>The len() function will return the number of values that are in a list value passed to it, just like it can count the number of characters in a string value.</small>
+                         <pre><code class="python" data-trim contenteditable>
+                             >>> spam = ['cat', 'dog', 'moose']
+                             >>> len(spam)
+                             3
+                        </code></pre>
+                </section>
+                <section>
+                    <h3>Time for Practice!</h3>
+                    <a href="https://repl.it/@nchristie/Lesson4Ex1">here</a>
+                </section>
+            </section>
+
+            <!-- Changing Lists -->
+            <section>
+                <section>
+                    <h3>Changing Lists</h3>
+                </section>
+                <section>
+                    <h4>Changing Values in a List</h4>
+                    <small>Normally you assign variables like <code>spam = 42</code>. But you can assign an index in a list:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                        >>> spam[1] = 'aardvark'
+                        >>> spam
+                        ['cat', 'aardvark', 'rat', 'elephant']
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam[2] = spam[1]
+                        >>> spam
+                        ['cat', 'aardvark', 'aardvark', 'elephant']
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> spam[-1] = 12345
+                        >>> spam
+                        ['cat', 'aardvark', 'aardvark', 12345]
+                        </code></pre>
+                </section>
+                <section>
+                        <h4>Appending to a list</h4>
+                            <small>You can add just one element to a list using <code>append</code></small>
+                            <pre><code class="python" data-trim contenteditable>
+                                    >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                                    >>> spam.append('dog')
+                                </code></pre>  
+                        </section>
+                <section>
+                     <h4>List Concatenation</h4>
+                    <small>The + operator can combine two lists to create a new list value in the same way it combines two strings into a new string value.
+                        The * operator can also be used with a list and an integer value to replicate the list.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    >>> [1, 2, 3] + ['A', 'B', 'C']
+                    [1, 2, 3, 'A', 'B', 'C']
+
+                    >>> ['X', 'Y', 'Z'] * 3
+                    ['X', 'Y', 'Z', 'X', 'Y', 'Z', 'X', 'Y', 'Z']
+                </code></pre>
+                <pre><code class="python" data-trim contenteditable>
+                    >>> spam = [1, 2, 3]
+                    >>> spam = spam + ['A', 'B', 'C']
+                    >>> spam
+                    [1, 2, 3, 'A', 'B', 'C']
+                        </code></pre>
+                </section>
+                
+                <section>
+                    <h4>Removing Values from Lists</h4>
+                    <small>The del statement will delete values at an index in a list. 
+                        All of the values in the list after the deleted value will be moved up one index. </small>
+                        <pre><code class="python" data-trim contenteditable>
+                            >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                            >>> del spam[2]
+                            >>> spam
+                            ['cat', 'bat', 'elephant']
+                            >>> del spam[2]
+                            >>> spam
+                            ['cat', 'bat']
+                        </code></pre>
+                        <small>There is another way here too (to remove by element, not by index)!</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> spam = ['cat', 'bat', 'rat', 'elephant']
+                                >>> spam.remove('cat')
+                            </code></pre>
+                    </section>
+                    <section>
+                        <h3>Time for some practice!</h3>
+                        <a href="https://repl.it/@nchristie/Lesson4Ex2">here</a>
+                    </section>
+                    <section>
+                            <h3>Time for some practice!</h3>
+                            <pre><code class="python">spam = [2, 4, 6, 8, 10]</code></pre>
+                            <small>1. How would you assign the value 'hello' as the third value in spam?</small>
+                            <small>2. Can you append ['cat', 'dog', 'bird'] to spam?</small>
+                            <small>3. Can you delete the last element? Can you delete the first?</small>
+                            <small>4. Can you delete the element 'dog'?</small>
+                        </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Working with lists</h3>
+                    <small>When you first begin writing programs, 
+                        it’s tempting to create many individual variables to store a group of similar values. 
+                        For example, if I wanted to store the names of my cats, I might be tempted to write code like this:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                catName1 = 'Zophie'
+                                catName2 = 'Pooka'
+                                catName3 = 'Simon'
+                                catName4 = 'Lady Macbeth'
+                                catName5 = 'Fat-tail'
+                                catName6 = 'Miss Cleo'
+                            </code></pre>
+                    </section>
+                    <section>
+                        <small>.. or like this: ...</small>
+                           <pre><code class="python" data-trim contenteditable>
+                                    print('Enter the name of cat 1:')
+                                    catName1 = input()
+                                    print('Enter the name of cat 2:')
+                                    catName2 = input()
+                                    print('Enter the name of cat 3:')
+                                    catName3 = input()
+                                    print('Enter the name of cat 4:')
+                                    catName4 = input()
+                                    print('Enter the name of cat 5:')
+                                    catName5 = input()
+
+                                    print('The cat names are:')
+                                    print(catName1 + ' ' + catName2 + ' ' + catName3 + ' ' + catName4 + ' ' +
+                                    catName5)
+                                </code></pre>
+                                <small>This is very repetitive.. and not extensible (What if you have 7 cats?)</small>
+                        </section>
+                        <section>
+                            <small>Here is a improved version of that:</small>
+                            <pre><code class="python" data-trim contenteditable>
+                                    catNames = []
+                                    while True:
+                                        print('Enter the name of cat ' + str(len(catNames) + 1) +
+                                          ' (Or enter nothing to stop.):')
+                                        name = input()
+                                        if name == '':
+                                            break
+                                        catNames = catNames + [name] # list concatenation
+                                    
+                                    print('The cat names are:')
+                                    for name in catNames:
+                                        print('  ' + name)
+                                </code></pre>
+                                <small>Let's try running this program!</small>
+                        </section>
+            </section>
+            <section>
+                <section>
+                    <h3>For loops with lists</h3>
+                    <small>In Lesson 2 you learned about loops:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        for i in range(4):
+                            print(i)        
+                    </code></pre>
+                    <small>This is because <code>range</code> returns a list-like value</small>
+                    <div class="fragment">
+                    <small>Iterating over a "real" list works the same way:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+                        >>> for supply in supplies
+                            print('The supply is: ' + supply)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                            The supply is: pens
+                            The supply is: staplers
+                            The supply is: flame-throwers
+                            The supply is: binders
+                        </code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h3>Time for practice!</h3>
+                    <small>Can you write some code that sums up all the values in a list?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                    numbers = [1, 3, 5, 10, 6] 
+                    # Your code goes here
+
+                    print(sum) # This should print 25
+                        </code></pre>
+                        <small>Bonus: Can you make it a function that takes a list as input?</small>
+                        <small>Bonus2: Can you ask the user for numbers like we asked for cat names?</small>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Check if a value exists</h3>
+                    <small>You can find out whether a value is or isn't in a list with the <code>in</code>
+                    and <code>not in</code> expressions.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        >>> 'howdy' in ['hello', 'hi', 'howdy', 'heyas']
+                        True
+                        >>> spam = ['hello', 'hi', 'howdy', 'heyas']
+                        >>> 'cat' in spam
+                        False
+                        >>> 'howdy' not in spam
+                        False
+                        >>> 'cat' not in spam
+                        True
+                    </code></pre>
+                </section>
+                <section>
+                    <small>For example, the following program lets the user type in a pet name and then checks to see whether the name is in a list of pets. </small>
+                    <pre><code class="python" data-trim contenteditable>
+                            myPets = ['Zophie', 'Pooka', 'Fat-tail']
+                            print('Enter a pet name:')
+                            name = input()
+                            if name not in myPets:
+                                print('I do not have a pet named ' + name)
+                            else:
+                                print(name + ' is my pet.')
+                        </code></pre>
+                        <small>The output might look something like this:</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                Enter a pet name:
+                                Footfoot
+                                I do not have a pet named Footfoot
+                        </code></pre>
+                    </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Sample Program</h3>
+                    <small>Remember the fortune teller program from earlier? We can simplify that by using a list:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            import random
+                            messages = ['It is certain',
+                                'It is decidedly so',
+                                'Yes definitely',
+                                'Reply hazy try again',
+                                'Ask again later',
+                                'Concentrate and ask again',
+                                'My reply is no',
+                                'Outlook not so good',
+                                'Very doubtful']
+                            
+                            random_index = random.randint(0, len(messages) - 1)
+                            print(messages[random_index])
+                    </code></pre>
+                    <small>Can you explain why we need the -1?</small>
+                </section>
+            </section>
+
+            <!-- Dictionaries -->
+            <section title="Dictionaries">
+                <section>
+                    <h3>Dictionaries</h3>
+                    <small>Dictionaries are like lists - a collection of many values, but the index can be of any type, not just an integer.</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> cat['size']
+                            'fat'
+                            >>> 'Cat has a ' + cat['disposition'] + ' disposition'
+                            'Cat has a loud disposition'
+                        </code>
+                    </pre>
+                    <small class="fragment">For dictionaries, indexes are known are keys. Each element is a key-value pair.</small>
+                </section>
+
+                <section>
+                    <h3>Dictionaries vs. Lists</h3>
+                    <small>Dictionaries are not like lists in that the order of the dictionaries don't matter</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> tab = {'disposition': 'loud', 'size': 'fat', 'color': 'gray'}
+                            >>> cat == tab
+                            True
+                        </code>
+                    </pre>
+                    <small class="fragment">Since there's no ordering, slicing a dictionary doesn't make sense.</small>
+                </section>
+
+                <section>
+                    <small>Python will give you a <code>KeyError</code> if a key does not exist in your dictionary:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> cat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+                            >>> cat['age']
+                            Traceback (most recent call last):
+                              File "python", line 1
+                            KeyError: 'age'
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <small>Dictionaries let you organise data in a more intuitive way.</small>
+                    <br>
+                    <small class="fragment">Maybe you want to describe information about a specific equity:</small>
+                    <br>
+                    <div class="fragment">
+                        <small><ul>
+                        <li>Ticker</li>
+                        <li>Price</li>
+                        <li>Tradable</li>
+                        <li>Exchange</li>
+                        </ul></small>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> equity = {
+                                'ticker': 'AAPL',
+                                'price': 104.6,
+                                'tradeable': True,
+                                'exchange': 'US'
+                            }
+                            >>> equity['ticker']
+                            'AAPL'
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h3>Organising data with dictionaries</h3>
+                    <small>Or maybe you want to keep the ages of everyone in the room</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Tom']
+                            23
+                            >>> ages['Kathrin']
+                            25
+                        </code></pre>
+                </section>
+            </section>
+
+            <!-- Working with dictionaries -->
+            <section title="Working with dictionaries">
+                <section>
+                    <h3>Working with dictionaries</h3>
+                    <small>We've just seen how to read from a dictionary, but how do we modify one?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Tom']
+                            23
+                            >>> ages['Tom'] = ages['Tom'] + 1
+                            >>> ages['Tom']
+                            24
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Naomi joins the class! Now we need to record her age</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> ages['Naomi']
+                            Traceback (most recent call last):
+                              File "python", line 1
+                            KeyError: 'Naomi'
+                            >>> ages['Naomi'] = 26
+                            >>> ages
+                            {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25, 'Naomi': 26}
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Kathrin goes on holiday so we want to remove her age</small>
+                    <pre>
+                        <code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> del ages['Kathrin']
+                            >>> ages
+                            {'Tom': 23, 'Gabriel': 27}
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Check if a key exists</h3>
+                    <small>Now we want to check if we've recorded someone's age</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> 'Naomi' in ages
+                            False
+                            >>> 'Kathrin' in ages
+                            True
+                        </code></pre>
+                    <div class="fragment">
+                        <small>We can combine this with <code>if</code> and <code>else</code> to do some interesting things</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                if 'Gabriel' in ages:
+                                  print('Gabriel is ' + str(ages['Gabriel']) + ' years old')
+                                else:
+                                  print("We do not have Gabriel's age")
+                            </code></pre>
+                    </div>
+                </section>
+                <section>
+                        <h3>Time for some practice!</h3>
+                        <a href="https://repl.it/@nchristie/Lesson4Ex3">here</a>
+                    </section>
+            </section>
+
+            <!-- Looping over dictionaries -->
+            <section title="For loops with dictionaries">
+                <section>
+                    <h3>For loops with dictionaries</h3>
+                    <small>Dictionaries provide three functions which return lists of things you can use in a for loop</small>
+                    <br><br>
+                    <div class="fragment">
+                        <small>Here's how to loop through the <em>values</em> of a dictionary</small>
+                        <pre><code class="python" data-trim contenteditable>
+                                >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                                >>> for age in ages.values():
+                                ...   print(age)
+                                
+                                23
+                                27
+                                25
+                            </code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <small>And here's how to loop through the <em>keys</em> of a dictionary</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> for name in ages.keys():
+                            ...   print(name)
+
+                            Tom
+                            Gabriel
+                            Kathrin
+                        </code></pre>
+                </section>
+
+                <section>
+                    <small>Or how about both at the same time?</small>
+                    <pre><code class="python" data-trim contenteditable>
+                            >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
+                            >>> for item in ages.items():
+                            ...   print(item)
+                            ...   print(item[0] + ' -> ' + str(item[1]))
+                            
+                            ('Tom', 23)
+                            'Tom -> 23'
+                            ('Gabriel', 27)
+                            'Gabriel -> 27'
+                            ('Kathrin', 25)
+                            'Kathrin -> 25'
+                        </code></pre>
+                    <small class="fragment">Using <code>items()</code> will give you the <em>key-value pairs</em></small>
+                    <br>
+                    <small class="fragment"></small>
+                </section>
+            </section>
+                        <section>
+                <section>
+                    <h2>Practice Questions</h2>
+                </section>
+                <section>
+                    <h4>What is [ ]?</h4>
+                </section>
+                <section>
+                    <h4>For the following 3 question assume:</h4>
+                    <pre><code class="python">spam = ['a', 'b', 'c', 'd']</code></pre>
+                    <small>1. What does <code>spam[int(int('3' * 2) // 11)]</code> evaluate to?</small><br>
+                    <small>2. What does <code>spam[-1] evaluate to?</code></small>
+                    <br>
+                    <small>3. What does <code>spam[:2] evaluate to?</code></small>
+                </section>
+                <section>
+                    <h4>How can you delete an element from a list?</h4>
+                </section>
+                <section>
+                    <h4>Read about methods on Lists: <code>append()</code>, <code>remove()</code> and <code>index()</code></h4>
+                    <small>Assume:</small>
+                    <pre><code class="python">bacon = [3.14, 'cat', 11, 'cat', True]</code></pre>
+                    <small>1. What does <code>bacon.index('cat')</code> evaluate to?</small><br>
+                    <small>2. What does <code>bacon.remove('cat')</code> do? What does bacon look like now?</small>
+                    <br>
+                    <small>3. What does <code>bacon.append(99)</code> do? What does bacon look like now?</small>
+                </section>
+                <section>
+                    <h4>Can you write a function that gets the largest number from a list?</h4>
+                </section>
+                <section>
+                    <h4>What does the code for an empty dictionary look like?</h4>
+                </section>
+                <section>
+                    <h4>Can you write a dictionary with a key 'foo' and value 42?</h4>
+                </section>
+                <section>
+                    <h4>What happens if you try to access <code>spam['foo']</code> if <code>spam = {'bar': 100}?</code></h4>
+                </section>
+                <section>
+                    <h4>What's the difference between the following codes? Assume <code>spam</code> is a dictionary</h4>
+                    <small><ul>
+                        <li>between the expressions <code>'cat' in spam</code> and <code>'cat' in spam.keys()</code>?</li>
+                        <li>between the expressions <code>'cat' in spam</code> and <code>'cat' in spam.values()</code>?</li>
+                    </ul></small>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Practice Project - Lists</h3>
+                    <h4>Comma Code</h4>
+                    <small>Say you have a list value like this: </small>
+                    <pre><code class="python">spam = ['apples', 'bananas', 'tofu', 'cats']</code></pre>
+                    <small>Write a function that takes a list value as an argument and returns a string with all the items separated by a comma and a space, with and inserted before the last item.
+                        For example, passing the previous spam list to the function would return 'apples, bananas, tofu, and cats'.
+                        But your function should be able to work with any list value passed to it.</small>
+                </section>
+            </section>
+            <section>
+                  <section>
+                    <h3>Practice Project - Dictionaries</h3>
+                    <h4>Fantasy Game Inventory</h4>
+                    <small style="font-size: 16px;">You are creating a fantasy video game.
+                        The data structure to model the player’s inventory will be a dictionary where the keys are string values describing the item in the inventory
+                        and the value is an integer value detailing how many of that item the player has.
+                        For example, the dictionary value <code>{'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}</code> means the player has 1 rope, 6 torches, 42 gold coins, and so on.</small>
+                    <br><br>
+                      <small style="font-size: 16px;">Write a function named <code>displayInventory()</code> that would take any possible “inventory” (dictionary) and display it like the following:</small>
+                        <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            Inventory:
+                            12 arrow
+                            42 gold coin
+                            1 rope
+                            6 torch
+                            1 dagger
+
+                            Total number of items: 63
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>Fantasy Game Inventory</h4>
+                    <small style="font-size: 16px;">Imagine a treasure represented as a list of strings like this:</small>
+                      <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+                      </code></pre>
+                    <small style="font-size: 16px;">Write a function named <code>addToInventory(inventory, addedItems)</code>, where the inventory parameter is a dictionary
+                        representing the player’s inventory (like in the previous project) and the addedItems parameter is a list like treasure.
+                        The addToInventory() function should return a dictionary that represents the updated inventory.
+                        Note that the addedItems list can contain multiples of the same item. Your code could look something like this:</small>
+                      <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            #Function definitions
+                            def displayInventory(inventory):
+                                # Code you wrote before
+
+                            def addToInventory(inventory, addedItems):
+                                # your code goes here
+
+                            # Code execution starts here
+                            inv = {'gold coin': 42, 'rope': 1}
+                            treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
+                            inv = addToInventory(inv, treasure)
+                            displayInventory(inv)
+                        </code></pre>
+                    <small style="font-size: 16px;">And the output could look something like this...</small>
+                </section>
+                <section>
+                       <small style="font-size: 16px;">And the output would look something like:</small>
+                       <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
+                            Inventory:
+                            45 gold coin
+                            1 rope
+                            1 ruby
+                            1 dagger
+
+                            Total number of items: 48
+                        </code></pre>
+                </section>
+            </section>
+             <section>
+                <h2>Thank you!!</h2>
+            </section>
+
+             <!-- LESSON 5 -->
+            <section id="lesson-5">
+                <h1>Introduction to Python</h1>
+                <h3>Lesson 5</h3>
+                <p>
+                    <small>Closely following <a href="https://automatetheboringstuff.com/">Automate the boring stuff with Python</a></small>
+                </p>
+            </section>
+
+            <section title="Setting up Jupyter Notebook">
+                <section>
+                    <h3>Setting up Jupyter Notebook</h3>
+                </section>
+                <section>
+                <h3>Set up: First steps</h3>
+                <small>
+                    <ol>
+                        <li>Download and install <a href="https://www.anaconda.com/download/">Anaconda</a></li>
+                        <li>Create a Folder structure, for the exercises we are going to use Documents->Jupyter->NameOfProject</li>
+                        <li>Move the relevant files excel files into the folder of your project, for the first example this will be <i>example.xlsx</i></li>
+                        <li>Start Jupyter Notebook, navigate to your folder, create a new Jupyter Notebook and save it.</li>
+                        <li>You are ready to go!</li>
+                    </ol>
+                </small>
+                </section>
+                <section>
+                    <h3>Jupyter Notebook Basics</h3>
+                    <small>
+                    <ul>
+                        <li>Notebook documents (or “notebooks”, all lower case) are documents which contain both computer code (e.g. python) and rich text elements (paragraph, equations, figures, links, etc…). </li>
+                        <li>To <i>run</i> a cell, Use <font color="#7fffd4">Shift + Enter.</font> This way you can run the notebook step by step</li>
+                        <li>You can run the whole notebook in a single step by clicking on the menu <font color="#7fffd4">Cell -> Run All.</font></li>
+                        <li>To restart the kernel (i.e. the computational engine), click on the menu <font color="#7fffd4">Kernel -> Restart</font>. This can be useful to start over a computation from scratch (e.g. variables are deleted, open files are closed, etc…).</li>
+                    </ul>
+                    </small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Working with Excel</h3>
+                </section>
+            <section>
+                <h3>A bit of vocabulary</h3>
+                <small>
+                <ul>
+                    <li>An Excel spreadsheet document is called a <i>workbook</i>. A single workbook is saved in a file with the .xlsx extension</li>
+                    <li>Each workbook can contain multiple sheets (also called <i>worksheets</i>). The current one is called the <i>active sheet</i></li>
+                    <li>Each sheet has <i>columns</i> (addressed by letters starting at A) and <i>rows</i> (addressed by numbers starting at 1). A box at a particular column and row is called a <i>cell</i>. </li>
+                </ul>
+                </small>
+            </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Opening an Excel file</h4>
+                    <small>Make sure you have <i>example.xlsx</i> ready in the same folder as your Notebook. Now let's open our first excel file:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         # Needed imports: This is the python excel module
+                         import openpyxl
+                        </code>
+                    </pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Open our excel workbook from a file path.
+                        wb = openpyxl.load_workbook('example.xlsx')
+                        type(wb)
+                        </code>
+                    </pre>
+                    <small><code>type(wb)</code> simply lets you inspect the type of the object in that variable. You don't need it to proceed and it's advisable to remove it in order to reduce the spam output.</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out[3]: openpyxl.workbook.workbook.Workbook
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>Getting sheets from a workbook</h4>
+                    <small>You can get all the sheets as a list by accessing worksheets:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         wb.worksheets
+                        </code></pre>
+                    <small>Note that this is <i>not</i> a function call, that's why there are no '()'</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out [7]: [&lt;Worksheet "Sheet1"&gt;, &lt;Worksheet "Sheet2"&gt;, &lt;Worksheet "Sheet3"&gt;]
+                    </code></pre>
+                    <small>You can now assign a variable to the sheet we want to work with. You can also inspect that</small>
+                    <pre><code class="python" data-trim contenteditable>
+                        # Access the first sheet of the workbook
+                        sheet = wb.worksheets[0]
+                        sheet.title
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out [7]: 'Sheet1'
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Getting cells from a sheet</h4>
+                    <small>You can access the cells similarly to Excel:</small>
+                    <pre><code class="python" data-trim contenteditable>
+                         sheet['A1'].value
+                        </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        Out[9]: datetime.datetime(2015, 4, 5, 13, 34, 2)
+                    </code></pre>
+                    <pre><code class="python" data-trim contenteditable>
+                        c = sheet['B1']
+                        print('Row ' + str(c.row) + ', Column ' + c.column + ' is ' + c.value)
+                        print('Cell ' + c.coordinate + ' is ' + c.value)
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out [11]: Row 1, Column B is Apples
+                                  Cell B1 is Apples
+                    </code></pre>
+                    <small>As you may have noticed, c is a Cell object. If you want the value you will need to access it using .value</small>
+                    <small>You can access many properties on a cell, such as row, column, coordinate and value</small>
+                </section>
+                <section>
+                    <small>You can also access the cells using the cell() function on your sheet</small>
+                    <pre><code class="python" data-trim="True">
+                        sheet.cell(row=1, column=2)
+                        sheet.cell(row=1, column=2).value
+                     </code></pre>
+                    <small>This way you can iterate over cells:</small>
+                    <pre><code class="python" data-trim="True">
+                        for i in range(1,8,2):
+                            print(i, sheet.cell(row=i, column=2).value)
+                        </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        1 Apples
+                        3 Pears
+                        5 Apples
+                        7 Strawberries
+                        </code></pre>
+                </section>
+                <section>
+                    <h4>What about number of columns and rows?</h4>
+                    <small>You can access those on the sheet!</small>
+                    <pre><code class="python" data-trim="True">
+                        sheet.max_row
+                        sheet.max_column
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        OUT[14]: 7
+                                 3
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>We can access complete rows or columns:</h4>
+                    <pre><code class="python" data-trim="True">
+                        for cells in sheet.iter_rows(min_col=2, max_col=2):
+                            print(cells[0].value)
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        Out[12]: Apples
+                                 Cherries
+                                 Pears
+                                 Oranges
+                                 Apples
+                                 Bananas
+                                 Strawberries
+                    </code></pre>
+                    <small>iter_rows returns a list of rows with cells from min_col to max_col!<br>
+                        You can use iter_cols to get list of columns, iter_cols uses min_row and max_row to select which rows to return.<br>
+                        Note that those value start from 1 and not 0!
+                    </small>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Sample Project</h3>
+                    <h4>Reading and analysing Data from a spreadsheet</h4>
+                    <small>To start, open a new Jupyter notebook and write code for the folloing tasks. You can copy paste from the previous slides to do that:<br><br>
+                    <ol>
+                        <li>Import the module openpyxl</li>
+                        <li>Open the Excel file and save it to a variable called 'wb'</li>
+                        <li>Access the first sheet and save it to a variable called 'sheet'</li>
+                    </ol>
+                    </small><br><br>
+                    <small>In this example we would like to analyse the dataset and report to how many ports are down per switch.</small>
+                </section>
+                <section>
+                    <small>Preparing the sheet:</small>
+                    <pre><code class="python" data-trim="True">
+                        In [1]: import openpyxl
+                        In [2]: wb = openpyxl.load_workbook('dataset.xlsx')
+                        In [3]: sheet = wb.worksheets[0]
+                    </code></pre>
+                    <div class="fragment">
+                     <small>Let's create a datastructure to fill in our analysis. We are choosing a dictionary, this way we can store it as key: switch-name -> value: number of nodes that are down</small>
+                    <pre><code class="python" data-trim="True">
+                        down_nodes = {}
+                    </code></pre>
+                    <small>The result will look something like this:</small>
+                    <pre><code class="python" data-trim="True">
+                        {
+                            'ATS1-1A-NODE-SW1' : 1,
+                            'ATS1-1A-NODE-SW2' : 3,
+                            ....
+                        }
+                    </code></pre>
+                        </div>
+                </section>
+                 <section>
+                     <small>Now we can start looping over our sheet (not including the header!) - In this case rows and columns are indexed with 1.</small>
+                     <pre><code class="python" data-trim data-noescape>
+                         for row_number in range(2, sheet.max_row + 1):<div class="fragment">
+                            # Retrieve switch name from the cell in column 1
+                            switch_name = sheet.cell(row=row_number, column=1).value</div><div class="fragment">
+                            # If we see switch_name for the first time we add it
+                            if switch_name not in down_nodes:
+                                down_nodes[switch_name] = 0</div><div class="fragment" >
+                            # Retrieve status from the cell in column 6
+                            status = sheet.cell(row=row_number, column=6).value</div><div class="fragment">
+                            # If the status is "down" we want to increase the number:
+                            if status == 'down':
+                                down_nodes[switch_name] = down_nodes[switch_name] + 1</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Inspecting the results</h4>
+                    <pre><code class="python" data-trim="True">
+                        down_nodes
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        {
+                            'ATS1-1A-NODE-SW1': 1,
+                            'ATS1-1A-NODE-SW2': 4,
+                            'ATS2-1A-NODE-SW1': 6,
+                            'ATSS-7A-CORP-SW1': 24,
+                            'ATSS-7A-CORP-SW2': 11
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Writing the results to a file</h4>
+                    <small>Let's say you want to write the results to a file, with the simple format:</small>
+                       <table style="font-size: 20px">
+                        <thead>
+                            <tr>
+                                <th>Switch Name</th>
+                                <th># Down</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ATS1-1A-NODE-SW1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>ATS1-1A-NODE-SW2</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    <small>There are many options available:
+                    <ul>
+                        <li>Write to another sheet in your excel file (or even a new excel file)</li>
+                        <li>Write to a simple text file</li>
+                        <li>Save them as comma separated values (so they can be opened in excel) - i.e. csv</li>
+                        <li>....</li>
+                    </ul></small>
+                </section>
+                <section>
+                    <h4>Let's start with a simple texfile:</h4>
+                    <pre><code class="python" data-trim="True" data-noescape>
+                        # Creating a new file, make it writeable
+                        resultFile = open('results.txt', 'w')
+
+                        # Empty the file (don't do this if you just append to a file)
+                        resultFile.truncate()<div class="fragment">
+                        # Iterate over our dictionary and write to file
+                        for item in down_nodes.items():
+                            resultFile.write(item[0] + ': ' + str(item[1]) + '\n')</div><div class="fragment">
+                        # Close the file
+                        resultFile.close()</div>
+                    </code></pre>
+                    <small>And you have successfully created a text file using Python!! :) </small>
+                </section>
+                <section>
+                    <h4>What about writing to a new sheet and save?</h4>
+                      <pre><code class="python" data-trim="True" data-noescape>
+                          # There is no second sheet yet, so we can create it:
+                          results_sheet = wb.create_sheet('Results')<div class="fragment">
+                          # Create Header row
+                          results_sheet.cell(row=1, column=1).value = 'Switch'
+                          results_sheet.cell(row=1, column=2).value = '# Down'</div><div class="fragment">
+                          # Write to the sheet (start from row 2)
+                          row = 2
+                          for item in down_nodes.items():
+                              results_sheet.cell(row=row, column=1).value = item[0]
+                              results_sheet.cell(row=row, column=2).value = item[1]
+                              row = row + 1</div><div class="fragment">
+                          # Now you just need to save the sheet (choose the same name or another one)
+                          # We recommend to keep the original "clean" and save to a new name.
+                          wb.save('dataset_results.xlsx')</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>What if we want to apply some colours?</h4>
+                    <small>Let's find all the unknown duplex types and highlight them!</small>
+                    <pre><code class="python" data-trim="True" data-noescape>
+                        # First we need to define/create our fill-style
+                        fill_style_green = openpyxl.styles.PatternFill("solid", fgColor=openpyxl.styles.colors.GREEN)<div class="fragment">
+                        # Now we can iterate over all the rows and assign
+                        # the style to them
+                        for row in sheet.rows:
+                            duplex_cell = row[2]
+                            if duplex_cell.value == 'unknown':
+                                duplex_cell.fill = fill_style_green</div><div class="fragment">
+                        # Don't forget to save!
+                        wb.save('dataset_results.xlsx')</div>
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>Let's see what we have done!</h4>
+                    <div class="paragraph">
+                        <p>
+                            <span class="image">
+                                <img src="pics/excel/duplex_pic.PNG" alt="duplex" width="550" height="300">
+                            </span>
+                            <span class="image">
+                                <img src="pics/excel/results_pic.PNG" alt="results" width="280" height="300">
+                            </span>
+                        </p>
+                    </div>
+                    <small>You can find more ideas in the <a href="https://openpyxl.readthedocs.io/en/stable/index.html">openpyxl documentation</a></small>
+                </section>
+            </section>
+
+            <section title="Working with data and pandas">
+                <section>
+                    <h3>Working with data and pandas</h3>
+                </section>
+
+                <section>
+                <h3>Introduction</h3>
+                <small>
+                    <ol>
+                        <li>Pandas is Python's data analysis library</li>
+                        <li>Numpy is Python's scientific computing libray (which pandas depends on)</li>
+                        <li>Inside pandas is a powerful data container called a dataframe</li>
+                        <li>Pandas is integrated with another library (matplotlib) making plotting really easy </li>
+                    </ol>
+                </small>
+                </section>
+
+
+                <section>
+                    <h4>Pandas dataframes</h4>
+                    <pre><code class="python" data-trim="True">
+                        import pandas as pd
+                        import numpy as np
+                    </code></pre>
+                    <small>Dataframes can be created in many different ways, here we create using a dict.</small>
+                    <pre><code class="python" data-trim="True">
+                        dict = {'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                                'group': ['Accounting', 'Engineering', 'Engineering', 'HR']}
+                        dataframe = pd.DataFrame(dict)
+                        print(dataframe)
+                    </code></pre>
+
+                    <small>Extract a column</small>
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        roles = dataframe['group']
+                    </code></pre>
+
+                    <small>Extract some data</small>
+                    </code></pre>
+                    <pre><code class="python" data-trim="True">
+                        dataframe.loc[dataframe['employee']=='Lisa', 'group']
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h4>Merging datasets</h4>
+                    <pre><code class="python" data-trim="True">
+                        df1 = pd.DataFrame({'employee': ['Bob', 'Jake', 'Lisa', 'Sue'],
+                                            'group': ['Accounting', 'Engineering', 'Engineering', 'HR']})
+                        df2 = pd.DataFrame({'employee': ['Lisa', 'Bob', 'Jake', 'Sue'],
+                                            'hire_date': [2004, 2008, 2012, 2014]})
+                        display(df1, df2)
+                    </code></pre>
+
+                    <pre><code class="python" data-trim="True">
+                        df3 = pd.merge(df1, df2)
+                        display(df3)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h4>Reading from csv and plotting using a dataframe</h4>
+                    <pre><code class="python" data-trim="True">
+                        import numpy as np
+                        import pandas as pd
+                        import matplotlib.pyplot as plt
+                    </code></pre>
+                    <small>Read the csv</small>
+                    <pre><code class="python" data-trim="True">
+                        data = pd.read_csv("price_data.csv")
+                    </code></pre>
+                    <small>Plot</small>
+                    <pre><code class="python" data-trim="True">
+                        data.plot()
+                    </code></pre>
+                </section>
+
+            </section>
+            <section>
+                <h3>What now?</h3>
+                <small><ul>
+                    <li>Sign up to other courses (Gid's pandas course, Hannah's Intro to CS)</li>
+                    <li><a href="https://www.practicepython.org/">https://www.practicepython.org/</a> has loads of exercises</li>
+                    <li><a href="https://www.hackerrank.com/domains/python">https://www.hackerrank.com/</a> has amazing exercises and challenges</li>
+                    <li><a href="https://www.codewars.com/?language=python">https://www.codewars.com/</a> takes a fun challenge approach</li>
+                    <li><a href="https://exercism.io/tracks/python">https://exercism.io/tracks/python</a> seems fun too!</li>
+                    <li><a href="https://www.codecademy.com/learn/learn-python?composer_curriculum_redirect=python">https://www.codeacademy.com</a> has an interactive course</li>
+                    <li>.. so does <a href="https://www.udacity.com/course/intro-to-computer-science--cs101">udacity!</a></li>
+                    <li>Find a project and just go with it (Google is your friend)</li>
+                </ul></small>
+            </section>
+            <section>
+                <h2>Thank you!!</h2>
+            </section>
+        </div>
     </div>
 
     <script src="lib/js/head.min.js"></script>
@@ -1445,4 +3051,5 @@
     </script>
 
 </body>
+
 </html>
