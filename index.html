@@ -1120,6 +1120,27 @@
                     </div>
                     <aside class="notes">The first line creates an infinite loop; it is a while loop whose condition is always True. (The expression True, after all, always evaluates down to the value True.) The program execution will always enter the loop and will exit it only when a break statement is executed. (An infinite loop that never exits is a common programming bug.)<br> - You can exit an infinite loop using Ctrl-C to kill the program.</aside>
                 </section>
+
+                <section>
+                    <h3>continue statements</h3>
+                    <small>Like break statements, continue statements are used inside of loops.  Unlike break statements, they cause the program execution to jump back to the start of the loop (and re-evaluate the condition).</small>
+                    <div class="fragment">
+                        <pre><code class="python" data-trim contenteditable>
+                        num = 0
+                        while num < 10:
+                            num = num + 1
+                            if num % 2 == 0:
+                                # number is even
+                                continue
+                            print(num)
+                        </code></pre>
+                    </div>
+		        </section>
+
+
+
+
+
             </section>
 
             </section>
@@ -1155,7 +1176,7 @@
                     </code></pre>
                     <small> Range is a function that returns a list like sequence of values up to a stop value. </small>
                     <small> The list returned excludes the stop value. </small>
-                    <small> Try it out! Replace the range function in the loop on the previous sleep with the following: </small>
+                    <small> Try it out! Replace the range function in the loop on the previous slide with the following: </small>
                     <ul>
                         <li><code>range(0,5)</code></li>
                         <li><code>range(3,10)</code>
@@ -1181,17 +1202,22 @@
                     <h4>Write code that prints "Hello" if 1 is stored in spam, prints "Howdy" if 2 is stored in spam, and prints "Greetings!" if anything else is stored in spam.</h4>
                 </section>
                 <section>
-                    <h4>Look up what <code>continue</code> statements do. Can you understand the following code?</h4>
-                    <pre><code class="python" data-trim contenteditable>
+                    <h4>Can you understand the following code?</h4>
+                        <pre><code class="python" data-trim contenteditable>
                         while True:
                             print('Who are you?')
                             name = input()
                             if name != 'Joe':
                                 continue
                             print('Hello, Joe. What is the password? (It is a fish.)')
+
+                        print('Hello, Joe.')
+                        while True:
+                            print('What is the password? (It is a fish.)')
                             password = input()
                             if password == 'swordfish':
                                 break
+                            print('WRONG!')
                         print('Access granted.')
                         </code></pre>
                 </section>
@@ -1203,7 +1229,6 @@
 
                 <section>
                     <h4> Can you write code that prints all the values from 1 to 50 and skips 27? </h4>
-                    <small> Hint: the continue statement will be useful.</small>
                 </section>
 
 
