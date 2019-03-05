@@ -379,13 +379,13 @@
 
                     print('Hello world!')
                     print('What is your name?')    # ask for their name
-                    myName = input() # raw_input if you're in python2
-                    print('It is good to meet you, ' + myName)
+                    my_name = input() # raw_input if you're in python2
+                    print('It is good to meet you, ' + my_name)
                     print('The length of your name is:')
-                    print(len(myName))
+                    print(len(my_name))
                     print('What is your age?')    # ask for their age
-                    myAge = input()
-                    print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+                    my_age = input()
+                    print('You will be ' + str(int(my_age) + 1) + ' in a year.')
                     </code></pre>
                         <small>Make sure you save it!</small>
                     </div>
@@ -423,29 +423,29 @@
                 <section>
                     <h4>The input() function</h4>
                     <pre><code class="python" data-trim contenteditable>
-                    myName = input()
+                    my_name = input()
                     </code></pre>
-                    <small>input waits for the user's input and saves it into <code>myName</code>
+                    <small>input waits for the user's input and saves it into <code>my_name</code>
                     as a string</small>
                     <br>
                     <br>
                     <div class="fragment">
                         <h4>Printing variables</h4>
                         <pre><code class="python" data-trim contenteditable>
-                    print('It is good to meet you, ' + myName)
+                    print('It is good to meet you, ' + my_name)
                     </code></pre>
-                        <small>If 'Kathrin' was stored in <code>myName</code> then this expression would print
+                        <small>If 'Kathrin' was stored in <code>my_name</code> then this expression would print
                     "It is good to meet you, Kathrin"</small>
                     </div>
                     <aside class="notes">
-                        - You can think of the input() function call as an expression that evaluates to whatever string the user typed in. <br> - If the user entered 'Al', then the expression would evaluate to myName = 'Al'.
+                        - You can think of the input() function call as an expression that evaluates to whatever string the user typed in. <br> - If the user entered 'Al', then the expression would evaluate to my_name = 'Al'.
                     </aside>
                 </section>
                 <section>
                     <h4>The len() function</h4>
                     <pre><code class="python" data-trim contenteditable>
                     print('The length of your name is:')
-                    print(len(myName))
+                    print(len(my_name))
                     </code></pre>
                     <div class="fragment">
                         <small>The <code>len()</code> functions evaluates the length of a string. Try it out:</small>
@@ -470,7 +470,7 @@
                     </code></pre>
                     </div>
                     <aside class="notes">
-                        - Just like those examples, len(myName) evaluates to an integer.<br> - Python gives an error because you can use the + operator only to add two integers together or concatenate two strings.<br> - You can’t add an integer to a string because this is ungrammatical in Python. <br> - Similarly if you want to do get a number from the user as an input and do calculations on it. You will have to convert it first.
+                        - Just like those examples, len(my_name) evaluates to an integer.<br> - Python gives an error because you can use the + operator only to add two integers together or concatenate two strings.<br> - You can’t add an integer to a string because this is ungrammatical in Python. <br> - Similarly if you want to do get a number from the user as an input and do calculations on it. You will have to convert it first.
                     </aside>
                 </section>
                 <section>
@@ -504,23 +504,23 @@
                     <small>How can you do calculations on a variable and then print it? </small>
                     <pre><code class="python" data-trim contenteditable>
                         print('What is your age?') # ask for their age
-                        myAge = input()
-                        print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+                        my_age = input()
+                        print('You will be ' + str(int(my_age) + 1) + ' in a year.')
                         </code></pre>
                     <br>
                     <div class="fragment">
-                        <small>myAge contains the value returned from input() as a string.
+                        <small>my_age contains the value returned from input() as a string.
                             To add 1 to it we need to convert it to an integer.
                         </small>
                         <pre><code class="python" data-trim contenteditable>
-                        int(myAge) + 1
+                        int(my_age) + 1
                         </code></pre>
                         <br>
                     </div>
                     <div class="fragment">
                         <small>To print this to the user's screen we need to convert it to a string again:</small>
                         <pre><code class="python" data-trim contenteditable>
-                        str(int(myAge) + 1)
+                        str(int(my_age) + 1)
                         </code></pre> </div>
                 </section>
             </section>
@@ -1458,7 +1458,7 @@ The only time you need to know how a function works inside is when you need to w
                         <small>When you define a function you can also define what it returns:</small>
                         <pre><code class="python" data-trim contenteditable>
                     # Function definition
-                    def getAnswer(number):
+                    def get_answer(number):
                         if number == 1:
                             return 'It is certain'
                         elif number == 2:
@@ -1467,21 +1467,21 @@ The only time you need to know how a function works inside is when you need to w
                             return 'I dont know the answer to this'
 
                     # Code starts here
-                    fortune = getAnswer(5)
+                    fortune = get_answer(5)
                     print(fortune)
                         </code></pre>
                     </div>
                 </section>
                 <section>
-                    <small>The result of getAnswer is stored in a variable called fortune.
+                    <small>The result of get_answer is stored in a variable called fortune.
                     We can then pass this to print.</small>
                     <pre><code class="python" data-trim contenteditable>
-                        fortune = getAnswer(3)
+                        fortune = get_answer(3)
                         print(fortune)
                 </code></pre>
                     <small>we can also chain this call:</small>
                     <pre><code class="python" data-trim contenteditable>
-                        print(getAnswer(3))
+                        print(get_answer(3))
                 </code></pre>
                 </section>
                 <section>
@@ -1490,11 +1490,11 @@ The only time you need to know how a function works inside is when you need to w
                     <pre><code class="python" data-trim contenteditable>
                         print('Tell me a number: ')
                         number = int(input())
-                        fortune = getAnswer(number)
+                        fortune = get_answer(number)
                         print(fortune)
                 </code></pre>
                     <small class="fragment">Remember that we need to create an int out of the input string!</small>
-                    <small class="fragment">This way someone else could write the function getAnswer and we can just use it!</small>
+                    <small class="fragment">This way someone else could write the function get_answer and we can just use it!</small>
                 </section>
                   <section>
                     <h3>Time for practice!</h3>
@@ -2118,48 +2118,48 @@ The only time you need to know how a function works inside is when you need to w
                         it’s tempting to create many individual variables to store a group of similar values. 
                         For example, if I wanted to store the names of my cats, I might be tempted to write code like this:</small>
                         <pre><code class="python" data-trim contenteditable>
-                                catName1 = 'Zophie'
-                                catName2 = 'Pooka'
-                                catName3 = 'Simon'
-                                catName4 = 'Lady Macbeth'
-                                catName5 = 'Fat-tail'
-                                catName6 = 'Miss Cleo'
+                                cat_name1 = 'Zophie'
+                                cat_name2 = 'Pooka'
+                                cat_name3 = 'Simon'
+                                cat_name4 = 'Lady Macbeth'
+                                cat_name5 = 'Fat-tail'
+                                cat_name6 = 'Miss Cleo'
                             </code></pre>
                     </section>
                     <section>
                         <small>.. or like this: ...</small>
                            <pre><code class="python" data-trim contenteditable>
                                     print('Enter the name of cat 1:')
-                                    catName1 = input()
+                                    cat_name1 = input()
                                     print('Enter the name of cat 2:')
-                                    catName2 = input()
+                                    cat_name2 = input()
                                     print('Enter the name of cat 3:')
-                                    catName3 = input()
+                                    cat_name3 = input()
                                     print('Enter the name of cat 4:')
-                                    catName4 = input()
+                                    cat_name4 = input()
                                     print('Enter the name of cat 5:')
-                                    catName5 = input()
+                                    cat_name5 = input()
 
                                     print('The cat names are:')
-                                    print(catName1 + ' ' + catName2 + ' ' + catName3 + ' ' + catName4 + ' ' +
-                                    catName5)
+                                    print(cat_name1 + ' ' + cat_name2 + ' ' + cat_name3 + ' ' + cat_name4 + ' ' +
+                                    cat_name5)
                                 </code></pre>
                                 <small>This is very repetitive.. and not extensible (What if you have 7 cats?)</small>
                         </section>
                         <section>
                             <small>Here is a improved version of that:</small>
                             <pre><code class="python" data-trim contenteditable>
-                                    catNames = []
+                                    cat_names = []
                                     while True:
-                                        print('Enter the name of cat ' + str(len(catNames) + 1) +
+                                        print('Enter the name of cat ' + str(len(cat_names) + 1) +
                                           ' (Or enter nothing to stop.):')
                                         name = input()
                                         if name == '':
                                             break
-                                        catNames = catNames + [name] # list concatenation
+                                        cat_names = cat_names + [name] # list concatenation
                                     
                                     print('The cat names are:')
-                                    for name in catNames:
+                                    for name in cat_names:
                                         print('  ' + name)
                                 </code></pre>
                                 <small>Let's try running this program!</small>
@@ -2222,10 +2222,10 @@ The only time you need to know how a function works inside is when you need to w
                 <section>
                     <small>For example, the following program lets the user type in a pet name and then checks to see whether the name is in a list of pets. </small>
                     <pre><code class="python" data-trim contenteditable>
-                            myPets = ['Zophie', 'Pooka', 'Fat-tail']
+                            my_pets = ['Zophie', 'Pooka', 'Fat-tail']
                             print('Enter a pet name:')
                             name = input()
-                            if name not in myPets:
+                            if name not in my_pets:
                                 print('I do not have a pet named ' + name)
                             else:
                                 print(name + ' is my pet.')
@@ -2533,7 +2533,7 @@ The only time you need to know how a function works inside is when you need to w
                         and the value is an integer value detailing how many of that item the player has.
                         For example, the dictionary value <code>{'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}</code> means the player has 1 rope, 6 torches, 42 gold coins, and so on.</small>
                     <br><br>
-                      <small style="font-size: 16px;">Write a function named <code>displayInventory()</code> that would take any possible “inventory” (dictionary) and display it like the following:</small>
+                      <small style="font-size: 16px;">Write a function named <code>display_inventory()</code> that would take any possible “inventory” (dictionary) and display it like the following:</small>
                         <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
                             Inventory:
                             12 arrow
@@ -2551,23 +2551,23 @@ The only time you need to know how a function works inside is when you need to w
                       <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
                             treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
                       </code></pre>
-                    <small style="font-size: 16px;">Write a function named <code>addToInventory(inventory, addedItems)</code>, where the inventory parameter is a dictionary
-                        representing the player’s inventory (like in the previous project) and the addedItems parameter is a list like treasure.
-                        The addToInventory() function should return a dictionary that represents the updated inventory.
-                        Note that the addedItems list can contain multiples of the same item. Your code could look something like this:</small>
+                    <small style="font-size: 16px;">Write a function named <code>add_to_inventory(inventory, added_items)</code>, where the inventory parameter is a dictionary
+                        representing the player’s inventory (like in the previous project) and the added_items parameter is a list like treasure.
+                        The add_to_inventory() function should return a dictionary that represents the updated inventory.
+                        Note that the added_items list can contain multiples of the same item. Your code could look something like this:</small>
                       <pre><code class="python" data-trim contenteditable style="font-size: 16px;">
                             #Function definitions
-                            def displayInventory(inventory):
+                            def display_inventory(inventory):
                                 # Code you wrote before
 
-                            def addToInventory(inventory, addedItems):
+                            def add_to_inventory(inventory, added_items):
                                 # your code goes here
 
                             # Code execution starts here
                             inv = {'gold coin': 42, 'rope': 1}
                             treasure = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
-                            inv = addToInventory(inv, treasure)
-                            displayInventory(inv)
+                            inv = add_to_inventory(inv, treasure)
+                            display_inventory(inv)
                         </code></pre>
                     <small style="font-size: 16px;">And the output could look something like this...</small>
                 </section>
@@ -2854,15 +2854,15 @@ The only time you need to know how a function works inside is when you need to w
                     <h4>Let's start with a simple texfile:</h4>
                     <pre><code class="python" data-trim="True" data-noescape>
                         # Creating a new file, make it writeable
-                        resultFile = open('results.txt', 'w')
+                        result_file = open('results.txt', 'w')
 
                         # Empty the file (don't do this if you just append to a file)
-                        resultFile.truncate()<div class="fragment">
+                        result_file.truncate()<div class="fragment">
                         # Iterate over our dictionary and write to file
                         for item in down_nodes.items():
-                            resultFile.write(item[0] + ': ' + str(item[1]) + '\n')</div><div class="fragment">
+                            result_file.write(item[0] + ': ' + str(item[1]) + '\n')</div><div class="fragment">
                         # Close the file
-                        resultFile.close()</div>
+                        result_file.close()</div>
                     </code></pre>
                     <small>And you have successfully created a text file using Python!! :) </small>
                 </section>
@@ -3066,3 +3066,5 @@ The only time you need to know how a function works inside is when you need to w
 </body>
 
 </html>
+
+
