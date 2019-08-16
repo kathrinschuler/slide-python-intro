@@ -21,7 +21,7 @@ empty object for copy-paste:
 BLURB = ""
 TASKS = [
     [
-        "",  # background info
+        "\ngoogle_up = True\nfacebook_up = True\n",  # background info
         "Write one line of code using a Boolean operator (and, or, not) which will display True if Google's price is up and Facebook's price is up, and False if not\n",  # question
         ["google", "facebook", "and"],  # list of required keywords
         {"google_up": True, "facebook_up": True},  # dict of variables to set up before question

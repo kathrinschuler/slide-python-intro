@@ -1,5 +1,5 @@
 from time import sleep
-from exercises.helpers import run_all_questions, create_question_list, ennumerate_task_list
+from exercises.helpers import run_all_questions, create_question_list, enumerate_task_list
 
 
 def run(tasks, blurb):
@@ -8,7 +8,7 @@ def run(tasks, blurb):
     fraction_of_second_to_read_each_word = 0.025
     sleep_len = word_num * fraction_of_second_to_read_each_word
     sleep(sleep_len)
-    list_of_remaining_questions = run_all_questions(create_question_list(ennumerate_task_list(tasks)))
+    list_of_remaining_questions = run_all_questions(create_question_list(enumerate_task_list(tasks)))
 
     while list_of_remaining_questions:
         print(f"You got {len(tasks) - len(list_of_remaining_questions)}/{len(tasks)} questions right\n")

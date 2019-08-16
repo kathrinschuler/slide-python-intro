@@ -1,6 +1,6 @@
 from exercises.helpers import (
     is_correct_answer,
-    ennumerate_task_list,
+    enumerate_task_list,
     question_tuple_maker,
     standardise_string,
     create_question_list,
@@ -70,13 +70,13 @@ class Tests(unittest.TestCase):
 
     real_list_of_remaining_questions = [real_question_1, real_question_2]
 
-    def test_ennumerate_task_list(self):
+    def test_enumerate_task_list(self):
         # GIVEN
         task_list = [[], [], [], []]
 
         # WHEN
         expected = [[1], [2], [3], [4]]
-        actual = ennumerate_task_list(task_list)
+        actual = enumerate_task_list(task_list)
 
         # THEN
         self.assertEqual(expected, actual)

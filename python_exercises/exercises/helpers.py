@@ -1,7 +1,8 @@
 from collections import namedtuple
 from time import sleep
 
-def ennumerate_task_list(task_list):
+
+def enumerate_task_list(task_list):
     for i, value in enumerate(task_list, 0):
         task_list[i].insert(0, i + 1)
     return task_list
@@ -13,9 +14,9 @@ def question_tuple_maker(q_num, info, question, answer, prerequisites):
     return task
 
 
-def create_question_list(ennumerated_tasks):
+def create_question_list(enumerated_tasks):
     list_of_remaining_questions = []
-    for task_data in ennumerated_tasks:
+    for task_data in enumerated_tasks:
         task_tuple = question_tuple_maker(task_data[0], task_data[1], task_data[2], task_data[3], task_data[4])
         list_of_remaining_questions.append(task_tuple)
     return list_of_remaining_questions
@@ -36,7 +37,7 @@ def run_all_questions(list_of_remaining_questions):
         if was_correct_answer:
             remove_list.append(task_tuple)
         print(_print_correct_or_incorrect(user_output, was_correct_answer))
-        sleep(.5)
+        sleep(0.5)
     for i in remove_list:
         list_of_remaining_questions.remove(i)
     return list_of_remaining_questions
@@ -46,7 +47,7 @@ def is_correct_answer(task_tuple, answer_to_question, user_output=None):
     keywords = task_tuple.answer
     keywords = [standardise_string(keyword) for keyword in keywords]
     was_correct_answer = False
-    if answer_to_question and (not user_output or not "Error" in user_output):
+    if answer_to_question and (not user_output or "Error" not in user_output):
         answer_to_question = standardise_string(answer_to_question)
         was_correct_answer = all(keyword in answer_to_question for keyword in keywords)
     return was_correct_answer
