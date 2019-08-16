@@ -707,7 +707,8 @@
                     >>> my_age = 29
                     >>> my_age >= 10
                     </code></pre>
-                <small>Click <a href="https://repl.it/@kathrinschuler/Lesson1ExBooleans">here</a> for another exercise</small>
+                <small>Click <a href="https://repl.it/@beginnerpython/equalityandbooleans">here</a> for another exercise</small>
+                <small>And find even more questions <a href="https://repl.it/@beginnerpython/greaterthanlessthanandbooleans">here</a></small>
             </section>
                 </section>
             </section>
@@ -792,7 +793,7 @@
 
                     >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2
                     </code></pre>
-                    <small>Click <a href="https://repl.it/@kathrinschuler/Lesson1ExBooleanOperators">here</a> for another exercise</small>
+                    <small>Click <a href="https://repl.it/@beginnerpython/variablesequalityandbooleans">here</a> for another exercise</small>
 
                 </section>
             </section>
@@ -864,7 +865,7 @@
 
             <section>
                 <h2>Warmup Exercise</h2>
-                <a href="https://repl.it/@kathrinschuler/Lesson2Ex1">Lesson 1 Recap</a>
+                <a href="https://repl.it/@beginnerpython/inbuiltfunctionsandoperators">Lesson 1 Recap</a>
             </section>
 
             <section title="Flow Control">
@@ -885,7 +886,7 @@
                 <section>
                     <h2>A bit of vocabulary</h2>
                     <h4>Conditions</h4>
-                    <small>Conditions always evaluate down to a Boolean value, <code>True</code> or <code>False</code>. 
+                    <small>Conditions always evaluate down to a Boolean value, <code>True</code> or <code>False</code>.
                         A flow control statement decides what to do based on whether its condition is True or False.</small>
                     <br><br>
                     <h4>Blocks of Code</h4>
@@ -895,7 +896,7 @@
                 </section>
                 <section>
                     <h2>If statements</h2>
-                    <small>“If this condition is true, execute the code in the clause.” 
+                    <small>“If this condition is true, execute the code in the clause.”
                     </small>
                     <pre><code class="python" data-trim contenteditable>
                     if name == 'Alice':
@@ -959,7 +960,7 @@
                 <section>
                     <h2>elif statements</h2>
                     <small>“If this condition is true, execute the code in the clause.
-                            Else if this condition is true, execute the code in this clause” 
+                            Else if this condition is true, execute the code in this clause”
                         </small>
                     <pre><code class="python" data-trim contenteditable>
                         if name == 'Alice':
@@ -1014,7 +1015,7 @@
                                 print('You are not Alice, grannie.')
                             elif age > 2000:
                                 print('Unlike you, Alice is not an undead, immortal vampire.')
-                            
+
                         </code></pre>
                     </div>
                 </section>
@@ -1067,7 +1068,7 @@
 
                 </section>
                 <section>
-                    <small>You can make a block of code execute over and over again with a while statement. 
+                    <small>You can make a block of code execute over and over again with a while statement.
                     </small>
                     <pre><code class="python" data-trim contenteditable>
                     spam = 0
@@ -1102,7 +1103,7 @@
                 </section>
                 <section>
                     <h3>break statements</h3>
-                    <small> There is a shortcut to getting the program execution to break out of a while loop’s clause early. 
+                    <small> There is a shortcut to getting the program execution to break out of a while loop’s clause early.
                         If the execution reaches a break statement, it immediately exits the while loop
                     </small>
                     <div class="fragment">
@@ -1255,6 +1256,7 @@ print('Access granted.')
 
             <section>
                 <h2>Warmup Exercise</h2>
+                <!-- TODO update question directory and links -->
                 <a href="https://repl.it/@kathrinschuler/Lesson3warmup">Lesson 2 Recap</a><br>
                 <a href="https://repl.it/@kathrinschuler/Lesson3warmup2">Lesson 3 Warmup: Fix the errors</a><br>
                 <a href="https://repl.it/@kathrinschuler/Lesson3warmupLoops">Lesson 3 Warmup: Loops Recap</a><br>
@@ -1512,7 +1514,7 @@ The only time you need to know how a function works inside is when you need to w
                     <small>Hint 2: This is just a practice function. Python has a built-in function <a href="https://docs.python.org/3.6/library/functions.html#max">max()</a> that does exactly that!</small>
                 </section>
                 <section>
-                    <p>Another review exercise is <a href=" https://repl.it/@kathrinschuler/Lesson3Ex1">here!</a></p>
+                    <p>Another review exercise is <a href="https://repl.it/@beginnerpython/functions">here!</a></p>
                 </section>
             </section>
 
@@ -1821,7 +1823,7 @@ The only time you need to know how a function works inside is when you need to w
             <section title="Local and Global Scope">
                 <section>
                     <h3>Local and Global Scope</h3>
-                    <small>Parameters and variables that are assigned in a function are said to exist in that function’s <q>local scope</q>. 
+                    <small>Parameters and variables that are assigned in a function are said to exist in that function’s <q>local scope</q>.
                         Variables that are assigned outside all functions are said to exist in the <q>global scope.</q> </small>
                     <br><br>
                     <small>Scope is like a container. When a scope is destrozed, all the variables in it are forgotten.</small>
@@ -1831,7 +1833,7 @@ The only time you need to know how a function works inside is when you need to w
                 <section>
                     <small>Local variables can not be read from outside:</small>
                     <pre><code class="python" data-trim contenteditable>
-                            # Function Definitions    
+                            # Function Definitions
                             def spam():
                                 eggs = 31337
 
@@ -1851,7 +1853,7 @@ The only time you need to know how a function works inside is when you need to w
                 <section>
                     <small>Global variables can be read from inside:</small>
                     <pre><code class="python" data-trim contenteditable>
-                        # Function Definitions    
+                        # Function Definitions
                         def spam():
                             print(eggs)
 
@@ -1879,7 +1881,7 @@ The only time you need to know how a function works inside is when you need to w
                         </code></pre>
                     <small>What will be printed? Why?</small>
                     <div class="fragment">
-                    <small>This can be very confusing... 
+                    <small>This can be very confusing...
                     And is the reason why you should avoid variables with the same name in global and local scope</small>
                     <br><br>
                     <small>To read more about scope, please refer to the section in the book where it is explained further!</small>
@@ -1899,6 +1901,7 @@ The only time you need to know how a function works inside is when you need to w
 
             <section>
                 <h2>Warmup Exercise</h2>
+                <!-- TODO update question directory and link -->
                 <a href="https://repl.it/@nchristie/Lesson4Warmup">Lesson 3 Recap</a>
             </section>
 
@@ -2022,6 +2025,7 @@ The only time you need to know how a function works inside is when you need to w
                 </section>
                 <section>
                     <h3>Time for Practice!</h3>
+                    <!-- TODO update question directory and links -->
                     <a href="https://repl.it/@nchristie/Lesson4Ex1">here</a>
                 </section>
             </section>
@@ -2057,7 +2061,7 @@ The only time you need to know how a function works inside is when you need to w
                             <pre><code class="python" data-trim contenteditable>
                                     >>> spam = ['cat', 'bat', 'rat', 'elephant']
                                     >>> spam.append('dog')
-                                </code></pre>  
+                                </code></pre>
                         </section>
                 <section>
                      <h4>List Concatenation</h4>
@@ -2077,10 +2081,10 @@ The only time you need to know how a function works inside is when you need to w
                     [1, 2, 3, 'A', 'B', 'C']
                         </code></pre>
                 </section>
-                
+
                 <section>
                     <h4>Removing Values from Lists</h4>
-                    <small>The del statement will delete values at an index in a list. 
+                    <small>The del statement will delete values at an index in a list.
                         All of the values in the list after the deleted value will be moved up one index. </small>
                         <pre><code class="python" data-trim contenteditable>
                             >>> spam = ['cat', 'bat', 'rat', 'elephant']
@@ -2099,7 +2103,7 @@ The only time you need to know how a function works inside is when you need to w
                     </section>
                     <section>
                         <h3>Time for some practice!</h3>
-                        <a href="https://repl.it/@nchristie/Lesson4Ex2">here</a>
+                        <a href="https://repl.it/@beginnerpython/lists">here</a>
                     </section>
                     <section>
                             <h3>Time for some practice!</h3>
@@ -2114,8 +2118,8 @@ The only time you need to know how a function works inside is when you need to w
             <section>
                 <section>
                     <h3>Working with lists</h3>
-                    <small>When you first begin writing programs, 
-                        it’s tempting to create many individual variables to store a group of similar values. 
+                    <small>When you first begin writing programs,
+                        it’s tempting to create many individual variables to store a group of similar values.
                         For example, if I wanted to store the names of my cats, I might be tempted to write code like this:</small>
                         <pre><code class="python" data-trim contenteditable>
                                 cat_name1 = 'Zophie'
@@ -2157,7 +2161,7 @@ The only time you need to know how a function works inside is when you need to w
                                         if name == '':
                                             break
                                         cat_names = cat_names + [name] # list concatenation
-                                    
+
                                     print('The cat names are:')
                                     for name in cat_names:
                                         print('  ' + name)
@@ -2171,7 +2175,7 @@ The only time you need to know how a function works inside is when you need to w
                     <small>In Lesson 2 you learned about loops:</small>
                     <pre><code class="python" data-trim contenteditable>
                         for i in range(4):
-                            print(i)        
+                            print(i)
                     </code></pre>
                     <small>This is because <code>range</code> returns a list-like value</small>
                     <div class="fragment">
@@ -2193,7 +2197,7 @@ The only time you need to know how a function works inside is when you need to w
                     <h3>Time for practice!</h3>
                     <small>Can you write some code that sums up all the values in a list?</small>
                     <pre><code class="python" data-trim contenteditable>
-                    numbers = [1, 3, 5, 10, 6] 
+                    numbers = [1, 3, 5, 10, 6]
                     # Your code goes here
 
                     print(sum) # This should print 25
@@ -2253,7 +2257,7 @@ The only time you need to know how a function works inside is when you need to w
                                 'My reply is no',
                                 'Outlook not so good',
                                 'Very doubtful']
-                            
+
                             random_index = random.randint(0, len(messages) - 1)
                             print(messages[random_index])
                     </code></pre>
@@ -2409,6 +2413,7 @@ The only time you need to know how a function works inside is when you need to w
                 </section>
                 <section>
                         <h3>Time for some practice!</h3>
+                        <!-- TODO update question directory and links -->
                         <a href="https://repl.it/@nchristie/Lesson4Ex3">here</a>
                     </section>
             </section>
@@ -2425,7 +2430,7 @@ The only time you need to know how a function works inside is when you need to w
                                 >>> ages = {'Tom': 23, 'Gabriel': 27, 'Kathrin': 25}
                                 >>> for age in ages.values():
                                 ...   print(age)
-                                
+
                                 23
                                 27
                                 25
@@ -2453,7 +2458,7 @@ The only time you need to know how a function works inside is when you need to w
                             >>> for item in ages.items():
                             ...   print(item)
                             ...   print(item[0] + ' -> ' + str(item[1]))
-                            
+
                             ('Tom', 23)
                             'Tom -> 23'
                             ('Gabriel', 27)
@@ -3066,5 +3071,3 @@ The only time you need to know how a function works inside is when you need to w
 </body>
 
 </html>
-
-
