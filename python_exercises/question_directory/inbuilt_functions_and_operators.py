@@ -16,9 +16,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = (
-    "\nLesson 2 - Warm Up Exercise\n\n(Feel free to look back over the slides/use Google if you need help on this)\n"
-)
+BLURB = "\nIn this exercise you'll practice using operators and in-built functions.\n(Feel free to look back over the slides/use Google if you need help on this)\n"
 
 TASKS = [
     [

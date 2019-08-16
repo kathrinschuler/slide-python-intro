@@ -18,7 +18,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = ""
+BLURB = "\nGuess what the output of these statements will be (clue, either True or False)\n"
 TASKS = [
     [
         "",  # background info
