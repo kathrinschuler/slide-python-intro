@@ -18,7 +18,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = "For the following questions answer by typing the letter a, b or c. These will correspond to the multiple choice answers you'll see below.\n"
+BLURB = "\nFor the following questions answer by typing the letter a, b or c. These will correspond to the multiple choice answers you'll see below.\n"
 TASKS = [
     [
         "\ndef hello(name)\n    print('hello ' + name)\n    return\n",  # background info

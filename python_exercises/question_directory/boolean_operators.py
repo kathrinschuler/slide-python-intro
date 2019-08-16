@@ -18,7 +18,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = ""
+BLURB = "\nYou've got clients who are interested in the share prices of Google and Facebook,\nin the following questions you'll write code to help your clients find out about those companies"
 TASKS = [
     [
         "\ngoogle_up = True\nfacebook_up = True\n",  # background info

@@ -19,8 +19,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = "\nLesson 2 - Exercise 2\n\
-\nImagine you've got clients who are interested in the share prices of Google and Facebook.\nThe variables we're using for these questions will be:\ngoogle_up\nfacebook_up\nFor each question the respective values of google_up and facebook_up will either be True or False. Keep an eye on their values (set before each question is asked) in order to get the right anwers."
+BLURB = "\nImagine you've got clients who are interested in the share prices of Google and Facebook.\nThe variables we're using for these questions will be:\ngoogle_up\nfacebook_up\nFor each question the respective values of google_up and facebook_up will either be True or False. Keep an eye on their values (set before each question is asked) in order to get the right anwers."
 
 TASKS = [
     [

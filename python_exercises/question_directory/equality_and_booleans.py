@@ -18,7 +18,7 @@ empty object for copy-paste:
 ],
 """
 
-BLURB = "\nLesson 1 - Exercise 1\n\n(Feel free to look back over the slides/use Google if you need help on this)\n Guess what the output of these statements will be (clue, either True or False)\n"
+BLURB = "\n(Feel free to look back over the slides/use Google if you need help on this)\n Guess what the output of these statements will be (clue, either True or False)\n"
 
 TASKS = [
     [
