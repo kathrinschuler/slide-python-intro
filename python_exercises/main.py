@@ -5,11 +5,16 @@ Press run above to start
 from exercises.question_runner import run
 from question_directory import (
     boolean_operators,
+    boolean_review,
+    changing_lists,
+    dictionaries,
     equality_and_booleans,
     functions,
+    functions_quick_review,
     greater_than_less_than_and_booleans,
     inbuilt_functions_and_operators,
-    lists,
+    indexing_lists,
+    loops,
     variables_equality_and_booleans,
 )
 from unit_tests.test_instructor_code import *  # noqa
@@ -29,10 +34,15 @@ if input("\n\nPress enter to start\n") != "test":
 
     # LESSON THREE
     # https://kathrinschuler.github.io/slide-python-intro/#/25/4
+    run(boolean_review.TASKS, boolean_review.BLURB)
     run(functions.TASKS, functions.BLURB)
+    run(loops.TASKS, loops.BLURB)
 
     # LESSON FOUR
-    run(lists.TASKS, lists.BLURB)
+    run(indexing_lists.TASKS, indexing_lists.BLURB)
+    run(functions_quick_review.TASKS, functions_quick_review.BLURB)
+    run(changing_lists.TASKS, changing_lists.BLURB)
+    run(dictionaries.TASKS, dictionaries.BLURB)
 
 else:
     if __name__ == "__main__":

@@ -1,0 +1,1 @@
+The code_challenges folder contains code which is deliberately wrong and the student is tasked with correcting. The files are .txt so that pre-commit hooks won't interfere, convert to .py for use in repl.
