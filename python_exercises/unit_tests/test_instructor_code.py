@@ -11,7 +11,7 @@ from exercises.question_runner import run, _bonus
 from collections import namedtuple
 import unittest
 from unittest import mock
-from question_directory.lists import TASKS as tasks, BLURB as blurb
+from question_directory.changing_lists import TASKS as tasks, BLURB as blurb
 
 
 class Tests(unittest.TestCase):
