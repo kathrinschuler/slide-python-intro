@@ -9,12 +9,12 @@ from question_directory import (
     changing_lists,
     dictionaries,
     equality_and_booleans,
+    for_loops,
     functions,
     functions_quick_review,
     greater_than_less_than_and_booleans,
     inbuilt_functions_and_operators,
     indexing_lists,
-    loops,
     variables_equality_and_booleans,
 )
 from unit_tests.test_instructor_code import *  # noqa
@@ -36,7 +36,7 @@ if input("\n\nPress enter to start\n") != "test":
     # https://kathrinschuler.github.io/slide-python-intro/#/25/4
     run(boolean_review.TASKS, boolean_review.BLURB)
     run(functions.TASKS, functions.BLURB)
-    run(loops.TASKS, loops.BLURB)
+    run(for_loops.TASKS, for_loops.BLURB)
 
     # LESSON FOUR
     run(indexing_lists.TASKS, indexing_lists.BLURB)
