@@ -61,15 +61,16 @@ def standardise_string(string):
 
 def get_output_for_user(answer_to_question, task_tuple):
     user_output = None
-    try:
-        user_output = (
-            exec(answer_to_question, task_tuple.prerequisites)
-            if _run_exec(answer_to_question)
-            else eval(answer_to_question, task_tuple.prerequisites)
-        )
-        user_output = str(user_output)
-    except Exception as e:
-        user_output = f"Error message: {e}"
+    if not task_tuple.prerequisites.get("no_eval") and not task_tuple.prerequisites.get("no_exec"):
+        try:
+            user_output = (
+                exec(answer_to_question, task_tuple.prerequisites)
+                if _run_exec(answer_to_question)
+                else eval(answer_to_question, task_tuple.prerequisites)
+            )
+            user_output = str(user_output)
+        except Exception as e:
+            user_output = f"Error message: {e}"
     if not answer_to_question:
         user_output = None
     return user_output

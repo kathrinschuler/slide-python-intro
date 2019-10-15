@@ -313,3 +313,40 @@ class Tests(unittest.TestCase):
         # THEN
         assert mock_bonus.called_once_with()
         self.assertTrue(True)  # hacky, but set True to False to see what the output looks like
+
+    @mock.patch("exercises.question_runner._bonus", bonus="")
+    @mock.patch("exercises.helpers._get_input", side_effect=["break", "continue"])
+    def test_no_exec_or_eval_override(self, mock_get_input, mock_bonus):
+        # GIVEN
+        tasks = [
+            [
+                "",  # background info
+                """What word is missing if you want spam to be written only twice?
+                count = 1
+                while count <= 5:
+                    count = count + 1
+                    print("spam")
+                    if count == 3:
+                    __________""",  # question
+                ["break"],  # list of required keywords
+                {"no_eval": True, "no_exec": True},  # dict of variables to set up before question
+            ],
+            [
+                "",  # background info
+                """What word is missing if you want to skip 'spam 3' ?
+                count = 1
+                while count <= 5:
+                    count = count + 1
+                    if count == 3:
+                    __________
+                print("spam " + str(count))""",  # question
+                ["continue"],  # list of required keywords
+                {"no_eval": True, "no_exec": True},  # dict of variables to set up before question
+            ],
+        ]
+
+        # WHEN
+        run(tasks, blurb="blah blah")
+
+        # THEN
+        assert mock_bonus.called_once_with()
