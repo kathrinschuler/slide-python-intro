@@ -16,6 +16,7 @@ from question_directory import (
     inbuilt_functions_and_operators,
     indexing_lists,
     variables_equality_and_booleans,
+    while_loops,
 )
 from unit_tests.test_instructor_code import *  # noqa
 
@@ -35,8 +36,9 @@ if input("\n\nPress enter to start\n") != "test":
     # LESSON THREE
     # https://kathrinschuler.github.io/slide-python-intro/#/25/4
     run(boolean_review.TASKS, boolean_review.BLURB)
-    run(functions.TASKS, functions.BLURB)
+    run(while_loops.TASKS, while_loops.BLURB)
     run(for_loops.TASKS, for_loops.BLURB)
+    run(functions.TASKS, functions.BLURB)
 
     # LESSON FOUR
     run(indexing_lists.TASKS, indexing_lists.BLURB)
